@@ -1,0 +1,1129 @@
+<!--
+<bs-navbar>
+    <bs-nav>
+        <bs-nav-dropdown title="Dateneingabe">
+            <bs-menu-item href="/resource/Default:DigitalApp">digitale Anwendung</bs-menu-item>
+            <bs-menu-item href="/resource/Default:E65_Creation">Entwicklung</bs-menu-item>
+        </bs-nav-dropdown>
+
+
+    </bs-nav>
+</bs-navbar>
+
+<ol class="page-breadcrumb">
+    <li><a href="/resource/:Home">Home
+        </a> </li>
+    <li><a href="/resource/:Start">Dateneingabe
+        </a> </li>
+    <li class="active">Digitale Anwendung</li>
+</ol>
+-->
+<bs-panel>
+        <h1>Digitale Anwendung</h1>
+        <semantic-form new-subject-template='https://www.enter.theninja.space/resources/DigitalApp/{{UUID}}'
+            post-action='redirect' browser-persistence=false form-id='DigitalApp' fields="[[fieldDefinitions]]">
+            
+            <!--
+               
+                Wo kann man einstellen wohin der 'redirect' geht? Ich hätte gern, dass er dann zur Ansicht der erstellten Instanz geht, also im Formularstyle. Von der Ansicht ausgehend hätt eich gern nen Button, 
+                der zum Edit (der bereits ausgefüllten Maske) der Instanz führt).
+                  <semantic-form subject='[[this]]'>
+                      Every form instance operates on one unique subject (defined using the subject attribute <semantic-form subject=‘IRI’>
+    • The subject must be an IRI and will be injected, i.e. replace all $subject variables in all SPARQL patterns in all field definitions used in the form during runtime.
+    • The subject does not necessarily need to exist in the graph, i.e. if the form is used to create new records, the subject can be constructed, for example, using a specific backend template helper function (e.g. constructing an IRI based on UUIDs).
+    • To edit an existing record (subject) the form can be, for example, embedded into the templates and then be parameterized using [[this]] helper. A different option is to have a dedicated page for editing (i.e. to not overload visualization templates) and propagate the subject via a URL parameter. This is primarily a design decision.
+    • If subject is not set explicitly, it defaults to the current resource IRI.
+    einfach hinzufügen im semantic-form:  ubject='{IRI}' IRI muss dasnn das Display sein. Jetzt nur noch die Frage wie man das visualisiert...
+            -->
+    
+            <bs-tabs fixed-key="form">
+                <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Kerninfo               #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+                <bs-tab event-key="1" title="Grundinformationen">
+                    <!--
+    
+    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/subjectRdfType"></semantic-form-hidden-input>
+    -->
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/shortTitle">
+                    </semantic-form-text-input>
+                    <!--
+                        bei TechnologyType value set nachtragen siehe Worklflow in Z:Doku/Ergebnisse
+                    -->
+                    <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasTechnologyType">
+                    </semantic-form-select-input>
+                    
+                    <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasMaturityLevel">
+                    </semantic-form-tree-picker-input>
+    
+                    <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasAreaOfUse">
+                    </semantic-form-select-input>
+    
+    
+                    <h3>Sourcecode der digitalen Anwendung</h3>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in"
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                        fields="[[fieldDefinitions]]">
+                        <h4>Link zu GitHub</h4>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                        </semantic-form-text-input>
+                        <!--
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                        </semantic-form-text-input>
+                        -->
+                    </semantic-form-composite-input>
+                    <!-- 
+                    <h3>Abbildungen</h3>
+                    Image upload siehe: https://www.enter.theninja.space/resource/Help:SemanticFormAdvancedInputs 
+                habe schon ein Feld für die Abbildung erstellt: .../appImage
+                -->
+                    <!--
+        
+                <semantic-form-file-input
+                for='http://www.metaphacts.com/fieldDefinition/appImage'
+                placeholder='Please drag&drop your image here'
+                accept-pattern='image/*'
+                generate-iri-query='
+                  SELECT ?resourceIri WHERE {
+                    BIND(URI(CONCAT(
+                      STR(<Default:>), "uploaded-file-", ?__fileName__)
+                    ) as ?resourceIri)
+                  }
+                '
+                resource-query='
+                  PREFIX mp: <http://www.metaphacts.com/ontologies/platform#>
+                  CONSTRUCT {
+                    ?__resourceIri__ a mp:File.
+                    ?__resourceIri__ mp:fileName ?__fileName__.
+                    ?__resourceIri__ mp:mediaType ?__mediaType__.
+                  } WHERE {}
+                '
+                name-predicate-iri='http://www.metaphacts.com/ontologies/platform#fileName'
+                media-type-predicate-iri='http://www.metaphacts.com/ontologies/platform#mediaType'
+                    storage='{file-storage-id}'
+                    temp-storage='{temp-file-storage-id}'>
+                </semantic-form-file-input>
+            
+                      
+    -->
+                    <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Vermittlung            #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+    
+                </bs-tab>
+                <bs-tab event-key="2" title="Vermittlungskonzept">
+                    <h2>Vermittlungskonzept</h2>
+                    <p>Das Vermittlungskonzept beschreibt den Inhalt/das Thema der digitalen Anwendung und wie dieser/dieses
+                        mittels eines Formates umgesetzt ist.
+                        Es beschreibt weiterhin angesprochene Nutzer-/Besuchergruppen und wie die digitale Anwendung deren
+                        Bedürfnisse adressiert.</p>
+    
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/hasEducationalConcept"
+                        new-subject-template='https://www.enter.theninja.space/resources/EducationalConcept/{{UUID}}' fields="[[fieldDefinitions
+                hasEducationFormat='http://www.metaphacts.com/fieldDefinition/hasEducationFormat'
+                descriptionOfEducationalGoal='http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal'
+                descriptionOfUserNeeds='http://www.metaphacts.com/fieldDefinition/descriptionOfUserNeeds'
+                hasTargetAudience='http://www.metaphacts.com/fieldDefinition/hasTargetAudience'
+                descriptionOfNarration='http://www.metaphacts.com/fieldDefinition/descriptionOfNarration'
+                hasSubject='http://www.metaphacts.com/fieldDefinition/hasSubject'
+                ]]">
+                        <!--
+                            Label umbenennen: Vermittlungsformat in Vermittlungsansatz, auch value set siehe Worklfow Dok in Z:Doku/Ergenisse
+                        -->
+    
+                        <semantic-form-select-input for="hasEducationFormat">
+                        </semantic-form-select-input>
+                        <semantic-form-text-input for="descriptionOfEducationalGoal" multiline=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="descriptionOfUserNeeds" multiline=true>
+                        </semantic-form-text-input>
+    
+                        <semantic-form-tree-picker-input for="hasTargetAudience">
+                            <semantic-form
+                                new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                            inSchemeTargetAudience='http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience'    
+                            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                ]]">
+                                <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
+                                </semantic-form-hidden-input>
+                                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+    
+                                <semantic-form-errors></semantic-form-errors>
+                                <button name='submit' class='btn btn-default'>Create</button>
+                                <button name='reset' class='btn btn-default'>Reset</button>
+                            </semantic-form>
+    
+                        </semantic-form-tree-picker-input>
+                        <!--
+                            HINZUFÜGEN: Vermittlungsmethode text-input descriptionOfEducationMethod muss noch Ontologie
+                        -->
+    
+    
+                        <h3>Gegenstand der Vermittlung</h3>
+                        <p>Das Vermittlungskonzept umfasst eine Narration mit der ein Thema vermittelt wird. Oder mit
+                            dem
+                            Konzept soll ein spezifischer Inhalt, ein Thema vermittelt werden. Beschreiben Sie dieses
+                            hier
+                            genauer.
+                        </p>
+    
+                        <semantic-form-text-input for="descriptionOfNarration" multiline=true>
+                        </semantic-form-text-input>
+                        <semantic-form-tree-picker-input for="hasSubject">
+                            <semantic-form
+                                new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                        inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    
+                        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'                
+                            ]]">
+                                <semantic-form-hidden-input for="inSchemeSubject" default-value='skos:Concept'>
+                                </semantic-form-hidden-input>
+                                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+    
+                                <semantic-form-errors></semantic-form-errors>
+                                <button name='submit' class='btn btn-default'>Create</button>
+                                <button name='reset' class='btn btn-default'>Reset</button>
+                            </semantic-form>
+    
+                        </semantic-form-tree-picker-input>
+                    </semantic-form-composite-input>
+    
+                </bs-tab>
+                <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Betrieb                #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+                <bs-tab event-key="3" title="Betrieb, Betreuung, Vermarktung">
+                    <h2>Betreuung</h2>
+                    <p>Für digitale Anwendungen, wie z.B. Virtual Reality Formate, wird Betreuung für die Nutzer benötigt.
+                        Wenn die beschriebene Anwendung keine Betreuung erfordert, dann entfernen Sie die Felder.</p>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/visitorCare">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/extentOfUsage">
+                    </semantic-form-text-input>
+    
+    
+                    <h2>Betriebskonzept</h2>
+                    <p>
+                        Das Betriebskonzept gibt Hinweise zum Management rund um den aktiven Betrieb im Museum.
+                    </p>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in"
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                        fields="[[fieldDefinitions]]">
+                        <h3>Link zu Zenodo</h3>
+                        <p>Geben Sie hier den Link zum Dokument in Zenodo an. Bei Zenodo wird Ihnen eine stabile URL
+                            angezeigt, die Sie hier verwenden sollten. Dort befindet sich auch die
+                            bibliographische Angabe, die Sie hier verwenden sollten.</p>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
+                            multiline=true>
+                        </semantic-form-text-input>
+                    </semantic-form-composite-input>
+                    <h2>Vermarktung</h2>
+                    <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasTouchpoints">
+                        <semantic-form new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                            fields="[[fieldDefinitions
+            inSchemeTouchpoints='http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints'
+            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+            ]]">
+                            <semantic-form-hidden-input for="inSchemeTouchpoints" default-value='skos:Concept'>
+                            </semantic-form-hidden-input>
+                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+    
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+    
+                        </semantic-form>
+                    </semantic-form-tree-picker-input>
+    
+                </bs-tab>
+                <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Geräte                 #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+                <bs-tab event-key="4" title="Geräte und Software">
+                    <h2>Ausspielgeräte, periphere Hardware und ihre Software</h2>
+                    <p>Für den aktive Betrieb der digitalen Anwendungen werden Ausspielgeräte benötigt. Bestimmte
+                        Anwendungen
+                        können nur auf speziell konfigurierten Geräten genutzt werden, wie bspw. eine AR Anwendung für die
+                        Hololens. Hier können Sie alle Spezifika der Geräte, ihrer Peripherie und auch der benötigten
+                        Software eingeben.</p>
+    
+                    <h3>Ausspielgeräte</h3>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/usesOutputDevice"
+                        new-subject-template="https://www.enter.theninja.space/resources/OutputDevice/{{title}}" fields="[[fieldDefinitions 
+                        hasOutputDeviceType='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType'
+                        title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                        modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
+                        needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
+                        requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                        requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                        requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                        requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                        ]]">
+    
+    
+                        <semantic-form-tree-picker-input for="hasOutputDeviceType">
+                            <semantic-form
+                                new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
+                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                broaderOutputDevice='http://www.metaphacts.com/fieldDefinition/broaderOutputDevice'
+                                ]]">
+                                <semantic-form-hidden-input for="inSchemeOutputDeviceType" default-value='skos:Concept'>
+                                </semantic-form-hidden-input>
+                                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-tree-picker-input for="broaderOutputDevice">
+                                </semantic-form-tree-picker-input>
+    
+                                <semantic-form-errors></semantic-form-errors>
+                                <button name='submit' class='btn btn-default'>Create</button>
+                                <button name='reset' class='btn btn-default'>Reset</button>
+    
+                            </semantic-form>
+                        </semantic-form-tree-picker-input>
+    
+                        <semantic-form-text-input for="title">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="modelNr">
+                        </semantic-form-text-input>
+                        <semantic-form-select-input for="needsPermanentInternetAccess">
+                        </semantic-form-select-input>
+    
+                        <h4>Mindestanforderungen an die Hardware</h4>
+                        <semantic-form-text-input for="requiredProcessor">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredRAM">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredHardDriveSpace">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredGraphicsCard">
+                        </semantic-form-text-input>
+    
+                    </semantic-form-composite-input>
+    
+                    <h3>benötigte periphere Hardware</h3>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/usesHardware"
+                        new-subject-template="https://www.enter.theninja.space/resources/Hardware/{{title}}" fields="[[fieldDefinitions 
+                        title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                        modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
+                        needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
+                        requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                        requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                        requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                        requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                        ]]">
+    
+                        <semantic-form-text-input for="title">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="modelNr">
+                        </semantic-form-text-input>
+    
+                        <h4>Mindestanforderungen</h4>
+                        <semantic-form-text-input for="requiredProcessor">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredRAM">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredHardDriveSpace">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredGraphicsCard">
+                        </semantic-form-text-input>
+    
+                    </semantic-form-composite-input>
+    
+                    <h3>benötigte Software</h3>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/usesSoftware"
+                        new-subject-template for="https://www.enter.theninja.space/resources/Software/{{title}}" fields="[[fieldDefinitions 
+                        title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                        version='http://www.metaphacts.com/fieldDefinition/version'
+                        hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                        ]]">
+                        <semantic-form-text-input for="title">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="version">
+                        </semantic-form-text-input>
+                        <semantic-form-select-input for="hasSoftwareType">
+                        </semantic-form-select-input>
+    
+                    </semantic-form-composite-input>
+                </bs-tab>
+                <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            ENTWICKLUNG            #####
+    #####                                   ##### 
+    #############################################
+    
+                -->
+                <bs-tab event-key="5" title="Entwicklung">
+                    <h2>Entwicklung der digitalen Anwendung</h2>
+                    <p>Beschreiben Sie hier alles, was im Kontext der Entwicklung der digitalen Anwendung relevant war.</p>
+                    <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P94i_was_created_by"
+                        new-subject-template='https://www.enter.theninja.space/resources/E65_Creation/{{UUID}}' fields="[[fieldDefinitions
+                                    descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges'
+                                    beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
+                                    endDate='http://www.metaphacts.com/fieldDefinition/endDate'
+                                    fallsWithinAppCreation='http://www.metaphacts.com/fieldDefinition/fallsWithinAppCreation'
+                                    ]]">
+                        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
+                        </semantic-form-text-input>
+                        <h3>Gesamtentwicklungszeitraum</h3>
+                        <p>Geben Sie den Beginn des Zeitraums an. Wenn Sie das taggenaue Datum nicht angeben können, so
+                            schätzen Sie es.
+                            Es kommt vor allem darauf an eine ungefähre Einschätzung von der Dauer des Entwicklungsprozesses
+                            zu geben.
+                            Dies soll es denjenigen helfen, die selbst die Entwicklung einer digitalen Anwendung dieser Art
+                            planen und
+                            ihnen die Möglichkeit geben Zeiten realistischer zu planen.</p>
+                        <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
+                        <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
+    
+    
+                        <h2>Entwicklungsschritte</h2>
+                        <p> Die unterschiedlichen Entwicklungsschritte sind jeder für sich zu beschreiben.
+                            Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und/oder ihrer
+                            Zugehörigkeit zu übergeordneten
+                            Entwicklungsphasen. Wie granular die Entwicklung der Anwendung beschrieben wird liegt im
+                            Ermessen des Erfassenden.
+                        </p>
+    
+                        <semantic-form-composite-input for="fallsWithinAppCreation"
+                            new-subject-template="https://www.enter.theninja.space/resources/E65_Creation/{{UUID}}" fields="[[fieldDefinitions
+                                        hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'
+                                        hasCreationPhase='http://www.metaphacts.com/fieldDefinition/hasCreationPhase'
+                                        needsExpertise='http://www.metaphacts.com/fieldDefinition/needsExpertise'
+                                        usedHardware='http://www.metaphacts.com/fieldDefinition/usedHardware'
+                                        usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
+                                        usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
+                                        ]]">
+    
+                            <semantic-form-select-input for="hasCreationPhase">
+                            </semantic-form-select-input>
+                            <semantic-form-tree-picker-input for="hasCreationMethod">
+                                <semantic-form
+                                    new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                                    fields="[[fieldDefinitions
+                                                inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                broaderCreationMethod='http://www.metaphacts.com/fieldDefinition/broaderCreationMethod'                
+                                                    ]]">
+                                    <semantic-form-hidden-input for="inSchemeCreationMethod" default-value='skos:Concept'>
+                                    </semantic-form-hidden-input>
+                                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]'
+                                        require-language=true>
+                                    </semantic-form-text-input>
+                                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                    </semantic-form-text-input>
+                                    <semantic-form-tree-picker-input for="broaderCreationMethod">
+                                    </semantic-form-tree-picker-input>
+    
+                                    <semantic-form-errors></semantic-form-errors>
+                                    <button name='submit' class='btn btn-default'>Create</button>
+                                    <button name='reset' class='btn btn-default'>Reset</button>
+                                </semantic-form>
+                            </semantic-form-tree-picker-input>
+    
+    
+                            <semantic-form-tree-picker-input for="needsExpertise">
+                                <semantic-form
+                                    new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                                    fields="[[fieldDefinitions
+                                                    inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
+                                                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                    altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                    broaderExpertise='http://www.metaphacts.com/fieldDefinition/broaderExpertise'                  
+                                                        ]]">
+                                    <semantic-form-hidden-input for="inSchemeExpertise" default-value='skos:Concept'>
+                                    </semantic-form-hidden-input>
+                                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]'
+                                        require-language=true>
+                                    </semantic-form-text-input>
+                                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                    </semantic-form-text-input>
+                                    <semantic-form-tree-picker-input for="broaderExpertise">
+                                    </semantic-form-tree-picker-input>
+    
+                                    <semantic-form-errors></semantic-form-errors>
+                                    <button name='submit' class='btn btn-default'>Create</button>
+                                    <button name='reset' class='btn btn-default'>Reset</button>
+                                </semantic-form>
+                            </semantic-form-tree-picker-input>
+    
+                            <h3>genutzte Tools - Hardware, Software und Hilfsmittel</h3>
+                            <semantic-form-composite-input for="usedHardware"
+                                new-subject-template="https://www.enter.theninja.space/resources/Hardware/{{title}}" fields="[[fieldDefinitions 
+                            title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                            modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
+                            hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                            requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                            requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                            requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                            requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                            ]]">
+                                <semantic-form-text-input for="title">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="modelNr">
+                                </semantic-form-text-input>
+    
+                                <semantic-form-tree-picker-input for="hasToolType">
+                                    <semantic-form
+                                        new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                                        fields="[[fieldDefinitions
+                                                    inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                    altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                    broaderToolType='http://www.metaphacts.com/fieldDefinition/broaderToolType'                  
+                                                        ]]">
+                                        <!--
+                                                            Hier gibt es im Field Generator einen Fehler: inScheme ist auf CreationMethod gesetzt.
+                                                        -->
+                                        <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                                        </semantic-form-hidden-input>
+                                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]'
+                                            require-language=true>
+                                        </semantic-form-text-input>
+                                        <semantic-form-text-input for="altLabel" languages='["de", "en"]'
+                                            require-language=true>
+                                        </semantic-form-text-input>
+                                        <semantic-form-tree-picker-input for="broaderToolType">
+                                        </semantic-form-tree-picker-input>
+    
+                                        <semantic-form-errors></semantic-form-errors>
+                                        <button name='submit' class='btn btn-default'>Create</button>
+                                        <button name='reset' class='btn btn-default'>Reset</button>
+                                    </semantic-form>
+                                </semantic-form-tree-picker-input>
+    
+                                <h4>Mindestanforderungen</h4>
+                                <semantic-form-text-input for="requiredProcessor">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="requiredRAM">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="requiredHardDriveSpace">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="requiredGraphicsCard">
+                                </semantic-form-text-input>
+    
+    
+    
+                            </semantic-form-composite-input>
+    
+                            <semantic-form-composite-input for="usedSoftware"
+                                new-subject-template="https://www.enter.theninja.space/resources/Software/{{title}}" fields="[[fieldDefinitions 
+                                        title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                        version='http://www.metaphacts.com/fieldDefinition/version'
+                                        hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                                        P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                        ]]">
+                                <semantic-form-text-input for="title">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="version">
+                                </semantic-form-text-input>
+                                <semantic-form-select-input for="hasSoftwareType">
+                                </semantic-form-select-input>
+                                <semantic-form-composite-input for="P70i_is_documented_in"
+                                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                                    fields="[[fieldDefinitions]]">
+                                    <h4>Quelle der Software</h4>
+                                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                                    </semantic-form-text-input>
+                                    <!--
+                                                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                                </semantic-form-text-input>
+                                                -->
+                                </semantic-form-composite-input>
+    
+    
+                            </semantic-form-composite-input>
+    
+                            <semantic-form-composite-input for="usedTool"
+                                new-subject-template="https://www.enter.theninja.space/resources/Tool/{{title}" fields="[[fieldDefinitions 
+                                        title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                        hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                                        P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                        ]]">
+                            
+                                                <semantic-form-text-input for="title">
+                                                </semantic-form-text-input>
+                            
+                                                <semantic-form-tree-picker-input for="hasToolType">
+                                                    <semantic-form
+                                                        new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                                    inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                    altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                    broaderToolType='http://www.metaphacts.com/fieldDefinition/broaderToolType'                  
+                                                        ]]">
+                                <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                                </semantic-form-hidden-input>
+                                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-tree-picker-input for="broaderToolType"></semantic-form-tree-picker-input>
+    
+                                <semantic-form-errors></semantic-form-errors>
+                                <button name='submit' class='btn btn-default'>Create</button>
+                                <button name='reset' class='btn btn-default'>Reset</button>
+        </semantic-form>
+        </semantic-form-tree-picker-input>
+    
+        <semantic-form-composite-input for="P70i_is_documented_in"
+            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+            fields="[[fieldDefinitions]]">
+            <h4>Quelle des Hilfsmittels</h4>
+            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation" multiline=true>
+            </semantic-form-text-input>
+            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+            </semantic-form-text-input>
+            <!--
+                                                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                                </semantic-form-text-input>
+                                                -->
+        </semantic-form-composite-input>
+    
+        </semantic-form-composite-input>
+    
+    
+    
+        </semantic-form-composite-input>
+        </semantic-form-composite-input>
+        </bs-tab>
+        <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            BEFORSCHUNG            #####
+    #####                                   ##### 
+    #############################################
+    
+                -->
+        <bs-tab event-key="6" title="Beforschung">
+            <h2>begeleitende Forschung</h2>
+            <p>Beschreiben Sie hier alles zur Beforschung und Untersuchung der digitalen Anwendung.</p>
+            <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/wasResearchedBy"
+                new-subject-template='https://www.enter.theninja.space/resources/ResearchActivity/{{UUID}}' fields="[[fieldDefinitions
+                                descriptionOfResearchAim='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim'
+                                hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
+                                P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                fallsWithinResearchActivity='http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity'
+                                ]]">
+    
+    
+                <semantic-form-text-input for="descriptionOfResearchAim" multiline=true>
+                </semantic-form-text-input>
+                <h2>entstandene Hilfsmittel</h2>
+                <p>Im Rahmen von Testings, Befragungen oder Beobachtungen enstehen häufig Vorlagen wie z.B. Frage- oder
+                    Beobachtungsbögen. Geben Sie hier an welche Hilfsmittel während der begleitenden Forschung der digitalen
+                    Anwendung entstanden sind.</p>
+                <semantic-form-composite-input for="hasGeneratedTool"
+                    new-subject-template="https://www.enter.theninja.space/resources/Tool/{{toolTitle}" fields="[[fieldDefinitions 
+                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                                P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                ]]">
+                                        <semantic-form-text-input for="toolTitle">
+                                        </semantic-form-text-input>
+                        
+                                        <semantic-form-tree-picker-input for="hasToolType">
+                                            <semantic-form
+                                                new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                            inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                            altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                            broaderToolType='http://www.metaphacts.com/fieldDefinition/broaderToolType'                  
+                                                ]]">
+                    <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-tree-picker-input for="broaderToolType"></semantic-form-tree-picker-input>
+    
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Create</button>
+                    <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
+                    </semantic-form-tree-picker-input>
+    
+                    <semantic-form-composite-input for="P70i_is_documented_in"
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                        fields="[[fieldDefinitions]]">
+                        <h4>Quelle des Hilfsmittels</h4>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
+                            multiline=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                        </semantic-form-text-input>
+                        <!--
+                                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                        </semantic-form-text-input>
+                                        -->
+                    </semantic-form-composite-input>
+    
+                </semantic-form-composite-input>
+                <h2>Erkenntnisse</h2>
+                <p>geben Sie hier an welche Publikationen sind aus der begleitenden Forschung hervorgegangen sind</p>
+                <semantic-form-composite-input for="P70i_is_documented_in"
+                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                                            url='http://www.metaphacts.com/fieldDefinition/url'
+                                            bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+                                            ]]">
+                    <h4>Quelle des Dokuments</h4>
+                    <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                    <!--
+                                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                            </semantic-form-text-input>
+                                            -->
+                </semantic-form-composite-input>
+    
+    
+                <h2>Untersuchungssetting</h2>
+                <p> Die unterschiedlichen Testsituationen bzw. Untersuchungseinheiten sind jeder für sich zu beschreiben.
+                    Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und der
+                    unterschiedlichen
+                    Testorte/-anlässe.
+                </p>
+    
+                <semantic-form-composite-input for="fallsWithinResearchActivity"
+                    new-subject-template="https://www.enter.theninja.space/resources/ResearchActivity/{{UUID}}" fields="[[fieldDefinitions
+                                    hasResearchMethod='http://www.metaphacts.com/fieldDefinition/hasResearchMethod'
+                                    hasExperimenteeType='http://www.metaphacts.com/fieldDefinition/hasExperimenteeType'
+                                    eventTitle='http://www.metaphacts.com/fieldDefinition/eventTitle'
+                                    P12_occurred_in_the_presence_of='http://www.metaphacts.com/fieldDefinition/P12_occurred_in_the_presence_of'
+                                    descriptionOfResearchSetting='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchSetting'
+                                    beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
+                                    endDate='http://www.metaphacts.com/fieldDefinition/endDate'
+                                    usedHardware='http://www.metaphacts.com/fieldDefinition/usedHardware'
+                                    usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
+                                    usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
+                                    ]]">
+                    <semantic-form-tree-picker-input for="hasResearchMethod">
+                        <semantic-form new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                            fields="[[fieldDefinitions
+                                                inSchemeResearchMethod='http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                broaderResearchMethod='http://www.metaphacts.com/fieldDefinition/broaderResearchMethod'                
+                                                    ]]">
+                            <semantic-form-hidden-input for="inSchemeResearchMethod" default-value='skos:Concept'>
+                            </semantic-form-hidden-input>
+                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+                            <semantic-form-tree-picker-input for="broaderResearchMethod"></semantic-form-tree-picker-input>
+    
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                    </semantic-form-tree-picker-input>
+    
+                    <semantic-form-tree-picker-input for="hasExperimenteeType">
+                        <semantic-form new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                            fields="[[fieldDefinitions
+                                            inSchemehasExperimenteeType='http://www.metaphacts.com/fieldDefinition/inSchemeExperimenteeType'    
+                                            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                            altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                ]]">
+                            <semantic-form-hidden-input for="inSchemehasExperimenteeType" default-value='skos:Concept'>
+                            </semantic-form-hidden-input>
+                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+    
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                    </semantic-form-tree-picker-input>
+    
+    
+                    <h3>Untersuchungsanlass und Durchführung</h3>
+    
+                    <semantic-form-text-input for="eventTitle"></semantic-form-text-input>
+    
+                    <semantic-form-autocomplete-input for="P12_occurred_in_the_presence_of">
+                        <semantic-form
+                            new-subject-template="https://www.enter.theninja.space/resources/E74_Group/{{legalName}}" fields="[[fieldDefinitions
+                                       legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                                       
+                                       ]]">
+                            <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                            <!--
+                            <semantic-form-autocomplete-input for="P74_has_current_or_former_residence"></semantic-form-autocomplete-input>
+                           
+                                           Hierfür den Geonames Datensatz hinterlegen! Nein, das ist doof. Besser wäre es, die API anzusprechen damit der 16GB Datensatz nich tgespeichert werden muss.
+                                            Aber wie baut man die Query hier ein? Siehe Hilfe: https://www.enter.theninja.space/resource/Help:WorkingWithData
+                                       
+                                        <semantic-form-tree-picker-input for="P74_has_current_or_former_residence">
+                                        </semantic-form-tree-picker-input>
+                        -->
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                    </semantic-form-autocomplete-input>
+                    <semantic-form-text-input for="descriptionOfResearchSetting" multiline="true">
+                    </semantic-form-text-input>
+                    <h3>Untersuchungszeitraum</h3>
+                    <p>Wann fand die Untersuchung statt?</p>
+                    <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
+                    <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
+    
+    
+                    <h3>genutzte Tools - Hardware, Software und Hilfsmittel</h3>
+                    <p>Geben Sie an, welche Hilfsmittel, Hardware oder Geräte und welche Software für die Untersuchung
+                        verwendet
+                        wurden.</p>
+                    <!--
+                            ACHTUNG!!! IM Field Catalog ist die Range falsch eingestellt für usedHardware/Software/tool : es muss crm:E7_Activity sein!
+                        -->
+                    <semantic-form-composite-input for="usedHardware"
+                        new-subject-template="https://www.enter.theninja.space/resources/Hardware/{{toolTitle}}" fields="[[fieldDefinitions 
+                        toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                        modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
+                        hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                        requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                        requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                        requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                        requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                        ]]">
+                        <semantic-form-text-input for="toolTitle">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="modelNr">
+                        </semantic-form-text-input>
+    
+                        <semantic-form-tree-picker-input for="hasToolType">
+                            <semantic-form
+                                new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                broaderToolType='http://www.metaphacts.com/fieldDefinition/broaderToolType'                  
+                                                    ]]">
+                                <!--
+                                                        Hier gibt es im Field Generator einen Fehler: inScheme ist auf CreationMethod gesetzt.
+                                                    -->
+                                <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                                </semantic-form-hidden-input>
+                                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                </semantic-form-text-input>
+                                <semantic-form-tree-picker-input for="broaderToolType"></semantic-form-tree-picker-input>
+    
+                                <semantic-form-errors></semantic-form-errors>
+                                <button name='submit' class='btn btn-default'>Create</button>
+                                <button name='reset' class='btn btn-default'>Reset</button>
+                            </semantic-form>
+                        </semantic-form-tree-picker-input>
+    
+                        <h4>Mindestanforderungen</h4>
+                        <semantic-form-text-input for="requiredProcessor">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredRAM">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredHardDriveSpace">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="requiredGraphicsCard">
+                        </semantic-form-text-input>
+    
+    
+    
+                    </semantic-form-composite-input>
+    
+                    <semantic-form-composite-input for="usedSoftware"
+                        new-subject-template="https://www.enter.theninja.space/resources/Software/{{toolTitle}}" fields="[[fieldDefinitions 
+                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                    version='http://www.metaphacts.com/fieldDefinition/version'
+                                    hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                    ]]">
+                        <semantic-form-text-input for="toolTitle">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="version">
+                        </semantic-form-text-input>
+                        <semantic-form-select-input for="hasSoftwareType">
+                        </semantic-form-select-input>
+                        <semantic-form-composite-input for="P70i_is_documented_in"
+                            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                            fields="[[fieldDefinitions]]">
+                            <h4>Quelle der Software</h4>
+                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                            </semantic-form-text-input>
+                            <!--
+                                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                            </semantic-form-text-input>
+                                            -->
+                        </semantic-form-composite-input>
+    
+    
+                    </semantic-form-composite-input>
+    
+                    <semantic-form-composite-input for="usedTool"
+                        new-subject-template="https://www.enter.theninja.space/resources/Tool/{{toolTitle}" fields="[[fieldDefinitions 
+                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                    hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                    ]]">
+                        
+                                            <semantic-form-text-input for="toolTitle">
+                                            </semantic-form-text-input>
+                        
+                                            <semantic-form-tree-picker-input for="hasToolType">
+                                                <semantic-form
+                                                    new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                broaderToolType='http://www.metaphacts.com/fieldDefinition/broaderToolType'                  
+                                                    ]]">
+                        <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                        </semantic-form-hidden-input>
+                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-tree-picker-input for="broaderToolType"></semantic-form-tree-picker-input>
+    
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                        </semantic-form-tree-picker-input>
+    
+                        <semantic-form-composite-input for="P70i_is_documented_in"
+                            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                            fields="[[fieldDefinitions]]">
+                            <h4>Quelle des Hilfsmittels</h4>
+                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
+                                multiline=true>
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                            </semantic-form-text-input>
+                            <!--
+                                            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                                            </semantic-form-text-input>
+                                            -->
+                        </semantic-form-composite-input>
+                    </semantic-form-composite-input>
+                </semantic-form-composite-input>
+            </semantic-form-composite-input>
+    
+        </bs-tab>
+    
+        <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Projektkontext         #####
+    #####                                   ##### 
+    #############################################
+    
+                -->
+        <bs-tab event-key="7" title="Projektkontext">
+            <h2>Projekt und Beteiligte</h2>
+            <p>In welchem Kontext ist die digitale Anwendung entstanden? Gab es ein mit Drittmitteln gefördertes Projekt,
+                dass die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am Entstehungsprozess der
+                digitalen Anwendung beteiligt und in welcher Rolle? Ist das Projekt Bestandteil eines größeren
+                (Verbund-)Projektes?</p>
+    
+            <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/wasDevelopedBy"
+                new-subject-template="https://www.enter.theninja.space/resources/Project/{{projectTitle}}" fields="[[fieldDefinitions
+                                   projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
+                                   beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
+                                   endDate='http://www.metaphacts.com/fieldDefinition/endDate'
+                                   hasEmployee='http://www.metaphacts.com/fieldDefinition/hasEmployee'
+                                   wasPartOfProject='http://www.metaphacts.com/fieldDefinition/wasPartOfProject'
+                                   hasInsitutionalSupport='http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport'
+                                   wasFundedBy='http://www.metaphacts.com/fieldDefinition/wasFundedBy'
+                                   ]]">
+    
+                <semantic-form-text-input for="projectTitle"></semantic-form-text-input>
+    
+                <h3>Gesamtlaufzeit</h3>
+                <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
+                <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
+    
+                <h3>Projektkontext</h3>
+    <!--
+    Bei institutionlSupport im Field Catalog noch as ASK Pattern nachtragen! Suche funktioniert noch nicht.
+        -->
+                <semantic-form-autocomplete-input for="hasInsitutionalSupport">
+                    <semantic-form new-subject-template="https://www.enter.theninja.space/resources/E74_Group/{{legalName}}"
+                        fields="[[fieldDefinitions
+                    legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                    ]]">
+                        <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                    </semantic-form>
+                </semantic-form-autocomplete-input>
+                <semantic-form-autocomplete-input for="wasPartOfProject">
+                </semantic-form-autocomplete-input>
+    
+                <h3>Projektmitarbeiter und extern Beteiligte</h3>
+                <semantic-form-composite-input for="hasEmployee"
+                    new-subject-template="https://www.enter.theninja.space/resources/E21_Person/{{UUID}}" fields="[[fieldDefinitions
+                    givenName='http://www.metaphacts.com/fieldDefinition/givenName'
+                    familyName='http://www.metaphacts.com/fieldDefinition/familyName'
+                    P14.1_in_the_role_of='http://www.metaphacts.com/fieldDefinition/P14.1_in_the_role_of'
+                    P107i_is_current_or_former_member_of='http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of'
+                    ]]">
+                    <semantic-form-text-input for="givenName"></semantic-form-text-input>
+                    <semantic-form-text-input for="familyName"></semantic-form-text-input>
+                    <semantic-form-tree-picker-input for="P14.1_in_the_role_of">
+                        <semantic-form new-subject-template="https://www.enter.theninja.space/resources/terms/{{prefLabel}}"
+                            fields="[[fieldDefinitions
+                        inSchemeActorRole='http://www.metaphacts.com/fieldDefinition/inSchemeActorRole'    
+                        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                        altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                        broaderActorRole='http://www.metaphacts.com/fieldDefinition/broaderActorRole'                  
+                            ]]">
+                            <semantic-form-hidden-input for="inSchemeActorRole" default-value='skos:Concept'>
+                            </semantic-form-hidden-input>
+                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                            </semantic-form-text-input>
+                            <semantic-form-tree-picker-input for="broaderActorRole"></semantic-form-tree-picker-input>
+    
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                    </semantic-form-tree-picker-input>
+                    <h4>institutionelle Zugehörigkeit</h4>
+                    <!--
+    Bei P107i im Field Catalog noch as ASK Pattern nachtragen! Suche funktioniert noch nicht.
+        -->
+                    <semantic-form-autocomplete-input for="P107i_is_current_or_former_member_of">
+                        <semantic-form
+                            new-subject-template="https://www.enter.theninja.space/resources/E74_Group/{{legalName}}" fields="[[fieldDefinitions
+                                       legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                                       
+                                       ]]">
+                            <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                            <!--
+                            <semantic-form-autocomplete-input for="P74_has_current_or_former_residence"></semantic-form-autocomplete-input>
+                           
+                                           Hierfür den Geonames Datensatz hinterlegen! Nein, das ist doof. Besser wäre es, die API anzusprechen damit der 16GB Datensatz nich tgespeichert werden muss.
+                                            Aber wie baut man die Query hier ein? Siehe Hilfe: https://www.enter.theninja.space/resource/Help:WorkingWithData
+                                       
+                                        <semantic-form-tree-picker-input for="P74_has_current_or_former_residence">
+                                        </semantic-form-tree-picker-input>
+                        -->
+                            <semantic-form-errors></semantic-form-errors>
+                            <button name='submit' class='btn btn-default'>Create</button>
+                            <button name='reset' class='btn btn-default'>Reset</button>
+                        </semantic-form>
+                    </semantic-form-autocomplete-input>
+                </semantic-form-composite-input>
+                <h2>Förderung</h2>
+                <!--
+    Bei wasFundedBy im Field Catalog noch as ASK Pattern nachtragen! Suche funktioniert noch nicht.
+        -->
+                <semantic-form-autocomplete-input for="wasFundedBy">
+                    <semantic-form new-subject-template="https://www.enter.theninja.space/resources/E74_Group/{{legalName}}"
+                        fields="[[fieldDefinitions
+                       legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                       
+                       ]]">
+                        <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                        <!--
+            <semantic-form-autocomplete-input for="P74_has_current_or_former_residence"></semantic-form-autocomplete-input>
+           
+                           Hierfür den Geonames Datensatz hinterlegen! Nein, das ist doof. Besser wäre es, die API anzusprechen damit der 16GB Datensatz nich tgespeichert werden muss.
+                            Aber wie baut man die Query hier ein? Siehe Hilfe: https://www.enter.theninja.space/resource/Help:WorkingWithData
+                       
+                        <semantic-form-tree-picker-input for="P74_has_current_or_former_residence">
+                        </semantic-form-tree-picker-input>
+        -->
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
+                </semantic-form-autocomplete-input>
+            </semantic-form-composite-input>
+    
+    
+    
+    
+    
+        </bs-tab>
+        <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            ASSETS                 #####
+    #####                                   ##### 
+    #############################################
+    
+                
+        <bs-tab event-key="8" title="Assets">
+            <h2>Digitale Objekte</h2>
+          
+                        <semantic-form-select-input
+                            for="http://www.researchspace.org/instances/fields/userGeneratedContentType">
+                        </semantic-form-select-input>
+                        -->
+      
+    
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default">Save</button>
+        <button name="reset" class="btn btn-default">Reset</button>
+        <!--
+                     <button name="save-state">Export</button>
+              <button name="load-state">Import</button>
+                -->
+        </bs-tabs>
+        </semantic-form>
+    </bs-panel>
+    
+    <!--
+      
+    Fragen: Wenn ich das Formular speichere möchte ich gern zu einer anderen Anzeige. Und zwar einfach die Eingabemaske mit den bereits befüllten Daten oder eine der Maske sehr ähnliche Ansicht mit den bereits ausgefüllten Daten. So dass die Eingebenden ihre Daten überprüfen können und ggf. gleich änern können.
+    -->

@@ -1,0 +1,29 @@
+
+<http://www.metaphacts.com/fieldDefinition/usesHardware/context> {
+  <http://www.metaphacts.com/fieldDefinition/usesHardware> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-5a6d057ef4584919a5bd82f3cffe07ef-0wlsi a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5a6d057ef4584919a5bd82f3cffe07ef-c2v7r <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:usesHardware $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/usesHardware> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-5a6d057ef4584919a5bd82f3cffe07ef-0wlsi;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5a6d057ef4584919a5bd82f3cffe07ef-c2v7r;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Hardware"@de .
+  
+  _:genid-5a6d057ef4584919a5bd82f3cffe07ef-c2v7r a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5a6d057ef4584919a5bd82f3cffe07ef-0wlsi <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:usesHardware $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/usesHardware> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-05T16:18:20.202Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/usesHardware> .
+  
+  <http://www.metaphacts.com/fieldDefinition/usesHardware> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,32 @@
+
+<http://www.metaphacts.com/fieldDefinition/visitorCare/context> {
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-51d7c902e1e24715812dbc7cfe3e3c11-ytfygcm;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-51d7c902e1e24715812dbc7cfe3e3c11-er3i3r a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie den empfohlenen Betreuungsaufwand in Personenstunden an. Es sind nur ganzzahlige Werte zulässig." .
+  
+  _:genid-51d7c902e1e24715812dbc7cfe3e3c11-er3i3r <http://spinrdf.org/sp#text> "INSERT { $subject  m4p0:visitorCare $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#label>
+      "empfohlener Betreuungsaufwand"@de .
+  
+  _:genid-51d7c902e1e24715812dbc7cfe3e3c11-ytfygcm <http://spinrdf.org/sp#text> "DELETE { $subject  m4p0:visitorCare $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#integer>;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-51d7c902e1e24715812dbc7cfe3e3c11-er3i3r;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-05T16:10:33.971Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/visitorCare> .
+  
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.w3.org/ns/ldp#Resource> .
+}

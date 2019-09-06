@@ -1,0 +1,33 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasMaturityLevel/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasMaturityLevel> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-20b61c8a9e9e4e55b570727f6a5e7558-9vpe7d <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasMaturityLevel $value} WHERE {}" .
+  
+  _:genid-20b61c8a9e9e4e55b570727f6a5e7558-inq6ty <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasMaturityLevel $value} WHERE {}" .
+  
+  _:genid-20b61c8a9e9e4e55b570727f6a5e7558-9vpe7d a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMaturityLevel> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-20b61c8a9e9e4e55b570727f6a5e7558-9vpe7d;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-20b61c8a9e9e4e55b570727f6a5e7558-inq6ty .
+  
+  _:genid-20b61c8a9e9e4e55b570727f6a5e7558-inq6ty a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMaturityLevel> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Reifegrad"@de;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    <http://www.metaphacts.com/ontology/fields#treePatterns> """{
+  \"type\": \"simple\",
+  \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-05T15:52:19.325Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasMaturityLevel> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMaturityLevel> a <http://www.w3.org/ns/ldp#Resource> .
+}

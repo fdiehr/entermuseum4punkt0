@@ -1,0 +1,31 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasTouchpoints/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-956e4867363e441db4e611dde3644270-c5kycn .
+  
+  _:genid-956e4867363e441db4e611dde3644270-c5kycn <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasTouchpoints $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-956e4867363e441db4e611dde3644270-n9miwf;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Touchpoints/Känale"@de .
+  
+  _:genid-956e4867363e441db4e611dde3644270-n9miwf <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasTouchpoints $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie an, über welche Kanäle NutzerInnen auf die digitale Anwendung aufmerksam werden. Was sind die (digitalen) \"Touchpoints\" (Kundenkontaktpunkte)? z.B. Museumswebsite, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc." .
+  
+  _:genid-956e4867363e441db4e611dde3644270-c5kycn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-05T16:13:54.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> a <http://www.w3.org/ns/ldp#Resource> .
+}

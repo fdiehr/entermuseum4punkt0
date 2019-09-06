@@ -1,0 +1,36 @@
+
+<http://www.metaphacts.com/fieldDefinition/broader/context> {
+  <http://www.metaphacts.com/fieldDefinition/broader> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Oberbegriff"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1e398fa0248741458f72976d2f0b5e05-t7tebg;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-1e398fa0248741458f72976d2f0b5e05-t7tebg a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-1e398fa0248741458f72976d2f0b5e05-vv9gvw <http://spinrdf.org/sp#text> "DELETE { $subject skos:broader $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broader> <http://www.metaphacts.com/ontology/fields#treePatterns>
+      """{
+  \"type\": \"full\",
+  \"rootsQuery\": \"PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\\nPREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>\\nSELECT DISTINCT ?item ?label ?hasChildren WHERE {\\n  FILTER(NOT EXISTS { ?item skos:broader ?parent. })\\n  ?item (skos:prefLabel) ?label.\\n  OPTIONAL { ?child skos:broader ?item. }\\n  BIND(BOUND(?child) AS ?hasChildren)\\n}\\nORDER BY (?label)\",
+  \"childrenQuery\": \"PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\\n\\nSELECT DISTINCT ?item ?label ?hasChildren WHERE {\\n  ?item skos:broader ?parent.\\n  ?item (skos:prefLabel) ?label.\\n  OPTIONAL { ?child skos:broader ?item. }\\n  BIND(BOUND(?child) AS ?hasChildren)\\n}\\nORDER BY (?label)\",
+  \"parentsQuery\": \"PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\\n\\nSELECT DISTINCT ?item ?parent ?parentLabel WHERE {\\n  ?item skos:broader ?parent.\\n  ?parent (skos:prefLabel) ?parentLabel.\\n}\",
+  \"searchQuery\": \"PREFIX bds: <http://www.bigdata.com/rdf/search#>\\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\\n\\nSELECT DISTINCT ?item ?label ?score ?hasChildren WHERE {\\n  ?item (skos:prefLabel) ?label.\\n  ?label bds:search ?__token__;\\n    bds:minRelevance \\\"0.3\\\";\\n    bds:relevance ?score;\\n    bds:matchAllTerms \\\"true\\\".\\n  OPTIONAL { ?child skos:broader ?item. }\\n  BIND(BOUND(?child) AS ?hasChildren)\\n}\\nORDER BY DESC (?score) (?label)\\nLIMIT 200\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson> .
+  
+  _:genid-1e398fa0248741458f72976d2f0b5e05-t7tebg <http://spinrdf.org/sp#text> "INSERT { $subject skos:broader $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/broader> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Wählen Sie den Oberbegriff des soeben erstellten Begriffs aus. Sollte kein passender Oberbegriff vorhanden sein, so erstellen Sie zunächst einen solchen. In einem nächsten Schritt können Sie dann den gewünschten Begriff erstellen und dem neuen Oberbegriff zuordnen.";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-1e398fa0248741458f72976d2f0b5e05-vv9gvw;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-05T15:35:02.659Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/broader> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broader> a <http://www.w3.org/ns/ldp#Resource> .
+}
