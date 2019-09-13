@@ -1,0 +1,45 @@
+<bs-panel>
+    <h1>Vokabulareditor</h1>
+
+    <semantic-form new-subject-template="https://www.enter.theninja.space/resources/ConceptScheme/{{UUID}}"
+        post-action='redirect' browser-persistence=false form-id='Vocabs' fields="[[fieldDefinitions]]">
+        <h2>Vokabular auswählen</h2>
+        <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/hasTopConcept"
+            new-subject-template="https://www.enter.theninja.space/resources/Concept/{{prefLabel}}" fields="[[fieldDefinitions
+        
+        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+]]">
+            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+            </semantic-form-text-input>
+        </semantic-form-composite-input>
+
+        <h2>Vokabularbegriffe hinzufügen</h2>
+        <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/inScheme"
+            new-subject-template="https://www.enter.theninja.space/resources/Concept/{{prefLabel}}" fields="[[fieldDefinitions
+        
+        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+        altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+        broader='http://www.metaphacts.com/fieldDefinition/broader'                
+        ]]">
+
+
+<semantic-form-automcomplete-input for="">
+
+</semantic-form-automcomplete-input>
+
+            <semantic-form-text-input for="prefLabel" languages='["de", "en"]'
+                require-language=true>
+            </semantic-form-text-input>
+            <semantic-form-text-input for="altLabel" languages='["de", "en"]'
+                require-language=true>
+            </semantic-form-text-input>
+            <semantic-form-tree-picker-input for="broader">
+            </semantic-form-tree-picker-input>
+
+        </semantic-form-composite-input>
+        <semantic-form-errors></semantic-form-errors>
+        <button name='submit' class='btn btn-default'>Create</button>
+        <button name='reset' class='btn btn-default'>Reset</button>
+    </semantic-form>
+
+</bs-panel>
