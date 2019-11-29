@@ -1,0 +1,23 @@
+
+<http://www.researchspace.org/instances/fields/broaderInScheme/context> {
+  <http://www.researchspace.org/instances/fields/broaderInScheme> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "broaderInScheme"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5fe4a168913d4b68b0254d7ba36e3795-c1wmo .
+  
+  _:genid-5fe4a168913d4b68b0254d7ba36e3795-c1wmo a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject skos:broader $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/broaderInScheme> <http://www.metaphacts.com/ontology/fields#treePatterns>
+      """{
+  \"type\": \"simple\",
+  \"relationPattern\": \"?item <http://www.w3.org/2004/02/skos/core#broader> ?parent\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-06T14:22:29.401Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/broaderInScheme> .
+  
+  <http://www.researchspace.org/instances/fields/broaderInScheme> a <http://www.w3.org/ns/ldp#Resource> .
+}
