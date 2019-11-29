@@ -1,0 +1,44 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasTouchpoints/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Touchpoints/Känale"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-85370f7456b04822a36b3da3581a22d3-tdj32k .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-i8s9d a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
+    <http://www.metaphacts.com/ontology/fields#treePatterns> """{
+  \"type\": \"simple\",
+  \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/Touchpoints>\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-85370f7456b04822a36b3da3581a22d3-p4jkc .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-tdj32k a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-85370f7456b04822a36b3da3581a22d3-i8s9d .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-p4jkc <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasTouchpoints ?value.
+}""" .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-tdj32k <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:OperationalConcept. $subject m4p0:hasTouchpoints $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie an, über welche Kanäle NutzerInnen auf die digitale Anwendung aufmerksam werden. Was sind die (digitalen) \"Touchpoints\" (Kundenkontaktpunkte)? z.B. Museumswebsite, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc." .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-i8s9d <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject m4p0:hasTouchpoints $value} WHERE {}" .
+  
+  _:genid-85370f7456b04822a36b3da3581a22d3-p4jkc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-21T11:04:34.319Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTouchpoints> a <http://www.w3.org/ns/ldp#Resource> .
+}

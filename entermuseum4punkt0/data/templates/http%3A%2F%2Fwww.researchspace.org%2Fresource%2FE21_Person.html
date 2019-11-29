@@ -1,0 +1,44 @@
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Person                 #####
+    #####                                   ##### 
+    #############################################
+    
+   -->
+
+<bs-panel>
+    <h1>Person</h1>
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Person/{{UUID}}"
+        subject='[[urlParam "person"]]' post-action='redirect' browser-persistence=false form-id='Person' fields="[[fieldDefinitions
+        personRdfType='http://www.metaphacts.com/fieldDefinition/personRdfType'
+        givenName='http://www.metaphacts.com/fieldDefinition/givenName'
+        familyName='http://www.metaphacts.com/fieldDefinition/familyName'
+        P107i_is_current_or_former_member_of='http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of'
+                                   ]]">
+        <semantic-form-hidden-input for="personRdfType"></semantic-form-hidden-input>
+        <semantic-form-text-input for="givenName"></semantic-form-text-input>
+        <semantic-form-text-input for="familyName"></semantic-form-text-input>
+
+        <semantic-form-autocomplete-input for="P107i_is_current_or_former_member_of">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+                fields="[[fieldDefinitions
+                                            groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'               
+                                            legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                                                           
+                                                           ]]">
+                <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                <semantic-form-text-input for="legalName"></semantic-form-text-input>
+
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+            </semantic-form>
+        </semantic-form-autocomplete-input>
+        <semantic-form-errors></semantic-form-errors>
+            <semantic-form-recover-notification></semantic-form-recover-notification>
+            <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+           
+    </semantic-form>
+</bs-panel>

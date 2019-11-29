@@ -1,0 +1,49 @@
+
+<http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess/context> {
+  <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-8lyqqw <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:needsPermanentInternetAccess $value} WHERE {}" .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-lxtk3 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:needsPermanentInternetAccess $value} WHERE {}" .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-qb8dd8 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+VALUES (?value ?label) {
+(true \"Yes\")
+(false \"No\")
+}}""" .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-jx9o18 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE { 
+  $subject m4p0:needsPermanentInternetAccess ?value. 
+      ?value rdfs:label ?label }""" .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-lxtk3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-8lyqqw;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#boolean>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-jx9o18;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-lxtk3 .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-8lyqqw a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-qb8dd8 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
+      _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-qb8dd8;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Benötigt das Ausspielgerät eine permanente Verbindung zum Internet?" .
+  
+  _:genid-e5ddca3ca97d4e67a73fb1f3f9e36253-jx9o18 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Wird permanenter Internetzugang benötigt?"@de;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-23T12:08:32.138Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess> a <http://www.w3.org/ns/ldp#Resource> .
+}

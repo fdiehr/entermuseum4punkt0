@@ -1,0 +1,45 @@
+
+<http://www.metaphacts.com/fieldDefinition/bibliographicCitation/context> {
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-fnij1w <http://spinrdf.org/sp#text> "INSERT { $subject dcterms:bibliographicCitation $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E31_Document> .
+  
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-hjzw7 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie eine bibliographische Angabe an mit der das Dokument auffindbar ist (Titel, AutorInnen, Jahr etc.)" .
+  
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-hn0l6 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-2a2f23a60d0d427ba45c92b977cad941-hjzw7;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2a2f23a60d0d427ba45c92b977cad941-fnij1w .
+  
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-hn0l6 <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
+  $subject dcterms:bibliographicCitation ?value.
+ 
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#label>
+      "bibliographische Angabe"@de .
+  
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-fnij1w a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-2a2f23a60d0d427ba45c92b977cad941-hjzw7 <http://spinrdf.org/sp#text> "DELETE { $subject dcterms:bibliographicCitation $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2a2f23a60d0d427ba45c92b977cad941-hn0l6;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:45:30.460Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> .
+  
+  <http://www.metaphacts.com/fieldDefinition/bibliographicCitation> a <http://www.w3.org/ns/ldp#Resource> .
+}

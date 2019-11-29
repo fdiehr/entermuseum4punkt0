@@ -1,0 +1,32 @@
+
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Institution            #####
+    #####                                   ##### 
+    #############################################
+    
+   -->
+<bs-panel>
+<h1>Institution</h1>
+<semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+subject='[[urlParam "group"]]' post-action='redirect' browser-persistence=false form-id='Group'        
+fields="[[fieldDefinitions
+                groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'   
+                legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
+                       
+                       ]]">
+                       <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                       <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                       <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
+            
+       
+                       <semantic-form-errors></semantic-form-errors>
+                       <semantic-form-recover-notification></semantic-form-recover-notification>
+                       <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+                      
+    </semantic-form>
+
+</bs-panel>

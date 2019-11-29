@@ -1,0 +1,45 @@
+
+<http://www.metaphacts.com/fieldDefinition/broaderResearchMethod/context> {
+  <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-cy33wc <http://spinrdf.org/sp#text> "DELETE { $subject skos:broader $value} WHERE {}" .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-auybm9 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject skos:broader ?value.
+ }""" .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-cy33wc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Wählen Sie einen Begriff aus, der dem soeben erstellten Begriff übergeordnet ist. Sollte kein passender Oberbegriff vorhanden sein, so erstellen Sie zunächst einen solchen bevor Sie den untergeordneten Begriff erstellen. In einem nächsten Schritt können Sie dann den gewünschten untergeordneten Begriff erstellen und dem passenden Oberbegriff zuordnen.";
+    <http://www.metaphacts.com/ontology/fields#treePatterns> """{
+  \"type\": \"simple\",
+  \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod>\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-790073e38a1a418fbc05f401b32ed51b-tusx9i;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-790073e38a1a418fbc05f401b32ed51b-cy33wc .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-tusx9i a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-790073e38a1a418fbc05f401b32ed51b-auybm9;
+    <http://www.w3.org/2000/01/rdf-schema#label> "übergeordneter Begriff Forschungsmethode"@de;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-tusx9i <http://spinrdf.org/sp#text> "INSERT { $subject skos:broader $value} WHERE {}" .
+  
+  _:genid-790073e38a1a418fbc05f401b32ed51b-auybm9 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-11T09:38:31.426Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderResearchMethod> a <http://www.w3.org/ns/ldp#Resource> .
+}

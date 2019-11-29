@@ -1,0 +1,18 @@
+
+<https://www.enter.theninja.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database/context> {
+  <https://www.enter.theninja.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database>
+    a <http://spinrdf.org/sp#Update>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Adding labels for skos:Concepts directly in database";
+    <http://spinrdf.org/sp#text> """INSERT {<https://www.museum4punkt0.de/catalogue/ontology/Augmentation> a skos:Concept. <https://www.museum4punkt0.de/catalogue/ontology/Augmentation> skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/Technology>. 
+  <https://www.museum4punkt0.de/catalogue/ontology/Augmentation> skos:prefLabel \"Augmentation\".
+  <https://www.museum4punkt0.de/catalogue/ontology/Augmentation> rdfs:label \"Augmentation\".} WHERE {}""";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-20T16:18:53.755Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://www.enter.theninja.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database> .
+  
+  <https://www.enter.theninja.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

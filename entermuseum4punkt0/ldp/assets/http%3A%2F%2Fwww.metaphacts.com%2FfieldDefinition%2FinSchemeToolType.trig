@@ -1,0 +1,38 @@
+
+<http://www.metaphacts.com/fieldDefinition/inSchemeToolType/context> {
+  <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeToolType"@de;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-rkvd8j <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:ToolType} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1a9adf1ad60840a0a3adb67d88688176-0h8cyk;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1a9adf1ad60840a0a3adb67d88688176-07o9de .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-rkvd8j a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-0h8cyk a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-1a9adf1ad60840a0a3adb67d88688176-rkvd8j .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-07o9de a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-0h8cyk <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:ToolType} WHERE {}" .
+  
+  _:genid-1a9adf1ad60840a0a3adb67d88688176-07o9de <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
+  $subject skos:inScheme ?value.
+  
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-22T13:18:42.030Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeToolType> a <http://www.w3.org/ns/ldp#Resource> .
+}

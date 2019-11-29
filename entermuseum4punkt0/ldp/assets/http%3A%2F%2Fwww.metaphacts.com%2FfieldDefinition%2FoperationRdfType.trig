@@ -1,0 +1,39 @@
+
+<http://www.metaphacts.com/fieldDefinition/operationRdfType/context> {
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-31de57e44a584586a94c4300d2362107-desmrs .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-b6yxgu <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-b6yxgu a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-desmrs a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
+      "https://www.museum4punkt0.de/catalogue/ontology/Operation" .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-bg4zg5 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-desmrs <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<https://www.museum4punkt0.de/catalogue/ontology/Operation> as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-31de57e44a584586a94c4300d2362107-bg4zg5;
+    <http://www.w3.org/2000/01/rdf-schema#label> "operationRdfType"@de .
+  
+  _:genid-31de57e44a584586a94c4300d2362107-bg4zg5 <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-31de57e44a584586a94c4300d2362107-b6yxgu;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-23T12:56:32.016Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/operationRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/operationRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

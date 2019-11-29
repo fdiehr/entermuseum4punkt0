@@ -1,0 +1,54 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasAreaOfUse/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-4672d <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasAreaOfUse $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-5b419824986940e2ba32b07fbd608aea-0gjeil;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "In welchem Bereich des Museums oder außerhalb kann die digitale Anwendung eingesetzt werden? Für welchen Bereich ist sie konzipiert worden?" .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-0gjeil <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:hasMaturityLevel ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-rr3xq a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-0gjeil a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
+      _:genid-5b419824986940e2ba32b07fbd608aea-rr3xq .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-4672d a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-5b419824986940e2ba32b07fbd608aea-fei3 .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-rr3xq <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {VALUES (?value ?label) {    (<https://www.museum4punkt0.de/catalogue/ontology/online>  \"online\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/outside> \"außer Haus\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/permanentExhibition> \"Dauerausstellung\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/temporaryExhibition> \"Sonderausstellung\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/walkthrough> \"Weg durch das Museum\")
+ 
+  }
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-5b419824986940e2ba32b07fbd608aea-4672d;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Anwendungsbereich"@de .
+  
+  _:genid-5b419824986940e2ba32b07fbd608aea-fei3 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasAreaOfUse $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:31:47.999Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> a <http://www.w3.org/ns/ldp#Resource> .
+}

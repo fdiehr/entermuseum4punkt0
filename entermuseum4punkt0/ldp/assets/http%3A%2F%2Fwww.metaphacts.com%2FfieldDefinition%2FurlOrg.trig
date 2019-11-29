@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/urlOrg/context> {
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-bweumh <http://spinrdf.org/sp#text> "DELETE { $subject a crm:E74_Group. $subject m4p0:urlOrg $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-8akilf a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-bweumh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-6d5eca45b9e3457bbcc732f28989841e-ju8s4f;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-6d5eca45b9e3457bbcc732f28989841e-bweumh;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Bitte geben Sie hier eine URL zum Internetauftritt der Institution an." .
+  
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-ju8s4f a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E74_Group>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Website der Institution"@de .
+  
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-ju8s4f <http://spinrdf.org/sp#text> "INSERT { $subject a crm:E74_Group. $subject m4p0:urlOrg $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-6d5eca45b9e3457bbcc732f28989841e-8akilf .
+  
+  _:genid-6d5eca45b9e3457bbcc732f28989841e-8akilf <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject a crm:E74_Group. $subject m4p0:urlOrg ?value
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-29T08:19:23.239Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/urlOrg> .
+  
+  <http://www.metaphacts.com/fieldDefinition/urlOrg> a <http://www.w3.org/ns/ldp#Resource> .
+}

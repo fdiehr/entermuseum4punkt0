@@ -1,0 +1,18 @@
+<bs-panel>
+    <h1>Ausspielgerät</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/toolTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/modelNr']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType']]
+    
+    
+    
+    <semantic-link
+        uri=':OutputDevice'
+        urlqueryparam-output='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    </bs-panel>

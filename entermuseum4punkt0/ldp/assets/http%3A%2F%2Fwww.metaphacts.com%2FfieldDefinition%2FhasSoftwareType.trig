@@ -1,0 +1,49 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasSoftwareType/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
+      _:genid-2d31113695b242a6be05ee48e42011cf-pacmjv;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-y021k <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:hasSoftwareType ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-2d31113695b242a6be05ee48e42011cf-52ku .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-y021k a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-pacmjv <http://spinrdf.org/sp#text> "SELECT $value $label WHERE { VALUES (?value ?label) {(<https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem> \"Betriebssystem\")  (<https://www.museum4punkt0.de/catalogue/ontology/UserApplication> \"Anwendersoftware\")  (<https://www.museum4punkt0.de/catalogue/ontology/Webbrowser> \"Webbrowser\")  (<https://www.museum4punkt0.de/catalogue/ontology/Other> \"Andere\")  }}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-2d31113695b242a6be05ee48e42011cf-hz02eh;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-52ku <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasSoftwareType  $value} WHERE {}" .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-hz02eh <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasSoftwareType  $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Art der Software"@de .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-hz02eh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie an, um welchen Softwaretyp es sich handelt.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2d31113695b242a6be05ee48e42011cf-y021k;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Software> .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-pacmjv a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-2d31113695b242a6be05ee48e42011cf-52ku a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:54:50.434Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSoftwareType> a <http://www.w3.org/ns/ldp#Resource> .
+}

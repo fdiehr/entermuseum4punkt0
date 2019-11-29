@@ -1,0 +1,25 @@
+
+<bs-panel> 
+<h1>Personen</h1>
+
+    <div class="gap">
+        <semantic-link
+            uri=':E21_Person'
+        >
+            <button>Neu</button>
+        </semantic-link>
+    </div>
+
+    <div class="gap">
+        <semantic-table
+            query='SELECT ?person ?givenName ?familyName WHERE 
+            { ?person a crm:E21_Person; 
+                      schema:givenName ?givenName;
+                      schema:familyName ?familyName.
+              
+              }'
+           
+        ></semantic-table>
+    </div>
+</bs-panel>
+

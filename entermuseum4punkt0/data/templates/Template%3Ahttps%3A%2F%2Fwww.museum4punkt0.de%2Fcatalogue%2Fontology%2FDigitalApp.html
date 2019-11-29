@@ -1,0 +1,73 @@
+
+<bs-panel>
+    <h1>Digitale Anwendung</h1>
+
+    <h2>Grundinformationen</h2>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/digitalAppTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/shortTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTechnologyType']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasMaturityLevel']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasAreaOfUse']]
+    
+    <h3>Gesamtentwicklungszeitraum</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
+    
+    <h3>Sourcecode der digitalen Anwendung</h3>
+
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn']]
+   
+    <semantic-link
+        uri=':DigitalApp'
+        urlqueryparam-app='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+
+<!--
+<h2>Entwicklungsschritte</h2>
+
+<div class="gap">
+   
+    <div class="gap">
+         
+    <semantic-query
+        query='PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+        SELECT *
+        WHERE {
+        $subject m4p0:hasCreatedDigitalApp ?x. 
+        }'>
+</semantic-query>
+</div>
+-->
+<!-- Die Query hier stimmt nicht. Er soll nur die Instanzen von E65_Creation anzeigen, die mit der aktuellen angezeigten DigitalApp verbunden sind.  -->
+
+
+
+
+<h2>Beforschung</h2>
+[[> :fieldVisualisation field='researched']]
+
+
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='6'
+>
+<button>Edit</button>
+</semantic-link>
+
+<h2>Projektkontext</h2>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasDevelopedBy']]
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='7'
+>
+<button>Edit</button>
+</semantic-link>
+
+</bs-panel>

@@ -1,0 +1,37 @@
+
+<http://www.metaphacts.com/fieldDefinition/altLabel/context> {
+  <http://www.metaphacts.com/fieldDefinition/altLabel> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-y4po4 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-qyi41e <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject skos:altLabel ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/altLabel> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-e65d7e5dae494620a2b43b46a393fbe7-y4po4;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e65d7e5dae494620a2b43b46a393fbe7-z58e8e;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-z58e8e a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/altLabel> <http://www.w3.org/2000/01/rdf-schema#label>
+      "alternative Bezeichnung"@de;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e65d7e5dae494620a2b43b46a393fbe7-qyi41e .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-z58e8e <http://spinrdf.org/sp#text> "INSERT { $subject a skos:Concept. $subject skos:altLabel $value} WHERE {}" .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-y4po4 <http://spinrdf.org/sp#text> "DELETE { $subject skos:altLabel $value} WHERE {}" .
+  
+  _:genid-e65d7e5dae494620a2b43b46a393fbe7-qyi41e a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/altLabel> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T09:18:40.442Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/altLabel> .
+  
+  <http://www.metaphacts.com/fieldDefinition/altLabel> a <http://www.w3.org/ns/ldp#Resource> .
+}

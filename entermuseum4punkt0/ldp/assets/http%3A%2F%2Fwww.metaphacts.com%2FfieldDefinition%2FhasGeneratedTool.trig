@@ -1,0 +1,39 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasGeneratedTool/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> <http://www.w3.org/2000/01/rdf-schema#label>
+      "entstandenes Hilfsmittel"@de;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-b44f8fde6bc943cb89afd976ef662e45-40h1dc a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasGeneratedTool $value} WHERE {}" .
+  
+  _:genid-b44f8fde6bc943cb89afd976ef662e45-47801 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-b44f8fde6bc943cb89afd976ef662e45-s7urrn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-b44f8fde6bc943cb89afd976ef662e45-47801 .
+  
+  _:genid-b44f8fde6bc943cb89afd976ef662e45-47801 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasGeneratedTool $value} WHERE {}" .
+  
+  _:genid-b44f8fde6bc943cb89afd976ef662e45-s7urrn <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasGeneratedTool ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-b44f8fde6bc943cb89afd976ef662e45-40h1dc;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Im Rahmen von Testings, Befragungen oder Beobachtungen enstehen häufig Vorlagen wie z.B. Frage- oder Beobachtungsbögen. Geben Sie hier an welche Hilfsmittel während der begleitenden Forschung der digitalen Anwendung entstanden sind.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-b44f8fde6bc943cb89afd976ef662e45-s7urrn;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T10:32:44.645Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasGeneratedTool> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,102 @@
+   <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Vermittlung            #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+
+                <bs-panel>
+
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/EducationalConcept/{{UUID}}'
+        subject='[[urlParam "edu"]]' 
+        post-action='redirect' 
+        browser-persistence=false 
+        form-id='EducationalConcept' 
+        fields="[[fieldDefinitions
+        eduConceptRdfType='http://www.metaphacts.com/fieldDefinition/eduConceptRdfType'
+        isEducationalConceptOf='http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf'
+        hasEducationFormat='http://www.metaphacts.com/fieldDefinition/hasEducationFormat'
+        descriptionOfEducationalGoal='http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal'
+        descriptionOfUserNeeds='http://www.metaphacts.com/fieldDefinition/descriptionOfUserNeeds'
+        hasTargetAudience='http://www.metaphacts.com/fieldDefinition/hasTargetAudience'
+        descriptionOfNarration='http://www.metaphacts.com/fieldDefinition/descriptionOfNarration'
+        hasSubject='http://www.metaphacts.com/fieldDefinition/hasSubject'
+        ]]">
+
+
+        <h2>Vermittlungskonzept</h2>
+        <p>Das Vermittlungskonzept beschreibt den Inhalt/das Thema der digitalen Anwendung und wie dieser/dieses
+            mittels eines Formates umgesetzt ist.
+            Es beschreibt weiterhin angesprochene Nutzer-/Besuchergruppen und wie die digitale Anwendung deren
+            Bedürfnisse adressiert.</p>
+
+        <semantic-form-hidden-input for="eduConceptRdfType"></semantic-form-hidden-input>
+        <semantic-form-autocomplete-input for="isEducationalConceptOf"></semantic-form-autocomplete-input>
+        <semantic-form-checklist-input for="hasEducationFormat">
+            </semantic-form-checklist-input>
+            <semantic-form-text-input for="descriptionOfEducationalGoal" multiline=true>
+            </semantic-form-text-input>
+            <semantic-form-text-input for="descriptionOfUserNeeds" multiline=true>
+            </semantic-form-text-input>
+
+            <semantic-form-tree-picker-input for="hasTargetAudience">
+                <semantic-form
+                    new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    fields="[[fieldDefinitions
+                    inSchemeTargetAudience='http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience'    
+                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                        ]]">
+                    <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Create</button>
+                    <button name='reset' class='btn btn-default'>Reset</button>
+                </semantic-form>
+
+            </semantic-form-tree-picker-input>
+           
+            <h3>Gegenstand der Vermittlung</h3>
+            <p>Das Vermittlungskonzept umfasst eine Narration mit der ein Thema vermittelt wird. Oder mit
+                dem
+                Konzept soll ein spezifischer Inhalt, ein Thema vermittelt werden. Beschreiben Sie dieses
+                hier
+                genauer.
+            </p>
+
+            <semantic-form-text-input for="descriptionOfNarration" multiline=true>
+            </semantic-form-text-input>
+            <semantic-form-tree-picker-input for="hasSubject">
+                <semantic-form
+                    new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    fields="[[fieldDefinitions
+                inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    
+                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'                
+                    ]]">
+                    <semantic-form-hidden-input for="inSchemeSubject" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Create</button>
+                    <button name='reset' class='btn btn-default'>Reset</button>
+                </semantic-form>
+
+            </semantic-form-tree-picker-input>
+        </semantic-form-composite-input>
+
+
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+       
+
+    </semantic-form>
+</bs-panel>

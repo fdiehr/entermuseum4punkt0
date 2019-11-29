@@ -1,0 +1,37 @@
+
+<http://www.metaphacts.com/fieldDefinition/groupRdfType/context> {
+  <http://www.metaphacts.com/fieldDefinition/groupRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1cebfda27ca74708aefa7e00e34e2f9a-4etc7r .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-v5y3hp a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-excuo <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(crm:E74_Group as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-4etc7r <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/groupRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1cebfda27ca74708aefa7e00e34e2f9a-excuo .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-4etc7r a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/groupRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-1cebfda27ca74708aefa7e00e34e2f9a-v5y3hp;
+    <http://www.w3.org/2000/01/rdf-schema#label> "groupRdfType"@de .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-excuo a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-1cebfda27ca74708aefa7e00e34e2f9a-v5y3hp <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/groupRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
+      "http://www.cidoc-crm.org/cidoc-crm/E74_Group";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T12:28:55.926Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/groupRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/groupRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

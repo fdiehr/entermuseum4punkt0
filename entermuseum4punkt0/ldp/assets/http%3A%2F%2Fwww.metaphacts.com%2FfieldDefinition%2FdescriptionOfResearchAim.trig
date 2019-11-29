@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim/context> {
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-eaf68e9410a448c793c9b15930dab026-2uat8;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-ajqa3 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-ynlp08 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Beschreibung der Forschungsziele"@de .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-ajqa3 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:descriptionOfResearchAim  ?value.
+}""" .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-ynlp08 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:descriptionOfResearchAim $value} WHERE {}" .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-2uat8 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:descriptionOfResearchAim $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-eaf68e9410a448c793c9b15930dab026-ajqa3;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-eaf68e9410a448c793c9b15930dab026-2uat8 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Beschreiben Sie hier, welche Fragen der Forschung zugrunde lagen und was die Ziele der Untersuchung waren.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-eaf68e9410a448c793c9b15930dab026-ynlp08;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T09:51:38.293Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim> a <http://www.w3.org/ns/ldp#Resource> .
+}

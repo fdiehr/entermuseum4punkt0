@@ -1,0 +1,36 @@
+
+<http://www.metaphacts.com/fieldDefinition/projectRdfType/context> {
+  <http://www.metaphacts.com/fieldDefinition/projectRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-79ca88770fd54ba1ae5889ae1499e9f5-ftpjsh .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-uzmtf a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-ftpjsh <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/projectRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-79ca88770fd54ba1ae5889ae1499e9f5-uzmtf;
+    <http://www.w3.org/2000/01/rdf-schema#label> "projectRdfType"@de .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-ftpjsh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-2nal26 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(m4p0:Project as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-uzmtf <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/projectRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-79ca88770fd54ba1ae5889ae1499e9f5-2nal26;
+    <http://www.metaphacts.com/ontology/fields#defaultValue> "https://www.museum4punkt0.de/catalogue/ontology/Project" .
+  
+  _:genid-79ca88770fd54ba1ae5889ae1499e9f5-2nal26 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/projectRdfType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T11:28:53.460Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/projectRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/projectRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

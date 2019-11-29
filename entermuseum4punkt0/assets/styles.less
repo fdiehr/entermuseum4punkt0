@@ -1,0 +1,32 @@
+// out: ./styles.css
+
+@bgNavBar: #2C3E50;
+
+.gap {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+
+// FIX: for broken CSS in ResearchSpace wrt responsive Nav Bar component
+
+nav.metaphacts-header-navbar.navbar {
+    > .container-fluid {
+      display: block !important;
+      .navbar-collapse {
+        margin-left:-15px;
+        background-color: @bgNavBar;
+      }
+      @media (min-width: 1200px) {
+        .navbar-header {
+          width: 16.66667%;
+        }
+        .navbar-nav {
+          li:first-child{
+            margin-left: -15px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,33 @@
+<bs-panel>
+<h1>Quelle</h1>
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}'
+        subject='[[urlParam "doc"]]' 
+        post-action='redirect' 
+        browser-persistence=false 
+        form-id='E31_Document' 
+        fields="[[fieldDefinitions
+        documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+        documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+        url='http://www.metaphacts.com/fieldDefinition/url'
+        doi='http://www.metaphacts.com/fieldDefinition/doi'
+        bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+        ]]">
+
+        <semantic-form-hidden-input for="documentRdfType">
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="documentTitle">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="doi">
+        </semantic-form-text-input>
+        <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+
+
+
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+       
+</semantic-form>
+</bs-panel>

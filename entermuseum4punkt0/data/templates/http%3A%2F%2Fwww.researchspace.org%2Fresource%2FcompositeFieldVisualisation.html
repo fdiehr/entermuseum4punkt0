@@ -1,0 +1,49 @@
+<!--
+
+  Field definitions appearing in composite form need to be added to mp-field-visualization in default template
+
+-->
+
+<mp-field-visualization subject="[[this]]" fields="[[fieldDefinitions field=field]]" template="{{> default}}">
+  <template id="default">
+    <dl>
+      {{#each fields as |field|}}
+      {{#if field.values}}
+      <dt>
+        {{#each field.label as |l|}}
+        {{ l.value }}
+        {{/each}}
+      </dt>
+      {{#each field.values as |value|}}
+      <dd>
+        <mp-field-visualization subject="{{value.value.value}}" fields="[[fieldDefinitions 
+                  
+        documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'          
+        url='http://www.metaphacts.com/fieldDefinition/url'
+                  doi='http://www.metaphacts.com/fieldDefinition/doi'
+                  bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+                  conceptIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/conceptIsDocumentedIn'
+                  researchIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/researchIsDocumentedIn'     
+                 
+                  title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                  modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
+                  needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
+                  requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                  requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                  requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                  requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                  
+                  version='http://www.metaphacts.com/fieldDefinition/version'
+                  hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                  hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                  P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                  
+                                  
+                ]]" template="<bs-panel>{{> :fieldVisualisationTemplate}}</bs-panel>">
+      </dd>
+      {{/each}}
+      {{/if}}
+      {{/each}}
+    </dl>
+  </template>
+</mp-field-visualization>

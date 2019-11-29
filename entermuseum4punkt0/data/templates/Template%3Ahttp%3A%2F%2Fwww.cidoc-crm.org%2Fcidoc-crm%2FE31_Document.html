@@ -1,0 +1,42 @@
+
+<bs-panel>
+    <h1>Quelle</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/documentTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/url']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/doi']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/bibliographicCitation']]
+    
+  
+    <semantic-link
+        uri=':E31_Document'
+        urlqueryparam-doc='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+<!--
+    <semantic-query 
+  query='
+    SELECT ?x WHERE {  
+    ?x crm:P70i_is_documented_in ?Quelle.   
+    }
+  ' 
+  template='{{> template}}'
+  style='display: inline;'
+>
+  <template id='template'>
+    <div>
+      Das ist die Quelle folgender Resource:
+      {{#each bindings}} 
+        {{#if @first}} {{else}} {{#if @last}} and {{else}}, {{/if}} {{/if}}
+        <semantic-link uri="{{x.value}}">
+          {{x.value}}
+        </semantic-link>
+        
+      {{/each}} 
+    </div>
+  </template>
+</semantic-query>
+-->
+</bs-panel>

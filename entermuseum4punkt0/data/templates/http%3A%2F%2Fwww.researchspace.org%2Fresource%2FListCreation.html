@@ -1,0 +1,23 @@
+
+<bs-panel>
+        <h1>Entwicklungsschritte</h1>
+   
+        <div class="gap">
+            <semantic-link
+                uri=':E65_Creation'
+            >
+                <button>neuen Entwicklungsschritt hinzufügen</button>
+            </semantic-link>
+        </div>
+        <div class="gap">
+            <semantic-table
+                query='SELECT * WHERE {
+                    $Entwicklungsschritt m4p0:hasCreatedDigitalApp ?DigitaleAnwendung. 
+                    
+                }'
+            
+        
+
+            ></semantic-table>
+        </div>
+    </bs-panel>

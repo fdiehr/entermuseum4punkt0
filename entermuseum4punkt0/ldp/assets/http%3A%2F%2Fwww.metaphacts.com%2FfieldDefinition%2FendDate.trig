@@ -1,0 +1,53 @@
+
+<http://www.metaphacts.com/fieldDefinition/endDate/context> {
+  <http://www.metaphacts.com/fieldDefinition/endDate> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> .
+  
+  _:genid-6af909e3d3464d08b26d6a32182b6016-k7oav a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/endDate> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Enddatum"@de;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "1" .
+  
+  _:genid-6af909e3d3464d08b26d6a32182b6016-k7oav <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasDevelopmentTimeSpan ?creationDate.
+?creationDate crm:P82b_end_of_the_end ?value
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/endDate> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie das Ende des Zeitraums an. Wenn Sie das taggenaue Datum nicht angeben können, so schätzen Sie es.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6af909e3d3464d08b26d6a32182b6016-9cza5p .
+  
+  _:genid-6af909e3d3464d08b26d6a32182b6016-ml8u7i a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6af909e3d3464d08b26d6a32182b6016-9cza5p <http://spinrdf.org/sp#text> """INSERT { 
+  $subject m4p0:hasDevelopmentTimeSpan ?creationDate.
+  ?creationDate crm:P82b_end_of_the_end $value} WHERE {
+BIND(IRI(CONCAT(STR(?subject), \"creationdate\")) as ?creationDate).
+              }""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/endDate> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-6af909e3d3464d08b26d6a32182b6016-k7oav;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date> .
+  
+  _:genid-6af909e3d3464d08b26d6a32182b6016-ml8u7i <http://spinrdf.org/sp#text> """DELETE {
+$subject m4p0:hasDevelopmentTimeSpan ?creationDate.
+                ?creationDate crm:P82b_end_of_the_end ?date} 
+WHERE {
+$subject m4p0:hasDevelopmentTimeSpan ?creationDate.
+?creationDate crm:P82b_end_of_the_end $value.
+?creationDate crm:P82a_begin_of_the_begin ?date.}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/endDate> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-6af909e3d3464d08b26d6a32182b6016-ml8u7i;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-05T13:38:17.018Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/endDate> .
+  
+  <http://www.metaphacts.com/fieldDefinition/endDate> a <http://www.w3.org/ns/ldp#Resource> .
+}

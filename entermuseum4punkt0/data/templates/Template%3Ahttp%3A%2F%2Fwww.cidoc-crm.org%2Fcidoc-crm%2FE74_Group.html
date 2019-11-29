@@ -1,0 +1,21 @@
+<bs-panel>
+    <h1>Institution</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/legalName']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/urlOrg']]
+ 
+    <semantic-link
+        uri=':E74_Group'
+        urlqueryparam-group='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+    <div class="gap">
+        <!--
+    <semantic-table
+query="SELECT ?person WHERE{ ?person crm:P107i_is_current_or_former_member_of $group. $group a crm:E74_Group}">
+</semantic-table>
+</div>
+-->
+    </bs-panel>

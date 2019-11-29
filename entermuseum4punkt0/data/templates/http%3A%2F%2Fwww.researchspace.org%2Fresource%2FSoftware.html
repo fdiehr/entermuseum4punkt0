@@ -1,0 +1,49 @@
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Software               #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+
+<bs-panel>
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{title}}"
+        subject='[[urlParam "software"]]' post-action='redirect' browser-persistence=false form-id='Software' fields="[[fieldDefinitions 
+    softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'    
+    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+        version='http://www.metaphacts.com/fieldDefinition/version'
+        hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+        P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+    ]]">
+
+        <h1>Software</h1>
+        <semantic-form-hidden-input for="softwareRdfType"></semantic-form-hidden-input>
+        <semantic-form-text-input for="toolTitle">
+        </semantic-form-text-input>
+        <semantic-form-text-input for="version">
+        </semantic-form-text-input>
+        <semantic-form-select-input for="hasSoftwareType">
+        </semantic-form-select-input>
+        <semantic-form-composite-input for="P70i_is_documented_in"
+            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+            fields="[[fieldDefinitions]]">
+            <h4>Quelle der Software</h4>
+            <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
+            </semantic-form-hidden-input>
+            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
+            </semantic-form-text-input>
+            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+            </semantic-form-text-input>
+
+        </semantic-form-composite-input>
+
+
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+       
+    </semantic-form>
+</bs-panel>

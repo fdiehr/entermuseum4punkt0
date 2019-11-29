@@ -1,0 +1,44 @@
+
+<http://www.metaphacts.com/fieldDefinition/broaderCreationMethod/context> {
+  <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-55fd0f14334b43babe1efcc212226f6d-m71efs;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.metaphacts.com/ontology/fields#treePatterns> """{
+  \"type\": \"simple\",
+  \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/CreationMethod>\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-55fd0f14334b43babe1efcc212226f6d-slqy6l .
+  
+  _:genid-55fd0f14334b43babe1efcc212226f6d-bxgixm <http://spinrdf.org/sp#text> "INSERT { $subject skos:broader $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Wählen Sie einen Begriff aus, der dem soeben erstellten Begriff übergeordnet ist. Sollte kein passender Oberbegriff vorhanden sein, so erstellen Sie zunächst einen solchen bevor Sie den untergeordneten Begriff erstellen. In einem nächsten Schritt können Sie dann den gewünschten untergeordneten Begriff erstellen und dem passenden Oberbegriff zuordnen.";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-55fd0f14334b43babe1efcc212226f6d-slqy6l a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> <http://www.w3.org/2000/01/rdf-schema#label>
+      "übergeordneter Begriff Entwicklungsmethode"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-55fd0f14334b43babe1efcc212226f6d-bxgixm .
+  
+  _:genid-55fd0f14334b43babe1efcc212226f6d-slqy6l <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject skos:broader ?value.
+ }""" .
+  
+  _:genid-55fd0f14334b43babe1efcc212226f6d-bxgixm a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-55fd0f14334b43babe1efcc212226f6d-m71efs <http://spinrdf.org/sp#text> "DELETE { $subject skos:broader $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-21T15:11:52.838Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> .
+  
+  <http://www.metaphacts.com/fieldDefinition/broaderCreationMethod> a <http://www.w3.org/ns/ldp#Resource> .
+}

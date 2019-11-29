@@ -1,0 +1,37 @@
+
+<http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal/context> {
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ffd20a3e37b3477c82d5abc0e53361f2-4upjl;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Beschreiben Sie das Ziel, das dem Vermittlungskonzept zugrunde liegt.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ffd20a3e37b3477c82d5abc0e53361f2-2qel5 .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-93gm4k <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:descriptionOfEducationalGoal $value} WHERE {}" .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-4upjl a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-2qel5 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-93gm4k a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-ffd20a3e37b3477c82d5abc0e53361f2-93gm4k;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Vermittlungsziel"@de .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-2qel5 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:descriptionOfEducationalGoal $value} WHERE {}" .
+  
+  _:genid-ffd20a3e37b3477c82d5abc0e53361f2-4upjl <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:descriptionOfEducationalGoal ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:39:24.148Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal> a <http://www.w3.org/ns/ldp#Resource> .
+}

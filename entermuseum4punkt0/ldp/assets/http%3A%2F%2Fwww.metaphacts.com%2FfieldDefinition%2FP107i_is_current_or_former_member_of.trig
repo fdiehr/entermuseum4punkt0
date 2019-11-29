@@ -1,0 +1,52 @@
+
+<http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of/context> {
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie an, bei welcher Institution die Person angebunden ist bzw. bei welcher sie tätig ist.";
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4d87ee9533614721996a1e52ffd162b6-hoi90b;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4d87ee9533614721996a1e52ffd162b6-8a9fjo .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-hoi90b <http://spinrdf.org/sp#text> "DELETE { $subject crm:P107i_is_current_or_former_member_of  $value} WHERE {}" .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-8a9fjo <http://spinrdf.org/sp#text> "INSERT { $subject crm:P107i_is_current_or_former_member_of  $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E74_Group>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-8a9fjo a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-4d87ee9533614721996a1e52ffd162b6-8feky .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-8feky <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject crm:P107i_is_current_or_former_member_of ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
+      _:genid-4d87ee9533614721996a1e52ffd162b6-90d3ow;
+    <http://www.w3.org/2000/01/rdf-schema#label> "institutionelle Zugehörigkeit"@de .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-90d3ow a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-hoi90b a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-4d87ee9533614721996a1e52ffd162b6-90d3ow <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a crm:E74_Group ;
+    schema:legalName ?label .
+  FILTER REGEX(STR(?label), \"?token\")
+} LIMIT 10""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> a
+      <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T12:26:22.663Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of> a
+      <http://www.w3.org/ns/ldp#Resource> .
+}

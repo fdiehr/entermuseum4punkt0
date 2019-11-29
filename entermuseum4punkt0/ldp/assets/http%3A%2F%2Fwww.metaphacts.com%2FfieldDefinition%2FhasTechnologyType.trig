@@ -1,0 +1,59 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasTechnologyType/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-gk3pce a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> <http://www.w3.org/2000/01/rdf-schema#label>
+      "verwendete Technologie"@de .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-1sjskh <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasTechnologyType $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-d73fea090d3f4e9dbc196577002f06a7-gk3pce .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-4h54bj a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-d73fea090d3f4e9dbc196577002f06a7-4h54bj .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-4h54bj <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {VALUES ($value $label) {    (<https://www.museum4punkt0.de/catalogue/ontology/Augmentation> \"Augmentation\")
+  (<https://www.museum4punkt0.de/catalogue/ontology/Guidesystem> \"Guidesystem\")    (<https://www.museum4punkt0.de/catalogue/ontology/NativeApp> \"Native App\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/VirtualReality> \"Virtual Reality\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/Website> \"Website\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/WebApp> \"Web-App\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/Chatbot> \"Chatbot\")
+    (<https://www.museum4punkt0.de/catalogue/ontology/Installation> \"multimediale Rauminstallation\")
+  }
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Welche Technologie(n) nutzt die digitale Anwendung? Bitte wählen Sie ein oder mehrere Angaben aus.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d73fea090d3f4e9dbc196577002f06a7-slqm4f;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d73fea090d3f4e9dbc196577002f06a7-1sjskh .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-slqm4f <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:hasTechnologyType ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-1sjskh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-gk3pce <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasTechnologyType $value} WHERE {}" .
+  
+  _:genid-d73fea090d3f4e9dbc196577002f06a7-slqm4f a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T09:34:52.397Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasTechnologyType> a <http://www.w3.org/ns/ldp#Resource> .
+}

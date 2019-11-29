@@ -1,0 +1,27 @@
+
+<bs-panel>
+    <h1>Institutionen</h1>
+
+    <div class="gap">
+        <semantic-link
+            uri=':E74_Group'
+        >
+            <button>Neu</button>
+        </semantic-link>
+    </div>
+
+    <div class="gap">
+        <semantic-table
+            query='SELECT * WHERE {
+                ?subject a crm:E74_Group ;
+                schema:legalName ?org_title .
+            }'
+            column-configuration='[
+            {
+                "variableName": "subject",
+                "displayName": "Name der Institution"
+            }]'
+        ></semantic-table>
+    </div>
+</bs-panel>
+

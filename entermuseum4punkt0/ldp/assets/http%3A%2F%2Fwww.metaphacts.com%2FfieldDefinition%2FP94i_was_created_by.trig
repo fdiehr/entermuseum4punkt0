@@ -1,0 +1,43 @@
+
+<http://www.metaphacts.com/fieldDefinition/P94i_was_created_by/context> {
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-jrkpe a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-7c5a68c33e264a2a9c90216f76bd08c5-g0urcd;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-7c5a68c33e264a2a9c90216f76bd08c5-6a5cf;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#defaultValue> "http://www.cidoc-crm.org/cidoc-crm/E65_Creation" .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-jrkpe <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject crm:P94i_was_created_by ?value.
+  }""" .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-6a5cf a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> <http://www.w3.org/2000/01/rdf-schema#label>
+      "hat Entwicklungskontext"@de;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-7c5a68c33e264a2a9c90216f76bd08c5-jrkpe .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-g0urcd <http://spinrdf.org/sp#text> "DELETE { $subject crm:P94i_was_created_by $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-6a5cf <http://spinrdf.org/sp#text> "INSERT { $subject crm:P94i_was_created_by $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1" .
+  
+  _:genid-7c5a68c33e264a2a9c90216f76bd08c5-g0urcd a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-22T10:25:28.698Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> .
+  
+  <http://www.metaphacts.com/fieldDefinition/P94i_was_created_by> a <http://www.w3.org/ns/ldp#Resource> .
+}

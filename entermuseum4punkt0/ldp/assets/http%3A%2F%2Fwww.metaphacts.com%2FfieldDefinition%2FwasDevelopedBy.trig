@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/wasDevelopedBy/context> {
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-3947fc5b00c24dd598f199980ca35589-ij3g7g a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-3947fc5b00c24dd598f199980ca35589-3djkoxn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-3947fc5b00c24dd598f199980ca35589-3djkoxn;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-3947fc5b00c24dd598f199980ca35589-jd3r9 .
+  
+  _:genid-3947fc5b00c24dd598f199980ca35589-ij3g7g <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:wasDevelopedBy ?value.
+  }""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-3947fc5b00c24dd598f199980ca35589-ij3g7g .
+  
+  _:genid-3947fc5b00c24dd598f199980ca35589-3djkoxn <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:wasDevelopedBy $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Projektkontext"@de;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
+  
+  _:genid-3947fc5b00c24dd598f199980ca35589-jd3r9 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:wasDevelopedBy $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:37:36.828Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasDevelopedBy> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,146 @@
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Projektkontext         #####
+    #####                                   ##### 
+    #############################################
+    
+   -->
+<bs-panel>
+    <h1>Projekt und Beteiligte</h1>
+    <p>In welchem Kontext ist die digitale Anwendung entstanden? Gab es ein, bspw. mit Drittmitteln gefördertes,
+        Projekt,
+        dass die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am Entstehungsprozess der
+        digitalen Anwendung beteiligt und in welcher Rolle? Ist das Projekt Bestandteil eines größeren
+        (Verbund-)Projektes?</p>
+
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{projectTitle}}"
+        subject='[[urlParam "project"]]' post-action='redirect' browser-persistence=false form-id='Project' fields="[[fieldDefinitions
+        projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'
+        realised='http://www.metaphacts.com/fieldDefinition/realised'                       
+        projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
+        beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
+        endDate='http://www.metaphacts.com/fieldDefinition/endDate'
+        hasInsitutionalSupport='http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport'
+        hasEmployee='http://www.metaphacts.com/fieldDefinition/hasEmployee'
+        wasPartOfProject='http://www.metaphacts.com/fieldDefinition/wasPartOfProject'
+        wasFundedBy='http://www.metaphacts.com/fieldDefinition/wasFundedBy'
+                                   ]]">
+
+        <semantic-form-hidden-input for="projectRdfType">
+        </semantic-form-hidden-input>
+        <semantic-form-autocomplete-input for="realised"></semantic-form-autocomplete-input>
+        <semantic-form-text-input for="projectTitle"></semantic-form-text-input>
+
+        <h3>Gesamtlaufzeit</h3>
+        <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
+        <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
+
+        <h3>Projektkontext</h3>
+
+        <semantic-form-autocomplete-input for="hasInsitutionalSupport">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+                fields="[[fieldDefinitions
+                groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'      
+                legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
+                    ]]">
+                    <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                    <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                    <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+            </semantic-form>
+        </semantic-form-autocomplete-input>
+        <semantic-form-autocomplete-input for="wasPartOfProject">
+        </semantic-form-autocomplete-input>
+
+        <h3>Projektmitarbeiter und extern Beteiligte</h3>
+        <semantic-form-autocomplete-input for="hasEmployee">
+
+
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E21_Person/{{UUID}}" fields="[[fieldDefinitions
+            personRdfType='http://www.metaphacts.com/fieldDefinition/personRdfType'        
+            givenName='http://www.metaphacts.com/fieldDefinition/givenName'
+                    familyName='http://www.metaphacts.com/fieldDefinition/familyName'
+                    P14.1_in_the_role_of='http://www.metaphacts.com/fieldDefinition/P14.1_in_the_role_of'
+                    P107i_is_current_or_former_member_of='http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of'
+                    ]]">
+                    <semantic-form-hidden-input for="personRdfType"></semantic-form-hidden-input>
+                    <semantic-form-text-input for="givenName"></semantic-form-text-input>
+                <semantic-form-text-input for="familyName"></semantic-form-text-input>
+                <semantic-form-tree-picker-input for="P14.1_in_the_role_of">
+
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                        fields="[[fieldDefinitions
+                        inSchemeActorRole='http://www.metaphacts.com/fieldDefinition/inSchemeActorRole'    
+                        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                        altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'                                          
+                            ]]">
+                        <semantic-form-hidden-input for="inSchemeActorRole" default-value='skos:Concept'>
+                        </semantic-form-hidden-input>
+                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
+                </semantic-form-tree-picker-input>
+
+                <h4>institutionelle Zugehörigkeit</h4>
+                <semantic-form-autocomplete-input for="P107i_is_current_or_former_member_of">
+                    <semantic-form
+                        new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+                        fields="[[fieldDefinitions
+                            groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'
+                            legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                            urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
+                                           
+                                           ]]">
+                        <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                        <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
+
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
+                </semantic-form-autocomplete-input>
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+
+            </semantic-form>
+
+        </semantic-form-autocomplete-input>
+        <h2>Förderung</h2>
+
+        <semantic-form-autocomplete-input for="wasFundedBy">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+                fields="[[fieldDefinitions
+                groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'   
+                legalName='http://www.metaphacts.com/fieldDefinition/legalName'
+                urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
+                       
+                       ]]">
+                       <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                       <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                       <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
+               
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+            </semantic-form>
+        </semantic-form-autocomplete-input>
+       
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+       
+    </semantic-form>
+</bs-panel>

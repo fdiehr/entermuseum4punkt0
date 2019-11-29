@@ -1,0 +1,35 @@
+<bs-panel>
+    <h1>Beforschung</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researched']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim']]
+    <h2>Untersuchungssetting</h2>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasResearchMethod']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasExperimenteeType']]
+    <h3>Untersuchungsanlass</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/eventTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researchLocation']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchSetting']]
+    <h3>Untersuchungszeitraum</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
+    <h2>entstandene Hilfsmittel</h2>
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool']]
+    <h2>(nach-)genutzte Tools - Hilfsmittel/Geräte und/oder Software</h2>
+    [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedTool']]
+    [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedSoftware']]
+    <h2>Erkenntnisse</h2>
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in']]
+
+
+    <semantic-link
+        uri=':ResearchActivity'
+        urlqueryparam-research='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    </bs-panel>
+
+    

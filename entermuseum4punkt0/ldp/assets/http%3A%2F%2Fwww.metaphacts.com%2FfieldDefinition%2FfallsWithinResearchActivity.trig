@@ -1,0 +1,39 @@
+
+<http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity/context> {
+  <http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Untersuchungseinheit"@de;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-pfj6l <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-xyt7hc a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-yif0cg a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-17079f3f90ba4fc8a17f691476260786-pfj6l;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-17079f3f90ba4fc8a17f691476260786-xyt7hc .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-xyt7hc <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:fallsWithinResearchActivity $value} WHERE {}" .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-pfj6l a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-17079f3f90ba4fc8a17f691476260786-yif0cg <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:fallsWithinResearchActivity ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity> <http://www.metaphacts.com/ontology/fields#range>
+      <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity>;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Die unterschiedlichen Testsituationen bzw. Untersuchungseinheiten sind jeder für sich zu beschreiben. Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und der unterschiedlichen Testorte/-anlässe.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-17079f3f90ba4fc8a17f691476260786-yif0cg;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T15:00:49.236Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity> .
+  
+  <http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity> a <http://www.w3.org/ns/ldp#Resource> .
+}

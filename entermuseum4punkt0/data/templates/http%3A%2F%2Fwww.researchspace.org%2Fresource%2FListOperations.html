@@ -1,0 +1,23 @@
+
+<bs-panel>
+        <h1>Betrieb</h1>
+   
+        <div class="gap">
+            <semantic-link
+                uri=':Operation'
+            >
+                <button>neuen Betrieb hinzufügen</button>
+            </semantic-link>
+        </div>
+        <div class="gap">
+            <semantic-table
+                query='SELECT * WHERE {
+                    $Betrieb m4p0:operated ?DigitaleAnwendung. 
+                    
+                }'
+            
+        
+
+            ></semantic-table>
+        </div>
+    </bs-panel>

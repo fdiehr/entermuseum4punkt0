@@ -1,0 +1,22 @@
+
+<http://www.metaphacts.com/fieldDefinition/inScheme/context> {
+  <http://www.metaphacts.com/fieldDefinition/inScheme> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "inScheme"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e733a687a3694427b3a0bd558e138250-yw7y1l .
+  
+  _:genid-e733a687a3694427b3a0bd558e138250-yw7y1l a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject skos:inScheme $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-11T09:23:08.242Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/inScheme> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> a <http://www.w3.org/ns/ldp#Resource> .
+}

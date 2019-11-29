@@ -1,0 +1,23 @@
+
+<bs-panel>
+        <h1>Ausspielgeräte</h1>
+   
+        <div class="gap">
+            <semantic-link
+                uri=':OutputDevice'
+            >
+                <button>Neu</button>
+            </semantic-link>
+        </div>
+        <div class="gap">
+            <semantic-table
+                query='SELECT * WHERE {
+                    $OutputDevice m4p0:toolTitle ?label. 
+                    
+                }'
+            
+        
+
+            ></semantic-table>
+        </div>
+    </bs-panel>

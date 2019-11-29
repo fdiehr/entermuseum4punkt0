@@ -1,0 +1,16 @@
+<bs-panel>
+    <h1>Person</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/givenName']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/familyName']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P107i_is_current_or_former_member_of']]
+ 
+    <semantic-link
+        uri=':E21_Person'
+        urlqueryparam-person='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    </bs-panel>

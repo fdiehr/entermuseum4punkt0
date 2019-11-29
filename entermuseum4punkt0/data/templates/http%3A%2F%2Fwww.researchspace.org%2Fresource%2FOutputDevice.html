@@ -1,0 +1,68 @@
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            Ausspielgerät          #####
+    #####                                   ##### 
+    #############################################
+    
+                
+                -->
+
+<bs-panel>
+
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/OutputDevice/{{toolTitle}}'
+        subject='[[urlParam "output"]]' post-action='redirect' browser-persistence=false form-id='OutputDevice'
+        fields="[[fieldDefinitions
+        
+        outputDeviceRdfType='http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType'        
+        toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+        modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'  
+        hasOutputDeviceType='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType'
+        ]]">
+        <h1>Ausspielgerät</h1>
+        <p>Für den aktiven Betrieb der digitalen Anwendungen werden Ausspielgeräte wie z.B. Tablets, Smartphones,
+            internetfähige Geräte oder VR-Headsets sowie ggf. auch periphere Hardware wie Rechner und Monitore benötigt. Bestimmte
+            Anwendungen können nur auf speziell konfigurierten Geräten genutzt werden, wie bspw. eine AR Anwendung für
+            die Hololens. </br>
+            Erstellen Sie hier Endgeräte, die für das Betreiben von digitalen Anwendungen benötigt werden.</p>
+
+                <semantic-form-hidden-input for="outputDeviceRdfType"></semantic-form-hidden-input>
+                <semantic-form-text-input for="toolTitle">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="modelNr">
+                </semantic-form-text-input>
+<p>
+    Ordnen Sie dem Ausspielgerät einen Typ zu. Handelt es sich bspw. um ein mobiles Endgerät wie ein Tablet oder Smartphone? Oder ist es ein sog. Head-Mounted Display also eine "VR-Brille" oder eine HoloLens?
+</p>
+                <semantic-form-tree-picker-input for="hasOutputDeviceType">
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                        fields="[[fieldDefinitions
+                        inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
+                                            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                            altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                            broaderHardware='http://www.metaphacts.com/fieldDefinition/broaderHardware'
+                                            ]]">
+                        <semantic-form-hidden-input for="inSchemeOutputDeviceType" default-value='skos:Concept'>
+                        </semantic-form-hidden-input>
+                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-tree-picker-input for="broaderOutputDevice">
+                        </semantic-form-tree-picker-input>
+
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+
+
+                    </semantic-form>
+                </semantic-form-tree-picker-input>
+
+                <semantic-form-errors></semantic-form-errors>
+                <semantic-form-recover-notification></semantic-form-recover-notification>
+                <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+               
+            </semantic-form>
+        

@@ -1,0 +1,41 @@
+
+<http://www.metaphacts.com/fieldDefinition/version/context> {
+  <http://www.metaphacts.com/fieldDefinition/version> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4dde18c34fcf45e9acf84d688e884c9c-8mvyx;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie die Version der Software an." .
+  
+  _:genid-4dde18c34fcf45e9acf84d688e884c9c-x7t698 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:version ?value.
+  
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/version> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-4dde18c34fcf45e9acf84d688e884c9c-nt7pqe .
+  
+  _:genid-4dde18c34fcf45e9acf84d688e884c9c-8mvyx <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:version $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/version> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Versionsnummer"@de .
+  
+  _:genid-4dde18c34fcf45e9acf84d688e884c9c-nt7pqe a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:version $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/version> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-4dde18c34fcf45e9acf84d688e884c9c-x7t698 .
+  
+  _:genid-4dde18c34fcf45e9acf84d688e884c9c-8mvyx a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/version> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Software>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:54:32.438Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/version> .
+  
+  <http://www.metaphacts.com/fieldDefinition/version> a <http://www.w3.org/ns/ldp#Resource> .
+}

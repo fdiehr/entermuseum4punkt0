@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges/context> {
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E65_Creation>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f63af694388544eea6c1a674528a6bfd-8i272v .
+  
+  _:genid-f63af694388544eea6c1a674528a6bfd-mcs0q6j <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:descriptionOfCreationChallenges $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-f63af694388544eea6c1a674528a6bfd-206rmh .
+  
+  _:genid-f63af694388544eea6c1a674528a6bfd-mcs0q6j a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-f63af694388544eea6c1a674528a6bfd-8i272v a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-f63af694388544eea6c1a674528a6bfd-mcs0q6j .
+  
+  _:genid-f63af694388544eea6c1a674528a6bfd-206rmh a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:descriptionOfCreationChallenges ?value.
+ 
+}""" .
+  
+  _:genid-f63af694388544eea6c1a674528a6bfd-8i272v <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:descriptionOfCreationChallenges $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Vor welchen Herausforderungen stand die Entwicklung der digitalen Anwendung? Benennen und beschreiben Sie Herausforderungen, Fragestellungen und Probleme inhaltlicher, prozessualer, struktureller oder sonstiger Art. Für Nachnutzende soll ersichtlich werden auf welche Hindernisse oder Fallstricke bei der Entwicklung zu achten ist.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Herausforderungen bei der Entwicklung"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:55:10.048Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> .
+  
+  <http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges> a <http://www.w3.org/ns/ldp#Resource> .
+}

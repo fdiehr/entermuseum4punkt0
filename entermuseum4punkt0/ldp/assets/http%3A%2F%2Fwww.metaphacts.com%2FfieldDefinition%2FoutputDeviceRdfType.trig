@@ -1,0 +1,36 @@
+
+<http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType/context> {
+  <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-de245973343947418dcab91c950296f9-0jzd2r a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-de245973343947418dcab91c950296f9-9zxn1l <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  
+  _:genid-de245973343947418dcab91c950296f9-3o4ufm a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> <http://www.w3.org/2000/01/rdf-schema#label>
+      "outputDeviceRdfType"@de .
+  
+  _:genid-de245973343947418dcab91c950296f9-0jzd2r <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<https://www.museum4punkt0.de/catalogue/ontology/OutputDevice> as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  _:genid-de245973343947418dcab91c950296f9-9zxn1l a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-de245973343947418dcab91c950296f9-0jzd2r;
+    <http://www.metaphacts.com/ontology/fields#defaultValue> "https://www.museum4punkt0.de/catalogue/ontology/OutputDevice";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-de245973343947418dcab91c950296f9-3o4ufm;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-de245973343947418dcab91c950296f9-9zxn1l .
+  
+  _:genid-de245973343947418dcab91c950296f9-3o4ufm <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-23T11:57:32.448Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

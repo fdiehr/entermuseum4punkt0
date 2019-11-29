@@ -1,0 +1,210 @@
+<!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####            ENTWICKLUNG            #####
+    #####                                   ##### 
+    #############################################
+    
+                -->
+<bs-panel>
+
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/E65_Creation/{{UUID}}'
+        subject='[[urlParam "creation"]]' post-action='redirect' browser-persistence=false form-id='Creation' fields="[[fieldDefinitions
+        creationRdfType='http://www.metaphacts.com/fieldDefinition/creationRdfType'
+        hasCreatedDigitalApp='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp'
+        descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges'      
+        hasCreationPhase='http://www.metaphacts.com/fieldDefinition/hasCreationPhase'            
+        hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'                                
+        needsExpertise='http://www.metaphacts.com/fieldDefinition/needsExpertise'
+        usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
+        usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
+        ]]">
+
+        <h1>Entwicklungsschritt</h1>
+        <p> Die unterschiedlichen Entwicklungsschritte sind jeder für sich zu beschreiben.
+            Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und/oder ihrer
+            Zugehörigkeit zu übergeordneten
+            Entwicklungsphasen. Wie granular die Entwicklung der Anwendung beschrieben wird liegt im
+            Ermessen des Erfassenden. </br>
+            Legen Sie für jeden Entwicklungsschritt einen neuen Datensatz an!
+        </p>
+
+        <semantic-form-hidden-input for="creationRdfType"></semantic-form-hidden-input>
+        <semantic-form-autocomplete-input for="hasCreatedDigitalApp"></semantic-form-autocomplete-input>
+        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
+        </semantic-form-text-input>
+        <semantic-form-checklist-input for="hasCreationPhase">
+        </semantic-form-checklist-input>
+        <semantic-form-tree-picker-input for="hasCreationMethod">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                                inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                broaderCreationMethod='http://www.metaphacts.com/fieldDefinition/broaderCreationMethod'                
+                                                    ]]">
+                <semantic-form-hidden-input for="inSchemeCreationMethod" default-value='skos:Concept'>
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
+                <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
+                <semantic-form-tree-picker-input for="broaderCreationMethod">
+                </semantic-form-tree-picker-input>
+
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+            </semantic-form>
+        </semantic-form-tree-picker-input>
+
+
+        <semantic-form-tree-picker-input for="needsExpertise">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+                                                    inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
+                                                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                    altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                        ]]">
+                <semantic-form-hidden-input for="inSchemeExpertise" default-value='skos:Concept'>
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
+                <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
+
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+            </semantic-form>
+        </semantic-form-tree-picker-input>
+
+      
+
+        <h3>genutze Hilfsmittel und Geräte</h3>
+<p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für das Scannen von 3D-Digitalisaten
+    wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig. Aber auch Literatur oder Archivmaterialien
+    sind mögliche Hilfsmittel, die während der Recherchephase genutzt wurden. </br>
+    Geben Sie hier Hilfsmittel und Geräte an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kamen.
+</p>
+        <semantic-form-autocomplete-input for="usedTool">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{toolTitle}}" fields="[[fieldDefinitions 
+                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                    hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                   
+                                    ]]">
+                <!--
+                             toolIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/toolIsDocumentedIn'
+                        -->
+                <semantic-form-text-input for="toolTitle">
+                </semantic-form-text-input>
+
+                <semantic-form-tree-picker-input for="hasToolType">
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                        fields="[[fieldDefinitions
+                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                    ]]">
+                        <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                        </semantic-form-hidden-input>
+                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                        </semantic-form-text-input>
+
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
+
+                </semantic-form-tree-picker-input>
+                <semantic-form-composite-input for="P70i_is_documented_in"
+                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+        documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+        documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+        url='http://www.metaphacts.com/fieldDefinition/url'
+        doi='http://www.metaphacts.com/fieldDefinition/doi'
+        bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+        ]]">
+                    <h4>Quelle</h4>
+                    <semantic-form-hidden-input for="documentRdfType">
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="documentTitle">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="doi">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+                </semantic-form-composite-input>
+                <semantic-form-errors></semantic-form-errors>
+                <semantic-form-recover-notification></semantic-form-recover-notification>
+                <button name="submit" class="btn btn-default">Save</button>
+                <button name="reset" class="btn btn-default">Reset</button>
+        </semantic-form-autocomplete-input>
+        <!--
+<semantic-form-composite-input for="toolIsDocumentedIn"
+    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+    fields="[[fieldDefinitions]]">
+    <h4>Quelle des Hilfsmittels</h4>
+    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
+    </semantic-form-hidden-input>
+    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
+    </semantic-form-text-input>
+    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+    </semantic-form-text-input>
+    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/doi">
+    </semantic-form-text-input>
+    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation" multiline=true>
+    </semantic-form-text-input>
+    </semantic-form-composite-input>
+-->
+
+<h3>genutzte Software</h3>
+ <p>Auch verschiedene Software kann bei der Entwicklung digitaler Anwendungen zum Einsatz kommen wie z.B. Programme zum Erstellen von 3D-Modellen oder 
+Videoschnitt- und Bildbearbeitungsprogramme.</br>
+Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
+ </p>      
+<semantic-form-autocomplete-input for="usedSoftware">
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{toolTitle}}"
+        fields="[[fieldDefinitions 
+                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                version='http://www.metaphacts.com/fieldDefinition/version'
+                                hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                                P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                ]]">
+        <semantic-form-text-input for="toolTitle">
+        </semantic-form-text-input>
+        <semantic-form-text-input for="version">
+        </semantic-form-text-input>
+        <semantic-form-select-input for="hasSoftwareType">
+        </semantic-form-select-input>
+        <semantic-form-composite-input for="P70i_is_documented_in"
+            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+            documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+            documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+            url='http://www.metaphacts.com/fieldDefinition/url'
+            ]]">
+            <h4>Quelle</h4>
+            <semantic-form-hidden-input for="documentRdfType">
+            </semantic-form-hidden-input>
+            <semantic-form-text-input for="documentTitle">
+            </semantic-form-text-input>
+            <semantic-form-text-input for="url">
+            </semantic-form-text-input>
+        </semantic-form-composite-input>
+        <semantic-form-errors></semantic-form-errors>
+        <button name='submit' class='btn btn-default'>Create</button>
+        <button name='reset' class='btn btn-default'>Reset</button>
+    </semantic-form>
+</semantic-form-autocomplete-input>
+
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-errors></semantic-form-errors>
+            <semantic-form-recover-notification></semantic-form-recover-notification>
+            <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+           
+
+    </semantic-form>
+</bs-panel>

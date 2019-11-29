@@ -1,0 +1,43 @@
+
+<http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn/context> {
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-hhim66 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie eine Quelle an, bei der der Sourcecode hinterlegt ist." .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-af4i29 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-bd9cb0b43644429a977ae5993b4747ce-i39117;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Quellcode"@de .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-hhim66 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:codeIsDocumentedIn ?value.
+  }""" .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-af4i29 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:codeIsDocumentedIn $value. $value a crm:E31_Document.} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-bd9cb0b43644429a977ae5993b4747ce-hhim66;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-i39117 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:codeIsDocumentedIn $value. $value a crm:E31_Document.} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E31_Document>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-bd9cb0b43644429a977ae5993b4747ce-af4i29 .
+  
+  _:genid-bd9cb0b43644429a977ae5993b4747ce-i39117 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T14:00:38.393Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> .
+  
+  <http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn> a <http://www.w3.org/ns/ldp#Resource> .
+}

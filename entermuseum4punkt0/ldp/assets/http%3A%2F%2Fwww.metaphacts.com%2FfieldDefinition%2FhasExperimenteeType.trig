@@ -1,0 +1,45 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasExperimenteeType/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-8359a84c802f4581b08d689a10abb9c4-3uboew a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8359a84c802f4581b08d689a10abb9c4-iqwpf7;
+    <http://www.metaphacts.com/ontology/fields#treePatterns> """{
+  \"type\": \"simple\",
+  \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType>\"
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie an mit welchemr Art Probanden Sie die Untersuchung durchgeführt haben. Nach welchen Kriterien haben Sie die Gruppe zusammengestellt und wie kann man sie bezeichnen?" .
+  
+  _:genid-8359a84c802f4581b08d689a10abb9c4-1jokb a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-8359a84c802f4581b08d689a10abb9c4-iqwpf7 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasExperimenteeType ?value.
+
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-8359a84c802f4581b08d689a10abb9c4-1jokb;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity> .
+  
+  _:genid-8359a84c802f4581b08d689a10abb9c4-1jokb <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-8359a84c802f4581b08d689a10abb9c4-3uboew;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Probandentyp"@de .
+  
+  _:genid-8359a84c802f4581b08d689a10abb9c4-3uboew <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T15:05:06.544Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> a <http://www.w3.org/ns/ldp#Resource> .
+}

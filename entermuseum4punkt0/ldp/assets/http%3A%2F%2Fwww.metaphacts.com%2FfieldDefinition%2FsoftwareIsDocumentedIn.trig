@@ -1,0 +1,39 @@
+
+<http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn/context> {
+  _:genid-cb52d1964d654dc98fc0c41800048a5b-fkhjuf <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:softwareIsDocumentedIn $value. $value a crm:E31_Document} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cb52d1964d654dc98fc0c41800048a5b-y9dbk;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Quelle der Software"@de .
+  
+  _:genid-cb52d1964d654dc98fc0c41800048a5b-fkhjuf a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-cb52d1964d654dc98fc0c41800048a5b-y9dbk a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:softwareIsDocumentedIn $value. $value a crm:E31_Document} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-cb52d1964d654dc98fc0c41800048a5b-usrnwi .
+  
+  _:genid-cb52d1964d654dc98fc0c41800048a5b-usrnwi <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:softwareIsDocumentedIn ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-cb52d1964d654dc98fc0c41800048a5b-fkhjuf;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie die Quelle an, bei der die Software zu finden ist." .
+  
+  _:genid-cb52d1964d654dc98fc0c41800048a5b-usrnwi a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/Software>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E31_Document>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T14:11:52.444Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> .
+  
+  <http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn> a <http://www.w3.org/ns/ldp#Resource> .
+}

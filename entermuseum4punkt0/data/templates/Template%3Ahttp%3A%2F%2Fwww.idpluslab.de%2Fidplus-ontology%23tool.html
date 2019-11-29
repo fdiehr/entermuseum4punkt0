@@ -1,0 +1,17 @@
+<bs-panel>
+    <h1>Hilfsmittel/Gerät</h1>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/toolTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasToolType']]
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in']]
+    
+    
+    <semantic-link
+        uri=':Tool'
+        urlqueryparam-tool='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    </bs-panel>
