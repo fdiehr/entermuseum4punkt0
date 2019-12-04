@@ -1,4 +1,4 @@
 preferredLanguages = de,en
-deploymentTitle = enter.theninja.space
+deploymentTitle = enter.museum4punkt0
 preferredLabels = <http://www.researchspace.org/ontology/displayLabel>,<http://www.w3.org/2000/01/rdf-schema#label>,<http://www.w3.org/2004/02/skos/core#prefLabel>,<https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle>
 unsupportedBrowserMessage = Please use Mozilla Firefox or Google Chrome
