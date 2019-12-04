@@ -1,0 +1,17 @@
+<bs-panel>
+    <h1>Projekte</h1>
+
+    <div class="gap">
+        <semantic-table
+            query='SELECT * WHERE {
+                ?subject a m4p0:Project ;
+                m4p0:projectTitle ?project_title .
+            }'
+            column-configuration='[
+            {
+                "variableName": "subject",
+                "displayName": "Bezeichnung des Projekts"
+            }]'
+        ></semantic-table>
+    </div>
+</bs-panel>
