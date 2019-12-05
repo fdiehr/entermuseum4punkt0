@@ -15,48 +15,40 @@
           <a>Startseite</a>
         </li>
       </semantic-link-container>
+      <bs-nav-dropdown title="Neu" id="navbar-dropdown">
+         <semantic-link-container uri=":DigitalApp">
+            <li title="Digitale Anwendung">
+              <a>Digitale Anwendung</a>
+            </li>
+          </semantic-link-container>
 
-    </ul>
-
-    <bs-nav>
-      <bs-nav-dropdown title="Neu" id="basic-nav-dropdown">
-        <bs-nav-item>Neu</bs-nav-item>
-        <ul class="nav navbar-nav">
-          <li>
-        <mp-resource-link-container uri=":DigitalApp">
-          <bs-menu-item>Digitale Anwendung</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <li>
-        <mp-resource-link-container uri=":EducationalConcept">
-          <bs-menu-item>Vermittlungskonzept</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <li>
-        <mp-resource-link-container uri=":E65_Creation">
-          <bs-menu-item>Entwicklung</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <li>
-        <mp-resource-link-container uri=":Operation">
-          <bs-menu-item>Betrieb</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <li>
-        <mp-resource-link-container uri=":ResearchActivity">
-          <bs-menu-item>Beforschung</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <li>
-        <mp-resource-link-container uri=":Project">
-          <bs-menu-item>Project</bs-menu-item>
-        </mp-resource-link-container>
-        </li>
-        <bs-menu-item divider="true"></bs-menu-item>
-        </ul>
+           <semantic-link-container uri=":EducationalConcept">
+            <li title="Vermittlungskonzept">
+              <a>Vermittlungskonzept</a>
+            </li>
+          </semantic-link-container>
+            <semantic-link-container uri=":E65_Creation">
+            <li title="Entwicklung">
+              <a>Entwicklung</a>
+            </li>
+          </semantic-link-container>
+          <semantic-link-container uri=":Operation">
+            <li title="Betrieb">
+              <a>Betrieb</a>
+            </li>
+          </semantic-link-container>
+            <semantic-link-container uri=":ResearchActivity">
+            <li title="Beforschung">
+              <a>Beforschung</a>
+            </li>
+          </semantic-link-container>
+           <semantic-link-container uri=":Project">
+            <li title="Projekt">
+              <a>Projekt</a>
+            </li>
+          </semantic-link-container>       
       </bs-nav-dropdown>
-    </bs-nav>
-
+</ul>
     <bs-nav data-pull-right="true">
       <ul class="nav navbar-nav">
         <semantic-link-container uri="http://www.metaphacts.com/resource/assets/Fields">

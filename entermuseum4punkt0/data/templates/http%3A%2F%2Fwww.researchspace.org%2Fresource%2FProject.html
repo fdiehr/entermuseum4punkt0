@@ -17,8 +17,7 @@
 
     <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{projectTitle}}"
         subject='[[urlParam "project"]]' post-action='redirect' browser-persistence=false form-id='Project' fields="[[fieldDefinitions
-        projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'
-        realised='http://www.metaphacts.com/fieldDefinition/realised'                       
+        projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                        
         projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
         beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
         endDate='http://www.metaphacts.com/fieldDefinition/endDate'
@@ -30,7 +29,6 @@
 
         <semantic-form-hidden-input for="projectRdfType">
         </semantic-form-hidden-input>
-        <semantic-form-autocomplete-input for="realised"></semantic-form-autocomplete-input>
         <semantic-form-text-input for="projectTitle"></semantic-form-text-input>
 
         <h3>Gesamtlaufzeit</h3>
@@ -55,6 +53,18 @@
             </semantic-form>
         </semantic-form-autocomplete-input>
         <semantic-form-autocomplete-input for="wasPartOfProject">
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{projectTitle}}"
+                fields="[[fieldDefinitions
+                projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                      
+                projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
+                    ]]">
+                    <semantic-form-hidden-input for="projectRdfType">
+                        </semantic-form-hidden-input>
+                        <semantic-form-text-input for="projectTitle"></semantic-form-text-input>
+                        <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Create</button>
+                <button name='reset' class='btn btn-default'>Reset</button>
+                    </semantic-form>
         </semantic-form-autocomplete-input>
 
         <h3>Projektmitarbeiter und extern Beteiligte</h3>
