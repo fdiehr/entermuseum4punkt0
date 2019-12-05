@@ -9,6 +9,11 @@ nav.metaphacts-header-navbar.navbar > .container-fluid .navbar-collapse {
   margin-left: -15px;
   background-color: #2C3E50;
 }
+}
+nav.metaphacts-header-navbar.navbar > .container-fluid .navbar-dropdown {
+  margin-left: -15px;
+  background-color: #2C3E50;
+}
 @media (min-width: 1200px) {
   nav.metaphacts-header-navbar.navbar > .container-fluid .navbar-header {
     width: 16.66667%;
@@ -17,3 +22,4 @@ nav.metaphacts-header-navbar.navbar > .container-fluid .navbar-collapse {
     margin-left: -15px;
   }
 }
+
