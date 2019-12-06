@@ -1,75 +1,49 @@
-@prefix thes: <http://collection.britishmuseum.org/id/thesauri/> .
-@prefix geoliteral: <http://www.bigdata.com/rdf/geospatial/literals/v1#> .
-@prefix : <http://www.researchspace.org/resource/> .
-@prefix thesUnit: <http://collection.britishmuseum.org/id/thesauri/unit/> .
-@prefix User: <http://www.metaphacts.com/resource/user/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rshelp: <http://researchspace.org/help/> .
-@prefix Admin: <http://www.metaphacts.com/resource/admin/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix geo: <http://www.bigdata.com/rdf/geospatial#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mpp: <http://www.metaphacts.com/resource/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rso: <http://www.researchspace.org/ontology/> .
-@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix thesIdentifier: <http://collection.britishmuseum.org/id/> .
-@prefix thesDimension: <http://collection.britishmuseum.org/id/thesauri/dimension/> .
-@prefix sp: <http://spinrdf.org/sp#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix fts: <http://www.bigdata.com/rdf/fts#> .
-@prefix schema: <http://schema.org> .
-@prefix Help: <http://help.metaphacts.com/resource/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix crminf: <http://www.ics.forth.gr/isl/CRMinf/> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix Platform: <http://www.metaphacts.com/ontologies/platform#> .
-@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
-@prefix m4p0: <https://www.museum4punkt0.de/catalogue/ontology/> .
-@prefix bmo: <http://collection.britishmuseum.org/id/ontology/> .
-@prefix bds: <http://www.bigdata.com/rdf/search#> .
-
 
 <http://www.metaphacts.com/fieldDefinition/wasRealisedBy/context> {
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:t1287 a sp:Query .
-  
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:t1287;
-    prov:generatedAtTime "2019-12-06T09:42:26.896Z"^^xsd:dateTime;
-    a prov:Entity .
-  
-  _:t1288 sp:text """SELECT ?value ?label WHERE {
+  _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   ?value a m4p0:Project ;
     m4p0:projectTitle ?label .
   FILTER REGEX(STR(?label), \"?token\")
 } LIMIT 10""" .
   
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#maxOccurs>
-      "1" .
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp;
+    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Project>;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "1";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Projekt"@de .
   
-  _:t1288 a sp:Query .
+  _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
+  
+  _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
-      _:t1288;
-    <http://www.metaphacts.com/ontology/fields#range> m4p0:Project .
+      _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr .
   
-  _:t1287 sp:text "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
+  _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> rdfs:label "Projekt"@de;
-    prov:wasAttributedTo User:admin;
-    a <http://www.w3.org/ns/ldp#Resource>;
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "1";
-    rdfs:comment "Wählen Sie ein Projekt aus, in dessen Rahmen die digitale Anwendung entstanden ist.";
-    <http://www.metaphacts.com/ontology/fields#domain> m4p0:DigitalApp .
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k .
   
-  _:node1drbcfp12x7 <http://www.w3.org/ns/ldp#contains> <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> .
-}
-
-{
-  _:node1drbcfp12x7 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity .
+  _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:wasRealisedBy ?value. ?value a m4p0:Project.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
+  
+  _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Wählen Sie ein Projekt aus, in dessen Rahmen die digitale Anwendung entstanden ist.";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T11:06:37.849Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> .
+  
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> a <http://www.w3.org/ns/ldp#Resource> .
 }

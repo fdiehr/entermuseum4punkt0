@@ -2,12 +2,12 @@
 <https://www.enter.theninja.space/container/queryTemplateContainer/adding-labels-for-skos-concepts-directly-in-database/context> {
   <https://www.enter.theninja.space/container/queryTemplateContainer/adding-labels-for-skos-concepts-directly-in-database>
     a <http://spinrdf.org/spin#Template>, <http://spinrdf.org/spin#UpdateTemplate>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Adding labels for skos:Concepts directly in database";
-    <http://www.w3.org/2000/01/rdf-schema#comment> "Adding labels for skos:Concepts directly in database";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Adding labels for skos:Concepts directly in database for skos:ConceptScheme Technology";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Adding labels for skos:Concepts directly in database for skos:ConceptScheme Technology";
     <http://spinrdf.org/spin#body> <https://www.enter.theninja.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database>;
     a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-20T16:18:54.270Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T10:23:46.381Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#queryTemplateContainer> <http://www.w3.org/ns/ldp#contains>
       <https://www.enter.theninja.space/container/queryTemplateContainer/adding-labels-for-skos-concepts-directly-in-database> .

@@ -1,49 +1,48 @@
 
 <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport/context> {
-  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
-      _:genid-47804733db7e4832a4a706bf34c5d3d3-k6texa .
-  
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-k6texa a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-039jqa a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "Bei welcher Institution ist das Projekt angesiedelt? Geben Sie an, welche Institution mit der Durchführung des Projekts betraut wurde. " .
-  
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-k6texa <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-8007f365465b4661b8e936fece8b38d9-dd1a2 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   ?value a crm:E74_Group ;
     schema:legalName ?label .
   FILTER REGEX(STR(?label), \"?token\")
 } LIMIT 10""" .
   
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-stcrao a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-47804733db7e4832a4a706bf34c5d3d3-039jqa;
+  _:genid-8007f365465b4661b8e936fece8b38d9-s654or a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Bei welcher Institution ist das Projekt angesiedelt? Geben Sie an, welche Institution mit der Durchführung des Projekts betraut wurde. ";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-8007f365465b4661b8e936fece8b38d9-s654or;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8007f365465b4661b8e936fece8b38d9-2z0ojy;
     <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E74_Group>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-47804733db7e4832a4a706bf34c5d3d3-9czsn;
     <http://www.metaphacts.com/ontology/fields#minOccurs> "1";
     <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Project> .
   
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-9czsn a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-stcrao <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject m4p0:hasInsitutionalSupport ?value. ?value a crm:E74_Group
+  _:genid-8007f365465b4661b8e936fece8b38d9-s0by3 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasInsitutionalSupport ?value. ?value a crm:E74_Group.
 }""" .
   
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-039jqa <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasInsitutionalSupport $value. $value a crm:E74_Group} WHERE {}" .
+  _:genid-8007f365465b4661b8e936fece8b38d9-2z0ojy a <http://spinrdf.org/sp#Query> .
   
-  _:genid-47804733db7e4832a4a706bf34c5d3d3-9czsn <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasInsitutionalSupport $value. $value a crm:E74_Group} WHERE {}" .
+  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-8007f365465b4661b8e936fece8b38d9-s0by3;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-8007f365465b4661b8e936fece8b38d9-dd1a2 .
+  
+  _:genid-8007f365465b4661b8e936fece8b38d9-s654or <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasInsitutionalSupport $value. $value a crm:E74_Group} WHERE {}" .
+  
+  _:genid-8007f365465b4661b8e936fece8b38d9-dd1a2 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-8007f365465b4661b8e936fece8b38d9-2z0ojy <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasInsitutionalSupport $value. $value a crm:E74_Group} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> <http://www.w3.org/2000/01/rdf-schema#label>
-      "ausführende Institution"@de;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-47804733db7e4832a4a706bf34c5d3d3-stcrao;
-    a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T11:32:38.173Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+      "ausführende Institution"@de .
+  
+  _:genid-8007f365465b4661b8e936fece8b38d9-s0by3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T12:54:17.351Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport> .
