@@ -1,0 +1,35 @@
+
+<https://researchspace.curving.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database_for_skos:ConceptScheme_MaturityLevel/context> {
+  <https://researchspace.curving.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database_for_skos:ConceptScheme_MaturityLevel>
+    a <http://spinrdf.org/sp#Update>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Adding labels for skos:Concepts directly in database for skos:ConceptScheme MaturityLevel";
+    <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"Low Fidelity Prototype\";
+    rdfs:label \"Low Fidelity Prototype\".
+<https://www.museum4punkt0.de/catalogue/ontology/HighFidelityPrototype> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"High Fidelity Prototype\";
+    rdfs:label \"High Fidelity Prototype\".
+<https://www.museum4punkt0.de/catalogue/ontology/Product> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"ausgereiftes Produkt\";
+    rdfs:label \"ausgereiftes Produkt\".  
+
+} WHERE {}""";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T10:28:55.691Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://researchspace.curving.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database_for_skos:ConceptScheme_MaturityLevel> .
+  
+  <https://researchspace.curving.space/container/queryContainer/Adding_labels_for_skos:Concepts_directly_in_database_for_skos:ConceptScheme_MaturityLevel>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
