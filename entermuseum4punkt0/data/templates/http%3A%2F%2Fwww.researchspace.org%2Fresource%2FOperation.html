@@ -76,7 +76,7 @@
             erstellen Sie zunächst eines.</p>
         <semantic-form-autocomplete-input for="usesOutputDevice">
 
-            <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Hardware/{{toolTitle}}'
+            <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Hardware/{{UUID}}'
                 fields="[[fieldDefinitions
                         outputDeviceRdfType='http://www.metaphacts.com/fieldDefinition/outputDeviceRdfTyp'        
                         toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -90,7 +90,7 @@
                 </semantic-form-text-input>
 
                 <semantic-form-tree-picker-input for="hasOutputDeviceType">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
                         inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
                                             prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -137,12 +137,12 @@
 
         <h3>benötigte Software</h3>
         <semantic-form-composite-input for="usesSoftware" new-subject-template
-            for="https://enter.museum4punkt0.de/resources/Software/{{title}}" fields="[[fieldDefinitions 
-                                title='http://www.metaphacts.com/fieldDefinition/toolTitle'
+            for="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
+                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                 version='http://www.metaphacts.com/fieldDefinition/version'
                                 hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'                        
                                 ]]">
-            <semantic-form-text-input for="title">
+            <semantic-form-text-input for="toolTitle">
             </semantic-form-text-input>
             <semantic-form-text-input for="version">
             </semantic-form-text-input>

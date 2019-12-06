@@ -1,23 +1,4 @@
-<!--
-<bs-navbar>
-    <bs-nav>
-        <bs-nav-dropdown title="Dateneingabe">
-            <bs-menu-item href=":DigitalApp">digitale Anwendung</bs-menu-item>
-            <bs-menu-item href="/resource/Default:E65_Creation">Entwicklung</bs-menu-item>
-        </bs-nav-dropdown>
 
-
-    </bs-nav>
-</bs-navbar>
-
-<ol class="page-breadcrumb">
-    <li><a href="/resource/:Home">Home
-        </a> </li>
-    <li><a href="/resource/:Start">Dateneingabe
-        </a> </li>
-    <li class="active">Digitale Anwendung</li>
-</ol>
--->
 <bs-panel>
     <h1>Digitale Anwendung</h1>
     <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/DigitalApp/{{UUID}}'
@@ -25,14 +6,19 @@
         fields="[[fieldDefinitions]]">
 
 
-        <bs-tabs fixed-key="form" default-active-key="[[#if (urlParam " tab" )]][[urlParam "tab" ]][[else]]1[[/if]]">
-            <!-- ############################################# ##### ##### ##### ##### ##### Kerninfo ##### ##### #####
-            ############################################# -->
-            <bs-tab event-key="1" title="Grundinformationen">
-                <!--
+        <bs-tabs fixed-key="form" default-active-key="[[#if (urlParam "tab" )]][[urlParam "tab" ]][[else]]1[[/if]]">
+
+ <!--
+    #############################################
+    #####                                   #####
+    #####                                   #####
+    #####         Grundinfos                #####
+    #####                                   ##### 
+    #############################################
     
-    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/subjectRdfType"></semantic-form-hidden-input>
-    -->
+   -->           
+            <bs-tab event-key="1" title="Grundinformationen">
+     
                 <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/digitalAppRdfType">
                 </semantic-form-hidden-input>
                 <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle">
@@ -72,7 +58,7 @@
 
                 <h2>Vermarktung</h2>
                 <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasTouchpoints">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
         inSchemeTouchpoints='http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints'
         prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'

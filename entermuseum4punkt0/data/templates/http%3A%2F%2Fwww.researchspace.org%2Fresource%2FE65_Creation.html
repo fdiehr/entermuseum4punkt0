@@ -37,7 +37,7 @@
         <semantic-form-checklist-input for="hasCreationPhase">
         </semantic-form-checklist-input>
         <semantic-form-tree-picker-input for="hasCreationMethod">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
                                                 inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
@@ -60,7 +60,7 @@
 
 
         <semantic-form-tree-picker-input for="needsExpertise">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
                                                     inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
                                                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                     altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
@@ -87,7 +87,7 @@
     Geben Sie hier Hilfsmittel und Geräte an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kamen.
 </p>
         <semantic-form-autocomplete-input for="usedTool">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{toolTitle}}" fields="[[fieldDefinitions 
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
                                     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
                                     P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
@@ -100,7 +100,7 @@
                 </semantic-form-text-input>
 
                 <semantic-form-tree-picker-input for="hasToolType">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
                                                 inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -167,7 +167,7 @@ Videoschnitt- und Bildbearbeitungsprogramme.</br>
 Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
  </p>      
 <semantic-form-autocomplete-input for="usedSoftware">
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{toolTitle}}"
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}"
         fields="[[fieldDefinitions 
                                 toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                 version='http://www.metaphacts.com/fieldDefinition/version'
