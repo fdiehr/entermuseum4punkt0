@@ -17,9 +17,9 @@
         hasCreationPhase='http://www.metaphacts.com/fieldDefinition/hasCreationPhase'            
         hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'                                
         needsExpertise='http://www.metaphacts.com/fieldDefinition/needsExpertise'
-        usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
         usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
-        ]]">
+        usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
+                ]]">
 
         <h1>Entwicklungsschritt</h1>
         <p> Die unterschiedlichen Entwicklungsschritte sind jeder für sich zu beschreiben.
@@ -41,7 +41,6 @@
                                                 inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
-                                                broaderCreationMethod='http://www.metaphacts.com/fieldDefinition/broaderCreationMethod'                
                                                     ]]">
                 <semantic-form-hidden-input for="inSchemeCreationMethod" default-value='skos:Concept'>
                 </semantic-form-hidden-input>
@@ -49,12 +48,11 @@
                 </semantic-form-text-input>
                 <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
                 </semantic-form-text-input>
-                <semantic-form-tree-picker-input for="broaderCreationMethod">
-                </semantic-form-tree-picker-input>
+               
 
                 <semantic-form-errors></semantic-form-errors>
-                <button name='submit' class='btn btn-default'>Create</button>
-                <button name='reset' class='btn btn-default'>Reset</button>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
             </semantic-form>
         </semantic-form-tree-picker-input>
 
@@ -73,8 +71,8 @@
                 </semantic-form-text-input>
 
                 <semantic-form-errors></semantic-form-errors>
-                <button name='submit' class='btn btn-default'>Create</button>
-                <button name='reset' class='btn btn-default'>Reset</button>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
             </semantic-form>
         </semantic-form-tree-picker-input>
 
@@ -114,8 +112,8 @@
                         </semantic-form-text-input>
 
                         <semantic-form-errors></semantic-form-errors>
-                        <button name='submit' class='btn btn-default'>Create</button>
-                        <button name='reset' class='btn btn-default'>Reset</button>
+                        <button name='submit' class='btn btn-default'>Speichern</button>
+                        <button name='reset' class='btn btn-default'>Wiederherstellen</button>
                     </semantic-form>
 
                 </semantic-form-tree-picker-input>
@@ -140,8 +138,8 @@
                 </semantic-form-composite-input>
                 <semantic-form-errors></semantic-form-errors>
                 <semantic-form-recover-notification></semantic-form-recover-notification>
-                <button name="submit" class="btn btn-default">Save</button>
-                <button name="reset" class="btn btn-default">Reset</button>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
         </semantic-form-autocomplete-input>
         <!--
 <semantic-form-composite-input for="toolIsDocumentedIn"
@@ -195,8 +193,8 @@ Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschr
             </semantic-form-text-input>
         </semantic-form-composite-input>
         <semantic-form-errors></semantic-form-errors>
-        <button name='submit' class='btn btn-default'>Create</button>
-        <button name='reset' class='btn btn-default'>Reset</button>
+        <button name='submit' class='btn btn-default'>Speichern</button>
+        <button name='reset' class='btn btn-default'>Wiederherstellen</button>
     </semantic-form>
 </semantic-form-autocomplete-input>
 

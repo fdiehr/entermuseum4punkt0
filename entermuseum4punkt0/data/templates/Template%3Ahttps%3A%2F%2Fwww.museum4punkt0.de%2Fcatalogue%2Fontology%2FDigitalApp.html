@@ -1,42 +1,44 @@
 
-<bs-panel>
     <h1>Digitale Anwendung</h1>
-
-    <h2>Grundinformationen</h2>
-
+            
+    <bs-panel>
+    <h4>Grundinformationen</h4>   
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/digitalAppTitle']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/shortTitle']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTechnologyType']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasMaturityLevel']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasAreaOfUse']]
-    
-    <h3>Gesamtentwicklungszeitraum</h3>
+
+    <h4>Gesamtentwicklungszeitraum</h4>
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
-    
-    <h3>Sourcecode der digitalen Anwendung</h3>
 
+    <h4>Sourcecode der digitalen Anwendung</h4>
     [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn']]
-    <semantic-link
-uri=':DigitalApp'
-urlqueryparam-app='[[this]]'
-urlqueryparam-tab='1'
->
-<button>Edit</button>
-</semantic-link>
 
-<h2>Projektkontext</h2>
-[[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasRealisedBy']]
+    <h4>Projektkontext</h4>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasRealisedBy']]
+    <semantic-link uri=':DigitalApp' urlqueryparam-app='[[this]]' urlqueryparam-tab='1'>
+            <button>Bearbeiten</button>
+        </semantic-link>
 
-<semantic-link
-uri=':DigitalApp'
-urlqueryparam-app='[[this]]'
-urlqueryparam-tab='1'
->
-<button>Edit</button>
-</semantic-link>
+    </bs-panel>
+    
 
-<h2>Beforschung</h2>
-[[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researched']]
+<!--
+    <h4>Vermittlungskonzept</h4>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf']]
 
-</bs-panel>
+    <h4>Entwicklungsschritte</h4>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp']]
+
+    <h4>Betrieb</h4>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/operated']]
+    
+    <h4>Beforschung</h4>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researched']]
+    -->
+    <!--
+    <h4>Assets</h4>
+-->
+
