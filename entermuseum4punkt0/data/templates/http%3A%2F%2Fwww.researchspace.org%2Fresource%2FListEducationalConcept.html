@@ -1,16 +1,24 @@
 <bs-panel>
-        <h1>Vermittlungskonzept</h1>
-   
-        
-        <div class="gap">
-            <semantic-table
-                query='SELECT * WHERE {
-                    $Vermittlungskonzept m4p0:isEducationalConceptOf ?DigitaleAnwendung
-                    
-                }'
-            
-        
+    <h1>Vermittlungskonzept</h1>
 
-            ></semantic-table>
-        </div>
-    </bs-panel>
+    
+    <div class="gap">
+        <semantic-table
+            query='SELECT ?s ?p ?o WHERE {
+                ?s m4p0:isEducationalConceptOf ?o
+                
+            }'
+            column-configuration='[
+            {"variableName": "s", "displayName": "Vermittlungskonzept"}, 
+            {"variableName": "p", "displayName": "gehört zu"},  
+            {"variableName": "o", "displayName": "digitale Anwendung"}
+
+            ]'                          
+        
+    
+
+        ></semantic-table>
+    </div>
+</bs-panel>
+
+

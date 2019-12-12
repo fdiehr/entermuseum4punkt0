@@ -11,10 +11,16 @@
         </div>
         <div class="gap">
             <semantic-table
-                query='SELECT * WHERE {
-                    $Entwicklungsschritt m4p0:hasCreatedDigitalApp ?DigitaleAnwendung. 
+                query= 'SELECT ?s ?p ?o WHERE {
+                    ?s m4p0:hasCreatedDigitalApp ?o. 
                     
                 }'
+                column-configuration='[
+                {"variableName": "s", "displayName": "Entwicklungsschritt"}, 
+                {"variableName": "p", "displayName": "gehört zu"},  
+                {"variableName": "o", "displayName": "digitale Anwendung"}
+    
+                ]'                     
             
         
 

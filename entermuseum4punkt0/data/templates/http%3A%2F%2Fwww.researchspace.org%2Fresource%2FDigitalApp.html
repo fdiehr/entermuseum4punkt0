@@ -17,8 +17,7 @@
     #############################################
     
    -->           
-            <bs-tab event-key="1" title="Grundinformationen">
-     
+       
                 <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/digitalAppRdfType">
                 </semantic-form-hidden-input>
                 <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle">
@@ -33,7 +32,7 @@
                 </semantic-form-checklist-input>
 
 
-                <h3>Sourcecode der digitalen Anwendung</h3>
+                <h4>Sourcecode der digitalen Anwendung</h4>
                 <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn"
                     new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
                     fields="[[fieldDefinitions]]">
@@ -42,7 +41,7 @@
                     </semantic-form-text-input>
 
                 </semantic-form-composite-input>
-                <h3>Gesamtentwicklungszeitraum</h3>
+                <h4>Gesamtentwicklungszeitraum</h4>
                 <p>Geben Sie den Beginn des Zeitraums an. Wenn Sie das taggenaue Datum nicht angeben können, so
                     schätzen Sie es.
                     Es kommt vor allem darauf an eine ungefähre Einschätzung von der Dauer des Entwicklungsprozesses
@@ -56,7 +55,7 @@
                 </semantic-form-datetime-input>
 
 
-                <h2>Vermarktung</h2>
+                <h3>Vermarktung</h3>
                 <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasTouchpoints">
                     <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
@@ -74,173 +73,17 @@
 
                     </semantic-form>
                 </semantic-form-tree-picker-input>
-                <h2>Projekt</h2>
+                <h3>Projekt</h3>
 <p>Geben Sie ein Projekt an, in dessen Zusammenhang die digitale Anwendung entwickelt wurde.</p>
 <semantic-form-autocomplete-input for="http://www.metaphacts.com/fieldDefinition/wasRealisedBy">    
 </semantic-form-autocomplete-input>
-                <!-- 
-                    <h3>Abbildungen</h3>
-                    Image upload siehe: https://enter.museum4punkt0.de/resource/Help:SemanticFormAdvancedInputs 
-                habe schon ein Feld für die Abbildung erstellt: .../appImage
-                -->
-                <!--
-        
-                <semantic-form-file-input
-                for='http://www.metaphacts.com/fieldDefinition/appImage'
-                placeholder='Please drag&drop your image here'
-                accept-pattern='image/*'
-                generate-iri-query='
-                  SELECT ?resourceIri WHERE {
-                    BIND(URI(CONCAT(
-                      STR(<Default:>), "uploaded-file-", ?__fileName__)
-                    ) as ?resourceIri)
-                  }
-                '
-                resource-query='
-                  PREFIX mp: <http://www.metaphacts.com/ontologies/platform#>
-                  CONSTRUCT {
-                    ?__resourceIri__ a mp:File.
-                    ?__resourceIri__ mp:fileName ?__fileName__.
-                    ?__resourceIri__ mp:mediaType ?__mediaType__.
-                  } WHERE {}
-                '
-                name-predicate-iri='http://www.metaphacts.com/ontologies/platform#fileName'
-                media-type-predicate-iri='http://www.metaphacts.com/ontologies/platform#mediaType'
-                    storage='{file-storage-id}'
-                    temp-storage='{temp-file-storage-id}'>
-                </semantic-form-file-input>
-            
-                      
-    -->
-            </bs-tab>
-            <!--
-    #############################################
-    #####                                   #####
-    #####                                   #####
-    #####            Vermittlung            #####
-    #####                                   ##### 
-    #############################################
-    
-                
-                -->
 
-
-            <bs-tab event-key="2" title="Vermittlungskonzept">
-                <h2>Vermittlungskonzept</h2>
-                <p>Das Vermittlungskonzept beschreibt den Inhalt/das Thema der digitalen Anwendung und wie dieser/dieses
-                    mittels eines Formates umgesetzt ist.
-                    Es beschreibt weiterhin angesprochene Nutzer-/Besuchergruppen und wie die digitale Anwendung deren
-                    Bedürfnisse adressiert.</p>
-                <p>Rufen Sie ein neues Formular auf, um Entwicklungsschritte zu beschreiben. Speichern Sie vorher!</p>
-
-                <semantic-link-container uri=":EducationalConcept" target=_blank>
-                    <button class="btn btn-default">Neu</button>
-                </semantic-link-container>
-            </bs-tab>
-            <!--
-    #############################################
-    #####                                   #####
-    #####                                   #####
-    #####            ENTWICKLUNG            #####
-    #####                                   ##### 
-    #############################################
-    
-                -->
-            <bs-tab event-key="3" title="Entwicklungsschritte">
-                <!--
-                   <semantic-form-composite-input for="hasDevelopmentTimeSpan"></semantic-form-composite-input> -->
-
-
-                <h2>Entwicklungsschritte</h2>
-                <p>Rufen Sie ein neues Formular auf, um Entwicklungsschritte zu beschreiben. Speichern Sie vorher!</p>
-
-                <semantic-link-container uri=":E65_Creation" target=_blank>
-                    <button class="btn btn-default">Neu</button>
-                </semantic-link-container>
-            </bs-tab>
-
-            <!--
-    #############################################
-    #####                                   #####
-    #####                                   #####
-    #####            Betrieb                #####
-    #####                                   ##### 
-    #############################################
-    
-                
-                -->
-            <bs-tab event-key="4" title="Betrieb">
-
-                <h2>Betrieb der digitalen Anwendung</h2>
-                <p>Rufen Sie ein neues Formular auf, um den Betrieb der digitalen Anwendung zu beschreiben.
-                    Speichern Sie vorher!</p>
-                <semantic-link-container uri=":Operation" target=_blank>
-                    <button class="btn btn-default">Neu</button>
-                </semantic-link-container>
-
-            </bs-tab>
-
-            <!--
-    #############################################
-    #####                                   #####
-    #####                                   #####
-    #####            BEFORSCHUNG            #####
-    #####                                   ##### 
-    #############################################
-    
-                -->
-            <bs-tab event-key="5" title="Beforschung">
-
-                <h2>Beforschung der digitalen Anwendung</h2>
-                <p>Rufen Sie ein neues Formular auf, um den Forschungskontext der digitalen Anwendung zu beschreiben.
-                    Speichern Sie vorher!</p>
-
-                <semantic-link-container uri=":ResearchActivity" target=_blank>
-                    <button class="btn btn-default">Neu</button>
-                </semantic-link-container>
-
-            </bs-tab>
-            
-            <!--
-    #############################################
-    #####                                   #####
-    #####                                   #####
-    #####            ASSETS                 #####
-    #####                                   ##### 
-    #############################################
-    
-              -->
-            <bs-tab event-key="7" title="Assets">
-
-                <h2>Digitale Objekte</h2>
-               
-                        <p>Rufen Sie ein neues Formular auf, um digitale Objekte hinzuzufügen.
-                         Speichern Sie vorher!</p>
-                
-                <semantic-link-container uri=":digiObj" target=_blank>
-                        <button class="btn btn-default">
-                            Neu
-                        </button>
-                    </semantic-link-container>
-              
-
-               
-
-
-
-            </bs-tab>
-            <!--
-                     <button name="save-state">Export</button>
-              <button name="load-state">Import</button>
-                -->
-        </bs-tabs>
+     
         
             <semantic-form-errors></semantic-form-errors>
             <semantic-form-recover-notification></semantic-form-recover-notification>
             <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
-            <!--
-            <button name="reset" class="btn btn-default">Wiederherstellen</button>
--->
+           
        
     </semantic-form>
 </bs-panel>

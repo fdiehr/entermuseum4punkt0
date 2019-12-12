@@ -16,12 +16,15 @@
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesSoftware']]
     
     
-    <semantic-link
-        uri=':Operation'
-        urlqueryparam-operation='[[this]]'
-        urlqueryparam-tab='1'
-    >
-        <button>Bearbeiten</button>
-    </semantic-link>
+    <div class="gap">
+        <semantic-link uri=':Operation' urlqueryparam-operation='[[this]]' urlqueryparam-tab='1'>
+                <button>Datensatz bearbeiten</button>
+            </semantic-link>
+        </div>
+        <h4>Nächster Schritt:</h4>
+    
+            <semantic-link uri=':ResearchActivity' target=_blank>
+                <button>Beforschung</button>
+            </semantic-link>
 
     </bs-panel>

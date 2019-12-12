@@ -12,13 +12,17 @@
 
     <div class="gap">
         <semantic-table
-            query='SELECT ?person ?givenName ?familyName WHERE 
-            { ?person a crm:E21_Person; 
-                      schema:givenName ?givenName;
-                      schema:familyName ?familyName.
-              
-              }'
-           
+            query='SELECT ?value ?givenName ?familyName
+            WHERE {?value a crm:E21_Person ;
+              schema:familyName ?familyName.            
+              OPTIONAL { ?value schema:givenName ?givenName }.
+            }
+              '          
+              column-configuration='[
+              {"variableName": "value", "displayName": "Person"}, 
+              {"variableName": "familyName", "displayName": "Nachname"},
+              {"variableName": "givenName", "displayName": "Vorname"}  
+              ]'  
         ></semantic-table>
     </div>
 </bs-panel>

@@ -13,27 +13,39 @@
         subject='[[urlParam "creation"]]' post-action='redirect' browser-persistence=false form-id='Creation' fields="[[fieldDefinitions
         creationRdfType='http://www.metaphacts.com/fieldDefinition/creationRdfType'
         hasCreatedDigitalApp='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp'
-        descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges'      
         hasCreationPhase='http://www.metaphacts.com/fieldDefinition/hasCreationPhase'            
-        hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'                                
+        hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'  
         needsExpertise='http://www.metaphacts.com/fieldDefinition/needsExpertise'
+        descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges' 
         usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
         usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
                 ]]">
 
-        <h1>Entwicklungsschritt</h1>
-        <p> Die unterschiedlichen Entwicklungsschritte sind jeder für sich zu beschreiben.
-            Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und/oder ihrer
-            Zugehörigkeit zu übergeordneten
-            Entwicklungsphasen. Wie granular die Entwicklung der Anwendung beschrieben wird liegt im
-            Ermessen des Erfassenden. </br>
-            Legen Sie für jeden Entwicklungsschritt einen neuen Datensatz an!
-        </p>
+        <h1>Entwicklung</h1>
+       
 
         <semantic-form-hidden-input for="creationRdfType"></semantic-form-hidden-input>
         <semantic-form-autocomplete-input for="hasCreatedDigitalApp"></semantic-form-autocomplete-input>
-        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
-        </semantic-form-text-input>
+        <div class="gap">
+        <p> Die Entwicklung digitaler Anwendungen gliedert sich in mehrere Teilschritte auf, die jeweils andere
+                Funktionen erfüllen.</br>
+                Jeder Entwicklungsschritt kann einer übergeordneten Phase zugeordnet werden, in der konkrete Methoden Anwendung finden: 
+            </p>
+            <p>    
+                <ul>
+                    <li>
+                <b>Ideenfindung- und Recherche: </b>Erste Ideen zum Inhalt und zu Ausgestaltung der Anwendung entstehen. Methoden
+                sind z.B. Kreativworkshop, Brainstorming.</li>
+                <li><b>Konzeption: </b>Die Idee nimmt konkrete Form an, die Vermittlungsziele werden definiert. Methoden sind z.B. Design, Gamedesign, Storytelling. </li> 
+                <li><b>Materialerzeugung und -beschaffung:</b> Für den Content werden Materialen erzeugt, erstellt, beschafft. Methoden
+                sind z.B. Bestand- und Objektdigitalisierung.</li>
+                <li><b>Umsetzung/Realisierung: </b>Die digitale Anwendung wird erzeugt/implementiert. Methoden sind z.B. Programmieren,
+                Videoschnitt, Bildbearbeitung.</li>
+            </ul>
+            </p>
+            <p>        Legen Sie für jeden Entwicklungsschritt einen neuen Datensatz an!
+            </p>
+        </div>
         <semantic-form-checklist-input for="hasCreationPhase">
         </semantic-form-checklist-input>
         <semantic-form-tree-picker-input for="hasCreationMethod">
@@ -48,15 +60,13 @@
                 </semantic-form-text-input>
                 <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
                 </semantic-form-text-input>
-               
-
                 <semantic-form-errors></semantic-form-errors>
                 <button name='submit' class='btn btn-default'>Speichern</button>
-                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
+           
             </semantic-form>
         </semantic-form-tree-picker-input>
-
-
+<!--
+<p>Welche Expertisen und Kenntnisse sind für die genannten Methoden nötig? z.B. Programmieren: Webprogrammierung, </p>
         <semantic-form-tree-picker-input for="needsExpertise">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
                                                     inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
@@ -72,18 +82,22 @@
 
                 <semantic-form-errors></semantic-form-errors>
                 <button name='submit' class='btn btn-default'>Speichern</button>
-                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
             </semantic-form>
         </semantic-form-tree-picker-input>
+        -->
+        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
+        </semantic-form-text-input>
 
-      
 
         <h3>genutze Hilfsmittel und Geräte</h3>
-<p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für das Scannen von 3D-Digitalisaten
-    wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig. Aber auch Literatur oder Archivmaterialien
-    sind mögliche Hilfsmittel, die während der Recherchephase genutzt wurden. </br>
-    Geben Sie hier Hilfsmittel und Geräte an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kamen.
-</p>
+        <p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für
+            das Scannen von 3D-Digitalisaten
+            wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig.
+            Aber auch Literatur oder Archivmaterialien
+            sind mögliche Hilfsmittel, die während der Recherchephase genutzt wurden. </br>
+            Geben Sie hier Hilfsmittel und Geräte an, die während des hier beschriebenen Entwicklungsschritts zum
+            Einsatz kamen.
+        </p>
         <semantic-form-autocomplete-input for="usedTool">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
                                     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -159,50 +173,51 @@
     </semantic-form-composite-input>
 -->
 
-<h3>genutzte Software</h3>
- <p>Auch verschiedene Software kann bei der Entwicklung digitaler Anwendungen zum Einsatz kommen wie z.B. Programme zum Erstellen von 3D-Modellen oder 
-Videoschnitt- und Bildbearbeitungsprogramme.</br>
-Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
- </p>      
-<semantic-form-autocomplete-input for="usedSoftware">
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}"
-        fields="[[fieldDefinitions 
+        <h3>genutzte Software</h3>
+        <p>Auch verschiedene Software kann bei der Entwicklung digitaler Anwendungen zum Einsatz kommen wie z.B.
+            Programme zum Erstellen von 3D-Modellen oder
+            Videoschnitt- und Bildbearbeitungsprogramme.</br>
+            Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
+        </p>
+        <semantic-form-autocomplete-input for="usedSoftware">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
                                 toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                 version='http://www.metaphacts.com/fieldDefinition/version'
                                 hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
                                 P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
                                 ]]">
-        <semantic-form-text-input for="toolTitle">
-        </semantic-form-text-input>
-        <semantic-form-text-input for="version">
-        </semantic-form-text-input>
-        <semantic-form-select-input for="hasSoftwareType">
-        </semantic-form-select-input>
-        <semantic-form-composite-input for="P70i_is_documented_in"
-            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                <semantic-form-text-input for="toolTitle">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="version">
+                </semantic-form-text-input>
+                <semantic-form-select-input for="hasSoftwareType">
+                </semantic-form-select-input>
+                <semantic-form-composite-input for="P70i_is_documented_in"
+                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
             documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
             documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
             url='http://www.metaphacts.com/fieldDefinition/url'
             ]]">
-            <h4>Quelle</h4>
-            <semantic-form-hidden-input for="documentRdfType">
-            </semantic-form-hidden-input>
-            <semantic-form-text-input for="documentTitle">
-            </semantic-form-text-input>
-            <semantic-form-text-input for="url">
-            </semantic-form-text-input>
-        </semantic-form-composite-input>
-        <semantic-form-errors></semantic-form-errors>
-        <button name='submit' class='btn btn-default'>Speichern</button>
-        <button name='reset' class='btn btn-default'>Wiederherstellen</button>
-    </semantic-form>
-</semantic-form-autocomplete-input>
+                    <h4>Quelle</h4>
+                    <semantic-form-hidden-input for="documentRdfType">
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="documentTitle">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                </semantic-form-composite-input>
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
+            </semantic-form>
+        </semantic-form-autocomplete-input>
 
         <semantic-form-errors></semantic-form-errors>
         <semantic-form-errors></semantic-form-errors>
-            <semantic-form-recover-notification></semantic-form-recover-notification>
-            <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
-           
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default"
+            style="background-color: lightgray; border-style:outset;">Speichern</button>
+
 
     </semantic-form>
 </bs-panel>

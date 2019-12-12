@@ -12,7 +12,7 @@
 
     <div class="gap">
         <semantic-table
-            query='SELECT * WHERE {
+            query='SELECT ?subject ?p ?org_title WHERE {
                 ?subject a crm:E74_Group ;
                 schema:legalName ?org_title .
             }'

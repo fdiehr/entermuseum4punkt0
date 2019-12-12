@@ -2,7 +2,7 @@
     <h1>Digitale Anwendung</h1>
             
     <bs-panel>
-    <h4>Grundinformationen</h4>   
+      
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/digitalAppTitle']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/shortTitle']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTechnologyType']]
@@ -18,27 +18,20 @@
 
     <h4>Projektkontext</h4>
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasRealisedBy']]
+   
+   <div class="gap">
     <semantic-link uri=':DigitalApp' urlqueryparam-app='[[this]]' urlqueryparam-tab='1'>
-            <button>Bearbeiten</button>
+            <button>Datensatz bearbeiten</button>
+        </semantic-link>
+    </div>
+    <h3>Nächster Schritt:</h3>
+   
+        <semantic-link uri=':EducationalConcept' target=_blank>
+            <button>Vermittlungskonzept</button>
         </semantic-link>
 
     </bs-panel>
     
 
-<!--
-    <h4>Vermittlungskonzept</h4>
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf']]
 
-    <h4>Entwicklungsschritte</h4>
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp']]
-
-    <h4>Betrieb</h4>
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/operated']]
-    
-    <h4>Beforschung</h4>
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researched']]
-    -->
-    <!--
-    <h4>Assets</h4>
--->
 

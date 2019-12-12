@@ -1,20 +1,27 @@
 <bs-panel>
-    <h1>Entwicklungsschritte</h1>
+    <h1>Entwicklung</h1>
 
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp']]
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasCreationPhase']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasCreationMethod']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/needsExpertise']]
-    [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedTool']]
-    [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedSoftware']]
-       
-    <semantic-link
-        uri=':E65_Creation'
-        urlqueryparam-creation='[[this]]'
-        urlqueryparam-tab='1'
-    >
-        <button>Bearbeiten</button>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges']]
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usedTool']]
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usedSoftware']]
+
+    <div class="gap">
+        <semantic-link uri=':E65_Creation' urlqueryparam-creation='[[this]]' urlqueryparam-tab='1'>
+            <button>Datensatz bearbeiten</button>
+        </semantic-link>
+    </div>
+    <h4>Weiteren Entwicklungsschritt hinzufügen:</h4>
+    <semantic-link uri=':E65_Creation' target=_blank>
+        <button>Entwicklung</button>
     </semantic-link>
 
-    </bs-panel>
+    <h4>Nächster Schritt:</h4>
+
+    <semantic-link uri=':Operation' target=_blank>
+        <button>Betrieb</button>
+    </semantic-link>
+</bs-panel>

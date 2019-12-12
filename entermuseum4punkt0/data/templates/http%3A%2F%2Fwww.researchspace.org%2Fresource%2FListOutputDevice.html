@@ -12,10 +12,14 @@
         <div class="gap">
             <semantic-table
                 query='SELECT * WHERE {
-                    $OutputDevice m4p0:toolTitle ?label. 
+                    ?s m4p0:toolTitle ?label. 
                     
                 }'
-            
+                column-configuration='[
+                {
+                    "variableName": "s",
+                    "displayName": "Bezeichnung des Ausspielgeräts"
+                }]'
         
 
             ></semantic-table>
