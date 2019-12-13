@@ -1,39 +1,33 @@
 
 <http://www.metaphacts.com/fieldDefinition/shortTitle/context> {
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> a <http://www.metaphacts.com/ontology/fields#Field> .
+  _:genid-d67e37053c9a48f5af22e1cb539b1515-nkiheo a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:shortTitle $value} WHERE {}" .
   
-  _:genid-23b7be1cab17460bb376610762bc7b0c-yatgms a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/shortTitle> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie ggf. einen Kurztitel an (max. 60-90 Zeichen).";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d67e37053c9a48f5af22e1cb539b1515-wa90q .
   
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Kurztitel"@de .
-  
-  _:genid-23b7be1cab17460bb376610762bc7b0c-owu3yb <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:shortTitle $value} WHERE {}" .
-  
-  _:genid-23b7be1cab17460bb376610762bc7b0c-g22k3f a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-23b7be1cab17460bb376610762bc7b0c-owu3yb .
-  
-  _:genid-23b7be1cab17460bb376610762bc7b0c-g22k3f <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:shortTitle $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "Geben Sie ggf. einen Kurztitel an.";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-23b7be1cab17460bb376610762bc7b0c-g22k3f .
-  
-  _:genid-23b7be1cab17460bb376610762bc7b0c-owu3yb a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-23b7be1cab17460bb376610762bc7b0c-yatgms;
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
-  
-  _:genid-23b7be1cab17460bb376610762bc7b0c-yatgms <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
+  _:genid-d67e37053c9a48f5af22e1cb539b1515-wa90q <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
   $subject m4p0:shortTitle ?value.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/shortTitle> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:28:20.428Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  _:genid-d67e37053c9a48f5af22e1cb539b1515-gpevuq <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:shortTitle $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-d67e37053c9a48f5af22e1cb539b1515-nkiheo;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d67e37053c9a48f5af22e1cb539b1515-gpevuq;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Kurztitel"@de .
+  
+  _:genid-d67e37053c9a48f5af22e1cb539b1515-wa90q a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d67e37053c9a48f5af22e1cb539b1515-gpevuq a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/shortTitle> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T16:53:48.174Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/shortTitle> .

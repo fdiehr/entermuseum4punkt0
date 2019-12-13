@@ -1,0 +1,34 @@
+
+<http://www.metaphacts.com/fieldDefinition/unitCare/context> {
+  <http://www.metaphacts.com/fieldDefinition/unitCare> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6e6955cb20f442b3ab674114d93f8c78-ktg7qo;
+    <http://www.metaphacts.com/ontology/fields#defaultValue> "h";
+    <http://www.w3.org/2000/01/rdf-schema#label> "unitCare"@de .
+  
+  _:genid-6e6955cb20f442b3ab674114d93f8c78-jjuv3 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:Operation; m4p0:unitCare $value} WHERE {}" .
+  
+  _:genid-6e6955cb20f442b3ab674114d93f8c78-ktg7qo a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-6e6955cb20f442b3ab674114d93f8c78-nqx9bh <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:Operation; m4p0:unitCare $value} WHERE {}" .
+  
+  _:genid-6e6955cb20f442b3ab674114d93f8c78-ktg7qo <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:visitorCare ?value;
+   m4p0:unitCare ?label.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/unitCare> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-6e6955cb20f442b3ab674114d93f8c78-jjuv3;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6e6955cb20f442b3ab674114d93f8c78-nqx9bh .
+  
+  _:genid-6e6955cb20f442b3ab674114d93f8c78-nqx9bh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/unitCare> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T17:20:41.821Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/unitCare> .
+  
+  <http://www.metaphacts.com/fieldDefinition/unitCare> a <http://www.w3.org/ns/ldp#Resource> .
+}

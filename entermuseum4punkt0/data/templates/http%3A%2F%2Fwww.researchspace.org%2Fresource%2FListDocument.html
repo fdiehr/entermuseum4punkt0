@@ -1,0 +1,18 @@
+<bs-panel>
+    <h1>Quellen</h1>
+      
+    <div class="gap">
+        <semantic-table
+            query='SELECT * WHERE {
+                ?s crm:P70i_is_documented_in ?o. 
+                
+            }'
+            column-configuration='[
+            {"variableName": "s", "displayName": "Entität"}, 
+            {"variableName": "p", "displayName": "hat Quelle"},  
+            {"variableName": "o", "displayName": "Dokument"}
+
+            ]'             
+        ></semantic-table>
+    </div>
+</bs-panel>

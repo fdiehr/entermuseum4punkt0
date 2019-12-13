@@ -1,35 +1,35 @@
 
 <http://www.metaphacts.com/fieldDefinition/visitorCare/context> {
-  _:genid-dfa77c312e26474b970c8720964028d8-o3w8de a <http://spinrdf.org/sp#Query> .
+  _:genid-75b127efb26146349fa225ebf63f3190-hi4bey <http://spinrdf.org/sp#text> """INSERT { $subject a m4p0:OperationalConcept;  m4p0:visitorCare $value.
+} WHERE {}""" .
   
   <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-dfa77c312e26474b970c8720964028d8-49qo8 a <http://spinrdf.org/sp#Query> .
+  _:genid-75b127efb26146349fa225ebf63f3190-hi4bey a <http://spinrdf.org/sp#Query> .
   
-  _:genid-dfa77c312e26474b970c8720964028d8-25ukvp <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:OperationalConcept. $subject  m4p0:visitorCare $value} WHERE {}" .
-  
-  _:genid-dfa77c312e26474b970c8720964028d8-49qo8 <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject  m4p0:visitorCare $value} WHERE {}" .
+  _:genid-75b127efb26146349fa225ebf63f3190-0zofkl a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject  m4p0:visitorCare $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#comment>
       "Geben Sie den empfohlenen Betreuungsaufwand in Personenstunden an. Es sind nur ganzzahlige Werte zulässig.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-dfa77c312e26474b970c8720964028d8-25ukvp;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-dfa77c312e26474b970c8720964028d8-49qo8;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-75b127efb26146349fa225ebf63f3190-0zofkl;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv;
     <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept> .
   
-  _:genid-dfa77c312e26474b970c8720964028d8-25ukvp a <http://spinrdf.org/sp#Query> .
+  _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-dfa77c312e26474b970c8720964028d8-o3w8de;
-    <http://www.w3.org/2000/01/rdf-schema#label> "empfohlener Betreuungsaufwand"@de;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#label>
+      "empfohlener Betreuungsaufwand"@de;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#integer>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-75b127efb26146349fa225ebf63f3190-hi4bey .
   
-  _:genid-dfa77c312e26474b970c8720964028d8-o3w8de <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject m4p0:visitorCare ?value.
+  _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:visitorCare ?value
 }""" .
   
   <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T13:42:46.541Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T17:33:49.932Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/visitorCare> .

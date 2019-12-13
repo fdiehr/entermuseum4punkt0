@@ -1,38 +1,41 @@
 
 <http://www.metaphacts.com/fieldDefinition/hasSubject/context> {
-  <http://www.metaphacts.com/fieldDefinition/hasSubject> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/hasSubject> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ar6o1a;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ynbpof .
   
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-c2z5ao <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasSubject $value} WHERE {}" .
-  
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-slf7ri a <http://spinrdf.org/sp#Query> .
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ar6o1a <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasSubject ?value.}""" .
   
   <http://www.metaphacts.com/fieldDefinition/hasSubject> <http://www.metaphacts.com/ontology/fields#treePatterns>
       """{
   \"type\": \"simple\",
   \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/Subject>\"
-}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-506edbe8193c4dd99a6e6aa13f01a171-u4m8u;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson> .
+  
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-tnt296 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasSubject $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSubject> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
     <http://www.w3.org/2000/01/rdf-schema#label> "thematischer Bezug"@de .
   
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-u4m8u <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject m4p0:hasSubject ?value.}""" .
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ynbpof a <http://spinrdf.org/sp#Query> .
   
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-slf7ri <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasSubject $value} WHERE {}" .
-  
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-c2z5ao a <http://spinrdf.org/sp#Query> .
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ar6o1a a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/hasSubject> <http://www.metaphacts.com/ontology/fields#domain>
       <https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept> .
   
-  _:genid-506edbe8193c4dd99a6e6aa13f01a171-u4m8u a <http://spinrdf.org/sp#Query> .
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-tnt296 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/hasSubject> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-506edbe8193c4dd99a6e6aa13f01a171-c2z5ao;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-506edbe8193c4dd99a6e6aa13f01a171-slf7ri;
+  _:genid-fe11de4a90bf48abbf2ed3a0063fc494-ynbpof <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasSubject $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSubject> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Welchen thematischen Bezug hat der Inhalt der Anwendung? z.B. Naturkunde, Technikgeschichte, Spiel- und Jugendbücher, Renaissance, Biodiversität, Bodentiere, Migration, Deutsche Auswanderer, Ozeanien, Südsee, Ethnologie";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-fe11de4a90bf48abbf2ed3a0063fc494-tnt296;
     a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-05T10:23:05.453Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T17:05:46.501Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasSubject> .
