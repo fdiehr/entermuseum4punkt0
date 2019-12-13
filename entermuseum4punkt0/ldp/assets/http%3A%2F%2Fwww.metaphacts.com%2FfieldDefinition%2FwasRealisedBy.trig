@@ -1,46 +1,41 @@
 
 <http://www.metaphacts.com/fieldDefinition/wasRealisedBy/context> {
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-c0bd563b1898496b8bb7f47a5e3600dd-losebi;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-losebi <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:wasRealisedBy ?value. ?value a m4p0:Project.}""" .
+  
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-sr2pe <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   ?value a m4p0:Project ;
     m4p0:projectTitle ?label .
   FILTER REGEX(STR(?label), \"?token\")
 } LIMIT 10""" .
   
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp;
-    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Project>;
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "1";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Projekt"@de .
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-udlayc <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
   
-  _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp a <http://spinrdf.org/sp#Query> .
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-losebi a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
-      _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr .
+  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "1";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Projekt"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-c0bd563b1898496b8bb7f47a5e3600dd-udlayc;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-c0bd563b1898496b8bb7f47a5e3600dd-sr2pe .
   
-  _:genid-8c123352ad15453dae6843ddd9e3a413-l85tr a <http://spinrdf.org/sp#Query> .
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-sr2pe a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k .
-  
-  _:genid-8c123352ad15453dae6843ddd9e3a413-87clbp <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject m4p0:wasRealisedBy ?value. ?value a m4p0:Project.
-}""" .
+  _:genid-c0bd563b1898496b8bb7f47a5e3600dd-udlayc a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#domain>
-      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp> .
-  
-  _:genid-8c123352ad15453dae6843ddd9e3a413-xkcf8k a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#maxOccurs>
-      "1";
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Wählen Sie ein Projekt aus, in dessen Rahmen die digitale Anwendung entstanden ist.";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T11:06:37.849Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T12:41:36.341Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> .

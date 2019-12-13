@@ -1,36 +1,33 @@
 
 <http://www.metaphacts.com/fieldDefinition/toolRdfType/context> {
   <http://www.metaphacts.com/fieldDefinition/toolRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4d1fd2edc5764d17a09afcc12d5367ec-nxlslw .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-3d3d7146131242088999372fe71f2df4-5sj04 .
   
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-0ki3l6 <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
-  
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-zoqxi <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<http://www.idpluslab.de/idplus-ontology#tool> as ?value)
+  _:genid-3d3d7146131242088999372fe71f2df4-5sj04 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<http://www.idpluslab.de/idplus-ontology#tool> as ?value)
   BIND($subject as ?dummy)
 }""" .
-  
-  <http://www.metaphacts.com/fieldDefinition/toolRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-4d1fd2edc5764d17a09afcc12d5367ec-zoqxi .
-  
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-nxlslw <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/toolRdfType> <http://www.w3.org/2000/01/rdf-schema#label>
       "toolRdfType"@de .
   
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-nxlslw a <http://spinrdf.org/sp#Query> .
+  _:genid-3d3d7146131242088999372fe71f2df4-r0dgtnn a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-3d3d7146131242088999372fe71f2df4-5sj04 a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/toolRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
-      "http://www.idpluslab.de/idplus-ontology#tool" .
+      "http://www.idpluslab.de/idplus-ontology#tool";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-3d3d7146131242088999372fe71f2df4-r0dgtnn;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-3d3d7146131242088999372fe71f2df4-l4m6nk .
   
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-zoqxi a <http://spinrdf.org/sp#Query> .
+  _:genid-3d3d7146131242088999372fe71f2df4-l4m6nk <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
   
-  _:genid-4d1fd2edc5764d17a09afcc12d5367ec-0ki3l6 a <http://spinrdf.org/sp#Query> .
+  _:genid-3d3d7146131242088999372fe71f2df4-r0dgtnn <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/toolRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-4d1fd2edc5764d17a09afcc12d5367ec-0ki3l6;
-    a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-23T17:30:54.050Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  _:genid-3d3d7146131242088999372fe71f2df4-l4m6nk a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/toolRdfType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T13:19:34.821Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/toolRdfType> .

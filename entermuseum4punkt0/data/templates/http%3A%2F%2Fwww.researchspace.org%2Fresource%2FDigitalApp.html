@@ -33,10 +33,14 @@
 
 
                 <h4>Sourcecode der digitalen Anwendung</h4>
-                <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn"
+                <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in"
                     new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
                     fields="[[fieldDefinitions]]">
                     <h4>Link zu GitHub</h4>
+                    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
+                    </semantic-form-text-input>
                     <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
                     </semantic-form-text-input>
 

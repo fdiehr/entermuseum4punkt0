@@ -1,26 +1,26 @@
 
 <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType/context> {
-  <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "eduConceptRdfType"@de .
-  
-  _:genid-59f1d938d60b47919b107e420fa63fde-nm04y8 a <http://spinrdf.org/sp#Query> .
+  _:genid-8a0add90d1b6424795ee8cbb2558c524-lv3h8h <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(m4p0:EducationalConcept as ?value)
+    BIND($subject as ?dummy) }""" .
   
   <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-59f1d938d60b47919b107e420fa63fde-kno6i7 .
+      _:genid-8a0add90d1b6424795ee8cbb2558c524-5v7pos;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eduConceptRdfType"@de .
   
-  _:genid-59f1d938d60b47919b107e420fa63fde-kno6i7 <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
+  _:genid-8a0add90d1b6424795ee8cbb2558c524-5v7pos <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
     a <http://spinrdf.org/sp#Query> .
   
-  _:genid-59f1d938d60b47919b107e420fa63fde-nm04y8 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(m4p0:EducationalConcept as ?value)
-  BIND($subject as ?dummy)
-}""" .
-  
   <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-59f1d938d60b47919b107e420fa63fde-nm04y8;
-    <http://www.metaphacts.com/ontology/fields#defaultValue> "https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept";
+      _:genid-8a0add90d1b6424795ee8cbb2558c524-lv3h8h .
+  
+  _:genid-8a0add90d1b6424795ee8cbb2558c524-lv3h8h a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
+      "https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept";
     a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-22T15:04:34.201Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T12:44:32.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/eduConceptRdfType> .

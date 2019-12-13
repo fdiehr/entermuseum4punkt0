@@ -1,31 +1,33 @@
 
 <http://www.metaphacts.com/fieldDefinition/personRdfType/context> {
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-lselj a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/personRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "personRdfType"@de;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-05ac92fd43d64e8aa753cd599b11780d-p1fb6o .
+    <http://www.w3.org/2000/01/rdf-schema#label> "personRdfType"@de .
   
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-p1fb6o a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-54ewdi a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/personRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
-      "http://www.cidoc-crm.org/cidoc-crm/E21_Person";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-05ac92fd43d64e8aa753cd599b11780d-54ewdi;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-05ac92fd43d64e8aa753cd599b11780d-lselj .
-  
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-p1fb6o <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(crm:E21_Person as ?value)
+  _:genid-0415c8d361fa43749492751ea5508de7-8v1ak <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(crm:E21_Person as ?value)
   BIND($subject as ?dummy)
 }""" .
   
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-lselj <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  _:genid-0415c8d361fa43749492751ea5508de7-f51uyc a <http://spinrdf.org/sp#Query> .
   
-  _:genid-05ac92fd43d64e8aa753cd599b11780d-54ewdi <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  <http://www.metaphacts.com/fieldDefinition/personRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-0415c8d361fa43749492751ea5508de7-f51uyc;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0415c8d361fa43749492751ea5508de7-kdw2w;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0415c8d361fa43749492751ea5508de7-8v1ak .
+  
+  _:genid-0415c8d361fa43749492751ea5508de7-kdw2w <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/personRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person" .
+  
+  _:genid-0415c8d361fa43749492751ea5508de7-f51uyc <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
+  
+  _:genid-0415c8d361fa43749492751ea5508de7-kdw2w a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-0415c8d361fa43749492751ea5508de7-8v1ak a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/personRdfType> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T12:01:17.435Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T13:15:46.998Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/personRdfType> .

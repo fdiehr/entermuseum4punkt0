@@ -1,25 +1,24 @@
 
 <http://www.metaphacts.com/fieldDefinition/creationRdfType/context> {
-  <http://www.metaphacts.com/fieldDefinition/creationRdfType> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-d08f133b95ba47dba903c8a1b92f9e07-s6hnpf;
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/creationRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d12114df20284c058b57d758cc0f1b34-jal1l .
   
-  _:genid-d08f133b95ba47dba903c8a1b92f9e07-s6hnpf <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
+  _:genid-d12114df20284c058b57d758cc0f1b34-jal1l <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
     a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/creationRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
       "http://www.cidoc-crm.org/cidoc-crm/E65_Creation";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d08f133b95ba47dba903c8a1b92f9e07-lzpt5;
-    <http://www.w3.org/2000/01/rdf-schema#label> "creationRdfType"@de .
+    <http://www.w3.org/2000/01/rdf-schema#label> "creationRdfType"@de;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d12114df20284c058b57d758cc0f1b34-59s75t .
   
-  _:genid-d08f133b95ba47dba903c8a1b92f9e07-lzpt5 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(crm:E65_Creation as ?value)
+  _:genid-d12114df20284c058b57d758cc0f1b34-59s75t <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(crm:E65_Creation as ?value)
   BIND($subject as ?dummy)
 }""";
     a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/creationRdfType> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-22T10:00:48.331Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T12:53:34.627Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/creationRdfType> .

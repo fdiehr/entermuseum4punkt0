@@ -1,26 +1,32 @@
 
 <http://www.metaphacts.com/fieldDefinition/documentRdfType/context> {
+  _:genid-a463a273cc454e009c8a3abd898bd877-7e65ha a <http://spinrdf.org/sp#Query> .
+  
   <http://www.metaphacts.com/fieldDefinition/documentRdfType> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-eb47b9226308467ab02c90ab1e5c6476-dyqylr a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/documentRdfType> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-eb47b9226308467ab02c90ab1e5c6476-b4fmff .
-  
-  _:genid-eb47b9226308467ab02c90ab1e5c6476-dyqylr <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<http://www.cidoc-crm.org/cidoc-crm/E31_Document> as ?value)
+  _:genid-a463a273cc454e009c8a3abd898bd877-oeakjn a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(<http://www.cidoc-crm.org/cidoc-crm/E31_Document> as ?value)
   BIND($subject as ?dummy)
 }""" .
   
-  _:genid-eb47b9226308467ab02c90ab1e5c6476-b4fmff <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
-    a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/documentRdfType> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-a463a273cc454e009c8a3abd898bd877-7e65ha;
+    <http://www.w3.org/2000/01/rdf-schema#label> "documentRdfType"@de .
+  
+  _:genid-a463a273cc454e009c8a3abd898bd877-7e65ha <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/documentRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
       "http://www.cidoc-crm.org/cidoc-crm/E31_Document";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Document RDF Type"@de;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-eb47b9226308467ab02c90ab1e5c6476-dyqylr;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a463a273cc454e009c8a3abd898bd877-6vb6c9n .
+  
+  _:genid-a463a273cc454e009c8a3abd898bd877-6vb6c9n <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/documentRdfType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-a463a273cc454e009c8a3abd898bd877-oeakjn;
     a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-21T10:53:39.183Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T13:25:04.353Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/documentRdfType> .

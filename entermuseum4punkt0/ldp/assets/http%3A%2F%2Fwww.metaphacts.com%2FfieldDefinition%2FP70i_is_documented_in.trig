@@ -1,40 +1,36 @@
 
 <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in/context> {
-  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.w3.org/2000/01/rdf-schema#label>
-      "ist dokumentiert in"@de;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2002/07/owl#Thing> .
+  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2002/07/owl#Thing>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a1969efd7c43450dad91424c04a688ca-301sg .
   
-  _:genid-9f7a6859de8741138c341e8b2b022642-p6hquh a <http://spinrdf.org/sp#Query> .
+  _:genid-a1969efd7c43450dad91424c04a688ca-301sg <http://spinrdf.org/sp#text> "INSERT { $subject crm:P70i_is_documented_in $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-9f7a6859de8741138c341e8b2b022642-crnmxq .
-  
-  _:genid-9f7a6859de8741138c341e8b2b022642-ynozy9 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
-  
-  _:genid-9f7a6859de8741138c341e8b2b022642-ynozy9 <http://spinrdf.org/sp#text> "INSERT { $subject crm:P70i_is_documented_in $value. $value a crm:E31_Document} WHERE {}" .
+  _:genid-a1969efd7c43450dad91424c04a688ca-w7ieg a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-9f7a6859de8741138c341e8b2b022642-p6hquh .
+      _:genid-a1969efd7c43450dad91424c04a688ca-2en0t .
   
-  _:genid-9f7a6859de8741138c341e8b2b022642-crnmxq <http://spinrdf.org/sp#text> "DELETE { $subject crm:P70i_is_documented_in $value. $value a crm:E31_Document} WHERE {}" .
+  _:genid-a1969efd7c43450dad91424c04a688ca-301sg a <http://spinrdf.org/sp#Query> .
   
-  _:genid-9f7a6859de8741138c341e8b2b022642-p6hquh <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-a1969efd7c43450dad91424c04a688ca-2en0t <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject crm:P70i_is_documented_in ?value.
 }""" .
   
+  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-a1969efd7c43450dad91424c04a688ca-w7ieg;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Quelle"@de .
+  
+  _:genid-a1969efd7c43450dad91424c04a688ca-w7ieg <http://spinrdf.org/sp#text> "DELETE { $subject crm:P70i_is_documented_in $value} WHERE {}" .
+  
+  _:genid-a1969efd7c43450dad91424c04a688ca-2en0t a <http://spinrdf.org/sp#Query> .
+  
   <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> <http://www.metaphacts.com/ontology/fields#range>
       <http://www.cidoc-crm.org/cidoc-crm/E31_Document>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9f7a6859de8741138c341e8b2b022642-ynozy9 .
-  
-  _:genid-9f7a6859de8741138c341e8b2b022642-crnmxq a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T13:11:54.107Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T13:20:50.726Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in> .
