@@ -15,7 +15,7 @@
         digitalen Anwendung beteiligt und in welcher Rolle? Ist das Projekt Bestandteil eines größeren
         (Verbund-)Projektes?</p>
 
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{projectTitle}}"
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{UUID}}"
         subject='[[urlParam "project"]]' post-action='redirect' browser-persistence=false form-id='Project' fields="[[fieldDefinitions
         projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                        
         projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
@@ -38,7 +38,7 @@
         <h3>Projektkontext</h3>
 
         <semantic-form-autocomplete-input for="hasInsitutionalSupport">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{legalName}}"
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}"
                 fields="[[fieldDefinitions
                 groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'      
                 legalName='http://www.metaphacts.com/fieldDefinition/legalName'
@@ -53,7 +53,7 @@
             </semantic-form>
         </semantic-form-autocomplete-input>
         <semantic-form-autocomplete-input for="wasPartOfProject">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{projectTitle}}"
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{UUID}}"
                 fields="[[fieldDefinitions
                 projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                      
                 projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'

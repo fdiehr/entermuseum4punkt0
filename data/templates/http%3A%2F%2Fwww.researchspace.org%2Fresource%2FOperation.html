@@ -9,156 +9,154 @@
                 
                 -->
 
-<bs-panel>
+                <bs-panel>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Operation/{{UUID}}'
-        subject='[[urlParam "operation"]]' post-action='redirect' browser-persistence=false form-id='Operation' fields="[[fieldDefinitions
-        operationRdfType='http://www.metaphacts.com/fieldDefinition/operationRdfType'
-        operated='http://www.metaphacts.com/fieldDefinition/operated'
-        P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
-        visitorCare='http://www.metaphacts.com/fieldDefinition/visitorCare'
-        extentOfUsage='http://www.metaphacts.com/fieldDefinition/extentOfUsage'
-        usesOutputDevice='http://www.metaphacts.com/fieldDefinition/usesOutputDevice'
-        needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
-        requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
-        requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
-        requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
-        requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
-        usesSoftware='http://www.metaphacts.com/fieldDefinition/usesSoftware'
-        ]]">
-
-        <h1>Betrieb einer digitalen Anwendung</h1>
-        <p>Hier können Sie Angaben dazu machen welche Erkenntnisse zum Betrieb der digitalen Anwendung gewonnen wurden.
-            Gibt es ein Betriebskonzept? Welche Geräte und Software werden für das Betreiben der digitalen Anwednungen
-            benötigt?
-            Wie wird der Aufwand für Betreuung der Nutzer*innen durch (Museums-)Personal eingeschätzt? Wie lang ist die
-            (geschätze) Nutzungsdauer?
-
-        </p>
-
-        <semantic-form-hidden-input for="operationRdfType"></semantic-form-hidden-input>
-        <semantic-form-autocomplete-input for="operated"></semantic-form-autocomplete-input>
-
-        <h2>Betriebskonzept</h2>
-        <p>
-            Das Betriebskonzept gibt Hinweise zum Management rund um den aktiven Betrieb im Museum.
-        </p>
-        <semantic-form-composite-input for="P70i_is_documented_in"
-            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
-            fields="[[fieldDefinitions]]">
-            <h3>Link zu Zenodo</h3>
-            <p>Geben Sie hier den Link zum Dokument in Zenodo an. Bei Zenodo wird Ihnen eine stabile URL
-                angezeigt, die Sie hier verwenden sollten. Dort befindet sich auch die
-                bibliographische Angabe, die Sie hier verwenden sollten.</p>
-            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
-            </semantic-form-text-input>
-            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
-                multiline=true>
-            </semantic-form-text-input>
-        </semantic-form-composite-input>
-
-        <h2>Betreuung</h2>
-        <p>Für digitale Anwendungen, wie z.B. Virtual Reality Formate, wird Betreuung für die Nutzer benötigt.
-            Wenn die beschriebene Anwendung keine Betreuung erfordert, dann entfernen Sie die Felder.</p>
-        <semantic-form-text-input for="visitorCare">
-        </semantic-form-text-input>
-        <semantic-form-text-input for="extentOfUsage">
-        </semantic-form-text-input>
-       
-
-
-        <h2>Ausspielgeräte und ihre Software</h2>
-        <p>Für den aktiven Betrieb der digitalen Anwendungen werden Ausspielgeräte wie z.B. Tablets, Smartphones,
-            internetfähige Geräte oder VR-Headsets benötigt. Bestimmte
-            Anwendungen können nur auf speziell konfigurierten Geräten genutzt werden, wie bspw. eine AR Anwendung für
-            die Hololens. Geben Sie hier an, welche Ausspielgeräte, peiphere Hardware und Software benötigt wird.</p>
-        <h3>Ausspielgeräte</h3>
-        <p>Suchen Sie aus bereits eingegebenen Geräte das passende heraus. Sollte das passende Gerät nicht dabei sein,
-            erstellen Sie zunächst eines.</p>
-        <semantic-form-autocomplete-input for="usesOutputDevice">
-
-            <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Hardware/{{UUID}}'
-                fields="[[fieldDefinitions
-                        outputDeviceRdfType='http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType'        
-                        toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
-                        modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'  
-                        hasOutputDeviceType='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType'
-                        ]]">
-                <semantic-form-hidden-input for="outputDeviceRdfType"></semantic-form-hidden-input>
-                <semantic-form-text-input for="toolTitle">
-                </semantic-form-text-input>
-                <semantic-form-text-input for="modelNr">
-                </semantic-form-text-input>
-
-                <semantic-form-tree-picker-input for="hasOutputDeviceType">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
-                        fields="[[fieldDefinitions
-                        inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
-                                            prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
-                                            altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                        <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Operation/{{UUID}}'
+                            subject='[[urlParam "operation"]]' post-action='redirect' browser-persistence=false form-id='Operation' fields="[[fieldDefinitions
+                            operationRdfType='http://www.metaphacts.com/fieldDefinition/operationRdfType'
+                            operated='http://www.metaphacts.com/fieldDefinition/operated'
+                            P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                            visitorCare='http://www.metaphacts.com/fieldDefinition/visitorCare'
+                            extentOfUsage='http://www.metaphacts.com/fieldDefinition/extentOfUsage'
+                            usesOutputDevice='http://www.metaphacts.com/fieldDefinition/usesOutputDevice'
+                            needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
+                            requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                            requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                            requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                            requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                            usesSoftware='http://www.metaphacts.com/fieldDefinition/usesSoftware'
+                            ]]">
+                    
+                            <h1>Betrieb einer digitalen Anwendung</h1>
+                            <p>Hier können Sie Angaben dazu machen welche Erkenntnisse zum Betrieb der digitalen Anwendung gewonnen wurden.
+                                Gibt es ein Betriebskonzept? Welche Geräte und Software werden für das Betreiben der digitalen Anwednungen
+                                benötigt?
+                                Wie wird der Aufwand für Betreuung der Nutzer*innen durch (Museums-)Personal eingeschätzt? Wie lang ist die
+                                (geschätze) Nutzungsdauer?
+                    
+                            </p>
+                    
+                            <semantic-form-hidden-input for="operationRdfType"></semantic-form-hidden-input>
+                            <semantic-form-autocomplete-input for="operated"></semantic-form-autocomplete-input>
+                    
+                            <h2>Betriebskonzept</h2>
+                            <p>
+                                Das Betriebskonzept gibt Hinweise zum Management rund um den aktiven Betrieb im Museum.
+                            </p>
+                            <semantic-form-composite-input for="P70i_is_documented_in"
+                                new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+                                fields="[[fieldDefinitions]]">
+                                <h3>Link zu Zenodo</h3>
+                                <p>Geben Sie hier den Link zum Dokument in Zenodo an. Bei Zenodo wird Ihnen eine stabile URL
+                                    angezeigt, die Sie hier verwenden sollten. Dort befindet sich auch die
+                                    bibliographische Angabe, die Sie hier verwenden sollten.</p>
+                                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
+                                    multiline=true>
+                                </semantic-form-text-input>
+                            </semantic-form-composite-input>
+                    
+                            <h2>Betreuung</h2>
+                            <p>Für digitale Anwendungen, wie z.B. Virtual Reality Formate, wird Betreuung für die Nutzer benötigt.
+                                Wenn die beschriebene Anwendung keine Betreuung erfordert, dann entfernen Sie die Felder.</p>
+                            <semantic-form-text-input for="visitorCare">
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="extentOfUsage">
+                            </semantic-form-text-input>
+                           
+                    
+                    
+                            <h2>Ausspielgeräte und ihre Software</h2>
+                            <p>Für den aktiven Betrieb der digitalen Anwendungen werden Ausspielgeräte wie z.B. Tablets, Smartphones,
+                                internetfähige Geräte oder VR-Headsets benötigt. Bestimmte
+                                Anwendungen können nur auf speziell konfigurierten Geräten genutzt werden, wie bspw. eine AR Anwendung für
+                                die Hololens. Geben Sie hier an, welche Ausspielgeräte, peiphere Hardware und Software benötigt wird.</p>
+                            <h3>Ausspielgeräte</h3>
+                            <p>Suchen Sie aus bereits eingegebenen Geräte das passende heraus. Sollte das passende Gerät nicht dabei sein,
+                                erstellen Sie zunächst eines.</p>
+                            <semantic-form-autocomplete-input for="usesOutputDevice">
+                    
+                                <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Hardware/{{UUID}}'
+                                    fields="[[fieldDefinitions
+                                            outputDeviceRdfType='http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType'        
+                                            toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                            modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'  
+                                            hasOutputDeviceType='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType'
                                             ]]">
-                        <semantic-form-hidden-input for="inSchemeOutputDeviceType" default-value='skos:Concept'>
-                        </semantic-form-hidden-input>
-                        <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
-                        </semantic-form-text-input>
-                        <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
-                        </semantic-form-text-input>
-                       
-                        <semantic-form-errors></semantic-form-errors>
-                        <button name='submit' class='btn btn-default'>Speichern</button>
-                        <button name='reset' class='btn btn-default'>Wiederherstellen</button>
-
-
-                    </semantic-form>
-                </semantic-form-tree-picker-input>
-
-                <semantic-form-errors></semantic-form-errors>
-                <button name='submit' class='btn btn-default'>Speichern</button>
-                <button name='reset' class='btn btn-default'>Wiederherstellen</button>
-            </semantic-form>
-        </semantic-form-autocomplete-input>
-        <semantic-form-checkbox-input for="needsPermanentInternetAccess">
-        </semantic-form-checkbox-input>
-        <h4>Mindestanforderungen</h4>
-        <p>
-            Welche Mindestanforderungen stellt die digitale Anwendung an das Ausspielgerät?
-        </p>
-        <semantic-form-text-input for="requiredProcessor">
-        </semantic-form-text-input>
-        <semantic-form-text-input for="requiredRAM">
-        </semantic-form-text-input>
-        <semantic-form-text-input for="requiredHardDriveSpace">
-        </semantic-form-text-input>
-        <semantic-form-text-input for="requiredGraphicsCard">
-        </semantic-form-text-input>
-
-
-        <h3>benötigte Software</h3>
-        <semantic-form-autocomplete-input for="usesSoftware">
-        <semantic-form new-subject-template
-            for="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
-                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
-                                version='http://www.metaphacts.com/fieldDefinition/version'
-                                hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'                        
-                                ]]">
-            <semantic-form-text-input for="toolTitle">
-            </semantic-form-text-input>
-            <semantic-form-text-input for="version">
-            </semantic-form-text-input>
-            <semantic-form-checklist-input for="hasSoftwareType">
-            </semantic-form-checklist-input>
-            <semantic-form-errors></semantic-form-errors>
-                        <button name='submit' class='btn btn-default'>Speichern</button>
-                        <button name='reset' class='btn btn-default'>Wiederherstellen</button>
-        </semantic-form>
-        </semantic-form-autocomplete-input> 
-      
-
-
-<semantic-form-errors></semantic-form-errors>
-<semantic-form-recover-notification></semantic-form-recover-notification>
-<button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
-
-
-    </semantic-form>
-</bs-panel>
+                                    <semantic-form-hidden-input for="outputDeviceRdfType"></semantic-form-hidden-input>
+                                    <semantic-form-text-input for="toolTitle">
+                                    </semantic-form-text-input>
+                                    <semantic-form-text-input for="modelNr">
+                                    </semantic-form-text-input>
+                    
+                                    <semantic-form-tree-picker-input for="hasOutputDeviceType">
+                                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                                            fields="[[fieldDefinitions
+                                            inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
+                                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                                ]]">
+                                            <semantic-form-hidden-input for="inSchemeOutputDeviceType" default-value='skos:Concept'>
+                                            </semantic-form-hidden-input>
+                                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                                            </semantic-form-text-input>
+                                            <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                                            </semantic-form-text-input>
+                                           
+                                            <semantic-form-errors></semantic-form-errors>
+                                            <button name='submit' class='btn btn-default'>Speichern</button>
+                    
+                    
+                                        </semantic-form>
+                                    </semantic-form-tree-picker-input>
+                    
+                                    <semantic-form-errors></semantic-form-errors>
+                                    <button name='submit' class='btn btn-default'>Speichern</button>
+                                </semantic-form>
+                            </semantic-form-autocomplete-input>
+                            <semantic-form-checkbox-input for="needsPermanentInternetAccess">
+                            </semantic-form-checkbox-input>
+                            <h4>Mindestanforderungen</h4>
+                            <p>
+                                Welche Mindestanforderungen stellt die digitale Anwendung an das Ausspielgerät?
+                            </p>
+                            <semantic-form-text-input for="requiredProcessor">
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="requiredRAM">
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="requiredHardDriveSpace">
+                            </semantic-form-text-input>
+                            <semantic-form-text-input for="requiredGraphicsCard">
+                            </semantic-form-text-input>
+                    
+                    
+                            <h3>benötigte Software</h3>
+                            <semantic-form-autocomplete-input for="usesSoftware">
+                            <semantic-form new-subject-template
+                                for="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
+                                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                                    version='http://www.metaphacts.com/fieldDefinition/version'
+                                                    hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'                        
+                                                    ]]">
+                                <semantic-form-text-input for="toolTitle">
+                                </semantic-form-text-input>
+                                <semantic-form-text-input for="version">
+                                </semantic-form-text-input>
+                                <semantic-form-checklist-input for="hasSoftwareType">
+                                </semantic-form-checklist-input>
+                                <semantic-form-errors></semantic-form-errors>
+                                            <button name='submit' class='btn btn-default'>Speichern</button>
+                                            
+                            </semantic-form>
+                            </semantic-form-autocomplete-input> 
+                          
+                    
+                    
+                    <semantic-form-errors></semantic-form-errors>
+                    <semantic-form-recover-notification></semantic-form-recover-notification>
+                    <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
+                    
+                    
+                        </semantic-form>
+                    </bs-panel>
