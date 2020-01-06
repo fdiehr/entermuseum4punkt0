@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasSetting/context> {
+  _:genid-4b58239baf544d5a9a4d1967f152465b-6pt9qh <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:hasSetting ?value
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Untersuchungssetting"@de .
+  
+  _:genid-4b58239baf544d5a9a4d1967f152465b-6avce <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:ResearchActivity; m4p0:hasSetting $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-4b58239baf544d5a9a4d1967f152465b-6pt9qh;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-4b58239baf544d5a9a4d1967f152465b-6avce a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-4b58239baf544d5a9a4d1967f152465b-6pt9qh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-4b58239baf544d5a9a4d1967f152465b-ksilab;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4b58239baf544d5a9a4d1967f152465b-6avce;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Beschreiben Sie den Rahmen in dem die Untersuchen/das Testing durchgeführt wurde." .
+  
+  _:genid-4b58239baf544d5a9a4d1967f152465b-ksilab a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity> .
+  
+  _:genid-4b58239baf544d5a9a4d1967f152465b-ksilab <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:ResearchActivity; m4p0:hasSetting $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T13:05:23.034Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasSetting> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasSetting> a <http://www.w3.org/ns/ldp#Resource> .
+}
