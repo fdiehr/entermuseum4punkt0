@@ -1,35 +1,34 @@
 
 <http://www.metaphacts.com/fieldDefinition/visitorCare/context> {
-  _:genid-75b127efb26146349fa225ebf63f3190-hi4bey <http://spinrdf.org/sp#text> """INSERT { $subject a m4p0:OperationalConcept;  m4p0:visitorCare $value.
-} WHERE {}""" .
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Wieviele Betreuer*innen sollten die Nutzung der Anwendung betreuen? (Es sind nur ganzzahlige Werte zulässig.)" .
   
-  <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-75b127efb26146349fa225ebf63f3190-hi4bey a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-75b127efb26146349fa225ebf63f3190-0zofkl a <http://spinrdf.org/sp#Query>;
+  _:genid-42368f02198f4ee1b77ee755b3e7c20e-m2s83f a <http://spinrdf.org/sp#Query>;
     <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject  m4p0:visitorCare $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "Geben Sie den empfohlenen Betreuungsaufwand in Personenstunden an. Es sind nur ganzzahlige Werte zulässig.";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-75b127efb26146349fa225ebf63f3190-0zofkl;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv;
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept> .
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-42368f02198f4ee1b77ee755b3e7c20e-qb5r4;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-42368f02198f4ee1b77ee755b3e7c20e-m2s83f;
+    <http://www.w3.org/2000/01/rdf-schema#label> "empfohlener Betreuungsaufwand (Anzahl Betreuer*innen)"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-42368f02198f4ee1b77ee755b3e7c20e-7lfb1 .
   
-  _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv a <http://spinrdf.org/sp#Query> .
+  _:genid-42368f02198f4ee1b77ee755b3e7c20e-qb5r4 a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.w3.org/2000/01/rdf-schema#label>
-      "empfohlener Betreuungsaufwand"@de;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#integer>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-75b127efb26146349fa225ebf63f3190-hi4bey .
+  <http://www.metaphacts.com/fieldDefinition/visitorCare> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#integer> .
   
-  _:genid-75b127efb26146349fa225ebf63f3190-rbnqyv <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-42368f02198f4ee1b77ee755b3e7c20e-7lfb1 <http://spinrdf.org/sp#text> """INSERT { $subject a m4p0:OperationalConcept;  m4p0:visitorCare $value.
+} WHERE {}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-42368f02198f4ee1b77ee755b3e7c20e-qb5r4 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject m4p0:visitorCare ?value
 }""" .
   
   <http://www.metaphacts.com/fieldDefinition/visitorCare> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T17:33:49.932Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T09:47:47.461Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/visitorCare> .

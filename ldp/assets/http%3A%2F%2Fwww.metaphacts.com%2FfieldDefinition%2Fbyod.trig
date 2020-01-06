@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/byod/context> {
+  <http://www.metaphacts.com/fieldDefinition/byod> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-913df97161324f31b8c03912efcc8735-6s5oj .
+  
+  _:genid-913df97161324f31b8c03912efcc8735-lnv9r <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:byod ?value. 
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/byod> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-913df97161324f31b8c03912efcc8735-lnv9r .
+  
+  _:genid-913df97161324f31b8c03912efcc8735-fexd9n a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject m4p0:byod $value. } WHERE {}" .
+  
+  _:genid-913df97161324f31b8c03912efcc8735-6s5oj a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/byod> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-913df97161324f31b8c03912efcc8735-fexd9n;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+  
+  _:genid-913df97161324f31b8c03912efcc8735-lnv9r a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/byod> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Können Nutzer*innen ihre eigenen Geräte verwenden? (BYOD)"@de;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie an, ob Nutzer*innen ihre eigenen (mobilen) Geräte nutzen können, um die Anwendung zu verwenden. z.B.: bei Browser Games, Citizen Science Apps, Chatbots etc.";
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-913df97161324f31b8c03912efcc8735-6s5oj <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:OperationalConcept. $subject m4p0:byod $value. } WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/byod> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T10:14:23.391Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/byod> .
+  
+  <http://www.metaphacts.com/fieldDefinition/byod> a <http://www.w3.org/ns/ldp#Resource> .
+}

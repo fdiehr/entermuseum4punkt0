@@ -1,36 +1,37 @@
 
 <http://www.metaphacts.com/fieldDefinition/extentOfUsage/context> {
-  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-68fd01b18e664af5b6c28fc2d543ef65-jhe8xc .
+  _:genid-75b2c311636f4191abd6ed8232b19f65-wjxx4g a <http://spinrdf.org/sp#Query> .
   
-  _:genid-68fd01b18e664af5b6c28fc2d543ef65-di0uaw9 a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-75b2c311636f4191abd6ed8232b19f65-aevik3 .
   
-  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> <http://www.w3.org/2000/01/rdf-schema#label>
-      "empfohlene Nutzungsdauer"@de;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-68fd01b18e664af5b6c28fc2d543ef65-di0uaw9 .
-  
-  _:genid-68fd01b18e664af5b6c28fc2d543ef65-jhe8xc a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-68fd01b18e664af5b6c28fc2d543ef65-jwkjgj;
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "Geben Sie die empfohlene Nutzungsdauer in Minuten an. Es sind nur ganzzahlige Werte zulässig." .
-  
-  _:genid-68fd01b18e664af5b6c28fc2d543ef65-jwkjgj <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-75b2c311636f4191abd6ed8232b19f65-wjxx4g <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   $subject m4p0:extentOfUsage ?value. 
-}""";
-    a <http://spinrdf.org/sp#Query> .
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "durchschnittliche Nutzungsdauer (in Minuten)"@de;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Wie lang verwenden die Nutzer*innen die Anwendung im Durchschnitt (auch schätzungsweise)? Geben Sie die durchschnittliche Nutzungsdauer der Anwendung in Minuten an. (Es sind nur ganzzahlige Werte zulässig.)";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-75b2c311636f4191abd6ed8232b19f65-smwee .
+  
+  _:genid-75b2c311636f4191abd6ed8232b19f65-aevik3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/extentOfUsage> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-75b2c311636f4191abd6ed8232b19f65-wjxx4g .
+  
+  _:genid-75b2c311636f4191abd6ed8232b19f65-smwee <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject m4p0:extentOfUsage $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/extentOfUsage> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
       <http://www.w3.org/2001/XMLSchema#integer> .
   
-  _:genid-68fd01b18e664af5b6c28fc2d543ef65-di0uaw9 <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept. $subject m4p0:extentOfUsage $value} WHERE {}" .
+  _:genid-75b2c311636f4191abd6ed8232b19f65-aevik3 <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:OperationalConcept. $subject m4p0:extentOfUsage $value. } WHERE {}" .
   
-  _:genid-68fd01b18e664af5b6c28fc2d543ef65-jhe8xc <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:OperationalConcept. $subject m4p0:extentOfUsage $value. } WHERE {}" .
+  _:genid-75b2c311636f4191abd6ed8232b19f65-smwee a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/extentOfUsage> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T17:14:28.019Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T09:53:28.086Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/extentOfUsage> .

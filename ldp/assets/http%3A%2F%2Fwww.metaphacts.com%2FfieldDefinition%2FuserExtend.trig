@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/userExtend/context> {
+  <http://www.metaphacts.com/fieldDefinition/userExtend> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8oesc .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8tddh <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:userExtend ?value
+}""" .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-o61poc <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:OperationalConcept;  m4p0:userExtend $value} WHERE {}" .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8oesc a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-o61poc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/userExtend> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Wieviele Nutzer*innen können die Anwendung bzw. wieviele Geräte/Stationen sind vor Ort vorhanden? Bei einem Gruppenerlebnis: Wie groß sollte die max. Personenanzahl der Gruppe sein? Im Falle BYOD muss keine Angabe gemacht werden, da die Anzahl der Nutzer*innen unbegrenzt sein kann. (Es sind nur ganzzahlige Werte zulässig.)";
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8tddh;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-ddcb287453c643ed8de1b5c1d3846dc8-o61poc .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8oesc <http://spinrdf.org/sp#text> """INSERT { $subject a m4p0:OperationalConcept;  m4p0:userExtend $value.
+} WHERE {}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/userExtend> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#integer> .
+  
+  _:genid-ddcb287453c643ed8de1b5c1d3846dc8-b8tddh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/userExtend> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Anzahl der Nutzer*innen / empfohlene Gruppengröße"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T10:15:19.804Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/userExtend> .
+  
+  <http://www.metaphacts.com/fieldDefinition/userExtend> a <http://www.w3.org/ns/ldp#Resource> .
+}
