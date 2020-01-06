@@ -3,27 +3,27 @@
 
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researched']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim']]
-    <h2>Untersuchungssetting</h2>
+    <h3>Untersuchungssetting</h3>
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasResearchMethod']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasExperimenteeType']]
-    <h3>Untersuchungsanlass</h3>
+    <h4>Untersuchungsanlass</h4>
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/eventTitle']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/researchLocation']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchSetting']]
-    <h3>Untersuchungszeitraum</h3>
+    <h4>Untersuchungszeitraum</h4>
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
-    <h2>entstandene Hilfsmittel</h2>
+    <h3>entstandene Hilfsmittel</h3>
     [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool']]
-    <h2>(nach-)genutzte Tools - Hilfsmittel/Geräte und/oder Software</h2>
+    <h3>(nach-)genutzte Tools - Hilfsmittel/Geräte und/oder Software</h3>
     [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedTool']]
     [[> :compositeFieldVisualisation  field='http://www.metaphacts.com/fieldDefinition/usedSoftware']]
-    <h2>Erkenntnisse</h2>
+    <h3>Erkenntnisse</h3>
     [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in']]
 
 
     <div class="gap">
-        <semantic-link uri=':ResearchActivity' urlqueryparam-research='[[this]]' urlqueryparam-tab='1'>
+        <semantic-link iri='[[resolvePrefix ":ResearchActivity"]]' urlqueryparam-research='[[this]]' urlqueryparam-tab='1'>
                 <button>Datensatz bearbeiten</button>
             </semantic-link>
         </div>

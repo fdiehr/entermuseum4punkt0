@@ -9,7 +9,7 @@
     
   
     <semantic-link
-        uri=':E31_Document'
+        iri='[[resolvePrefix ":E31_Document"]]'
         urlqueryparam-doc='[[this]]'
         urlqueryparam-tab='1'
     >
@@ -30,7 +30,7 @@
       Das ist die Quelle folgender Resource:
       {{#each bindings}} 
         {{#if @first}} {{else}} {{#if @last}} and {{else}}, {{/if}} {{/if}}
-        <semantic-link uri="{{x.value}}">
+        <semantic-link iri="{{x.value}}">
           {{x.value}}
         </semantic-link>
         
