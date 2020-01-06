@@ -22,10 +22,7 @@
                             visitorCare='http://www.metaphacts.com/fieldDefinition/visitorCare'
                             usesOutputDevice='http://www.metaphacts.com/fieldDefinition/usesOutputDevice'
                             needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
-                            requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
-                            requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
-                            requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
-                            requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
+                            hasMinimumRequirements='http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements'
                             usesSoftware='http://www.metaphacts.com/fieldDefinition/usesSoftware'
                             ]]">
                     
@@ -116,8 +113,12 @@
                                 </semantic-form>
                             </semantic-form-autocomplete-input>
                             <semantic-form-checkbox-input for="needsPermanentInternetAccess">
-                            </semantic-form-checkbox-input>
-                            <h4>Mindestanforderungen</h4>
+                            </semantic-form-checkbox-input>                           
+                            <semantic-form-composite-input for="hasMinimumRequirements" fields="[[fieldDefinitions
+                            requiredProcessor='http://www.metaphacts.com/fieldDefinition/requiredProcessor'
+                            requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
+                            requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
+                            requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard']]">
                             <p>
                                 Welche Mindestanforderungen stellt die digitale Anwendung an das Ausspielgerät?
                             </p>
@@ -129,7 +130,7 @@
                             </semantic-form-text-input>
                             <semantic-form-text-input for="requiredGraphicsCard">
                             </semantic-form-text-input>
-                    
+                        </semantic-form-composite-input>
                     
                             <h3>benötigte Software</h3>
                             <semantic-form-autocomplete-input for="usesSoftware">
