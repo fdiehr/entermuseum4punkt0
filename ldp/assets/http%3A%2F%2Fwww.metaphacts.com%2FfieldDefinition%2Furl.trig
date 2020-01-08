@@ -1,38 +1,36 @@
 
 <http://www.metaphacts.com/fieldDefinition/url/context> {
   <http://www.metaphacts.com/fieldDefinition/url> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E31_Document>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-z0a39 .
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E31_Document> .
   
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-gaxwsl <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-9ba21904796440899d71ab84837d9a7b-6fm1pj <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject schema:url ?value.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/url> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-gaxwsl .
+  _:genid-9ba21904796440899d71ab84837d9a7b-gpnprq <http://spinrdf.org/sp#text> "INSERT { $subject a crm:E31_Document. $subject schema:url $value} WHERE {}" .
   
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-z0a39 a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/url> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-9ba21904796440899d71ab84837d9a7b-6fm1pj;
+    <http://www.w3.org/2000/01/rdf-schema#label> "URL"@de;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9ba21904796440899d71ab84837d9a7b-gpnprq;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
   
-  <http://www.metaphacts.com/fieldDefinition/url> <http://www.w3.org/2000/01/rdf-schema#label>
-      "URL"@de .
-  
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-gaxwsl a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-el4rze a <http://spinrdf.org/sp#Query> .
+  _:genid-9ba21904796440899d71ab84837d9a7b-uxgxx a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/url> <http://www.w3.org/2000/01/rdf-schema#comment>
       "Geben Sie hier einen Web-Link an. " .
   
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-z0a39 <http://spinrdf.org/sp#text> "INSERT { $subject a crm:E31_Document. $subject schema:url $value} WHERE {}" .
+  _:genid-9ba21904796440899d71ab84837d9a7b-6fm1pj a <http://spinrdf.org/sp#Query> .
   
-  _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-el4rze <http://spinrdf.org/sp#text> "DELETE { $subject schema:url $value} WHERE {}" .
+  _:genid-9ba21904796440899d71ab84837d9a7b-uxgxx <http://spinrdf.org/sp#text> "DELETE { $subject schema:url $value} WHERE {}" .
+  
+  _:genid-9ba21904796440899d71ab84837d9a7b-gpnprq a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/url> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-ca153b8cfa914c5b8bf7357ef900a5ed-el4rze;
+      _:genid-9ba21904796440899d71ab84837d9a7b-uxgxx;
     a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-19T13:04:08.480Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-08T17:12:05.730Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/url> .
