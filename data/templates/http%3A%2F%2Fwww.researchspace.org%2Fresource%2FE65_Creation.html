@@ -22,28 +22,33 @@
                 ]]">
 
         <h1>Entwicklung</h1>
-       
+
 
         <semantic-form-hidden-input for="creationRdfType"></semantic-form-hidden-input>
         <semantic-form-autocomplete-input for="hasCreatedDigitalApp"></semantic-form-autocomplete-input>
         <div class="gap">
-        <p> Die Entwicklung digitaler Anwendungen gliedert sich in mehrere Teilschritte auf, die jeweils andere
+            <p> Die Entwicklung digitaler Anwendungen gliedert sich in mehrere Teilschritte auf, die jeweils andere
                 Funktionen erfüllen.</br>
-                Jeder Entwicklungsschritt kann einer übergeordneten Phase zugeordnet werden, in der konkrete Methoden Anwendung finden: 
+                Jeder Entwicklungsschritt kann einer übergeordneten Phase zugeordnet werden, in der konkrete Methoden
+                Anwendung finden:
             </p>
-            <p>    
+            <p>
                 <ul>
                     <li>
-                <b>Ideenfindung- und Recherche: </b>Erste Ideen zum Inhalt und zu Ausgestaltung der Anwendung entstehen. Methoden
-                sind z.B. Kreativworkshop, Brainstorming.</li>
-                <li><b>Konzeption: </b>Die Idee nimmt konkrete Form an, die Vermittlungsziele werden definiert. Methoden sind z.B. Design, Gamedesign, Storytelling. </li> 
-                <li><b>Materialerzeugung und -beschaffung:</b> Für den Content werden Materialen erzeugt, erstellt, beschafft. Methoden
-                sind z.B. Bestand- und Objektdigitalisierung.</li>
-                <li><b>Umsetzung/Realisierung: </b>Die digitale Anwendung wird erzeugt/implementiert. Methoden sind z.B. Programmieren,
-                Videoschnitt, Bildbearbeitung.</li>
-            </ul>
+                        <b>Ideenfindung- und Recherche: </b>Erste Ideen zum Inhalt und zu Ausgestaltung der Anwendung
+                        entstehen. Methoden
+                        sind z.B. Kreativworkshop, Brainstorming.</li>
+                    <li><b>Konzeption: </b>Die Idee nimmt konkrete Form an, die Vermittlungsziele werden definiert.
+                        Methoden sind z.B. Design, Gamedesign, Storytelling. </li>
+                    <li><b>Materialerzeugung und -beschaffung:</b> Für den Content werden Materialen erzeugt, erstellt,
+                        beschafft. Methoden
+                        sind z.B. Bestand- und Objektdigitalisierung.</li>
+                    <li><b>Umsetzung/Realisierung: </b>Die digitale Anwendung wird erzeugt/implementiert. Methoden sind
+                        z.B. Programmieren,
+                        Videoschnitt, Bildbearbeitung.</li>
+                </ul>
             </p>
-            <p>        Legen Sie für jeden Entwicklungsschritt einen neuen Datensatz an!
+            <p> Legen Sie für jeden Entwicklungsschritt einen neuen Datensatz an!
             </p>
         </div>
         <semantic-form-checklist-input for="hasCreationPhase">
@@ -62,11 +67,20 @@
                 </semantic-form-text-input>
                 <semantic-form-errors></semantic-form-errors>
                 <button name='submit' class='btn btn-default'>Speichern</button>
-           
+
             </semantic-form>
         </semantic-form-tree-picker-input>
-<!--
-<p>Welche Expertisen und Kenntnisse sind für die genannten Methoden nötig? z.B. Programmieren: Webprogrammierung, </p>
+        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
+        </semantic-form-text-input>
+        <h3>erforderliche Expertisen und Kenntnisse</h3>
+        <p> Geben Sie an, welche Expertisen, Kenntnisse, fachliche Kompetenzen und/oder Qualifikationen für die
+            Entwicklung der digitalen Anwendung benötigt wurde.</br>
+            z.B. Programmierkenntnisse (PHP, Python, Javascript), dokumentarische Expertise (Bibliothek, Museum, Archiv,
+            Medien), Design, fachliche Kenntnisse in der europäischen Ethnologie, Elektronikverständnis,
+            praktische Erfahrungen bei Filmaufnahmen, Fotografie, Digitalisierung von Kulturgut etc. </br>
+            Dies ermöglicht es anderen Einrichtungen abzuschätzen, welche
+            Expertise sie für welche Entwicklungsschritte benötigen.
+        </p>
         <semantic-form-tree-picker-input for="needsExpertise">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
                                                     inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
@@ -84,12 +98,8 @@
                 <button name='submit' class='btn btn-default'>Speichern</button>
             </semantic-form>
         </semantic-form-tree-picker-input>
-        -->
-        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
-        </semantic-form-text-input>
 
-
-        <h3>genutze Hilfsmittel und Geräte</h3>
+       <h3>genutze Hilfsmittel und Geräte</h3>
         <p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für
             das Scannen von 3D-Digitalisaten
             wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig.
@@ -105,9 +115,7 @@
                                     P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
                                    
                                     ]]">
-                <!--
-                             toolIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/toolIsDocumentedIn'
-                        -->
+
                 <semantic-form-text-input for="toolTitle">
                 </semantic-form-text-input>
 
@@ -153,23 +161,6 @@
                 <semantic-form-recover-notification></semantic-form-recover-notification>
                 <button name='submit' class='btn btn-default'>Speichern</button>
         </semantic-form-autocomplete-input>
-        <!--
-<semantic-form-composite-input for="toolIsDocumentedIn"
-    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
-    fields="[[fieldDefinitions]]">
-    <h4>Quelle des Hilfsmittels</h4>
-    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
-    </semantic-form-hidden-input>
-    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
-    </semantic-form-text-input>
-    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
-    </semantic-form-text-input>
-    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/doi">
-    </semantic-form-text-input>
-    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation" multiline=true>
-    </semantic-form-text-input>
-    </semantic-form-composite-input>
--->
 
         <h3>genutzte Software</h3>
         <p>Auch verschiedene Software kann bei der Entwicklung digitaler Anwendungen zum Einsatz kommen wie z.B.

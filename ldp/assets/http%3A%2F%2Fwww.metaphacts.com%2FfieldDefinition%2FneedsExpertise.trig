@@ -1,44 +1,47 @@
 
 <http://www.metaphacts.com/fieldDefinition/needsExpertise/context> {
   <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> .
-  
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-pkqbrk a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-dt0kwb <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject m4p0:needsExpertise ?value.
- }""" .
-  
-  <http://www.metaphacts.com/fieldDefinition/needsExpertise> a <http://www.metaphacts.com/ontology/fields#Field>;
+      <http://www.cidoc-crm.org/cidoc-crm/E65_Creation>;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#treePatterns> """{
   \"type\": \"simple\",
   \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/Expertise>\"
-}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-c6f6426e2a93482f8c7859f964e313c2-dt0kwb .
+}"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson> .
   
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-xu7ulq a <http://spinrdf.org/sp#Query> .
+  _:genid-e95634383f444cfba9a8560d29fe1821-3oyxes9 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:needsExpertise $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.w3.org/2000/01/rdf-schema#comment>
-      """Geben Sie an, welche Expertisen, Kenntnisse, fachliche Kompetenzen und/oder Qualifikationen für die Entwicklung der digitalen Anwendung benötigt wurde. 
-z.B. Programmierkenntnisse (PHP, Python, Javascript), dokumentarische Expertise (Bibliothek, Museum, Archiv, Medien), Studium in Design, fachliche Kenntnisse in der europäischen Ethnologie, Elektronikverständnis, praktische Erfahrungen bei Filmaufnahmen, fachliche Kenntnisse in der Fotografie, Expertise in der 3D Digitalisierung von Kulturgut etc. Dies soll es anderen Einrichtungen ermöglichen abzuschätzen, welche Expertise sie für welche Schritte benötigen.""";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-c6f6426e2a93482f8c7859f964e313c2-pkqbrk;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Expertise> .
+  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-dt0kwb a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-xu7ulq <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:needsExpertise $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.w3.org/2000/01/rdf-schema#label>
-      "benötigte Expertise"@de .
-  
-  _:genid-c6f6426e2a93482f8c7859f964e313c2-pkqbrk <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:needsExpertise $value} WHERE {}" .
+  _:genid-e95634383f444cfba9a8560d29fe1821-aba03p <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:needsExpertise ?value.
+ }""" .
   
   <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-c6f6426e2a93482f8c7859f964e313c2-xu7ulq;
-    a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:57:52.673Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+      _:genid-e95634383f444cfba9a8560d29fe1821-duz23 .
+  
+  _:genid-e95634383f444cfba9a8560d29fe1821-3oyxes9 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-e95634383f444cfba9a8560d29fe1821-aba03p;
+    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Expertise> .
+  
+  _:genid-e95634383f444cfba9a8560d29fe1821-duz23 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-e95634383f444cfba9a8560d29fe1821-3oyxes9;
+    <http://www.w3.org/2000/01/rdf-schema#label> "benötigte Expertise"@de .
+  
+  _:genid-e95634383f444cfba9a8560d29fe1821-aba03p a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsExpertise> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Welche Expertisen und Kenntnisse sind für die genannten Methoden nötig? z.B. Programmieren: Webprogrammierung" .
+  
+  _:genid-e95634383f444cfba9a8560d29fe1821-duz23 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:needsExpertise $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/needsExpertise> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-08T12:26:33.801Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/needsExpertise> .
