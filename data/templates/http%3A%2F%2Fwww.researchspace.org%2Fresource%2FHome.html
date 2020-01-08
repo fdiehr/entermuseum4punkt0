@@ -22,9 +22,20 @@
 
 
     <div data-flex-layout="row stretch-stretch">
+      <div class="grid-demo" data-flex-layout="column top-stretch">
+        <bs-panel>
+          <h2>How to: Datenerfassung</h2>
+          <p>
+            Lesen Sie die <semantic-link title=":How" iri='[[resolvePrefix ":How"]]' target=_blank>
+              <b>Hilfe</b>
+            </semantic-link>
+            bevor Sie Daten erfassen!</br>
+            Dort erhalten Sie hilfreiche Informationen zur Datenerstellung und -bearbeitung.
+          </p>
+        </bs-panel>
+      </div>
+
       <div data-flex-layout="column top-stretch">
-
-
         <div class="grid-demo">
           <h3>Daten erfassen</h3>
           <p>Erstellen Sie neue Datensätze für:</p>
@@ -64,7 +75,7 @@
             </li>
           </ul>
         </div>
-        <div class="grid-demo" data-flex-layout="column top-stretch">
+        <div class="grid-demo">
           <h3>Daten überprüfen</h3>
           <p>Hier finden Sie Listen aller bisher erstellten Datensätze:</p>
           <ul style="list-style-type:none;">
@@ -86,7 +97,8 @@
               </semantic-link>
             </li>
             <li>
-              <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ListResearchActivity"]]' target=_blank>
+              <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ListResearchActivity"]]'
+                target=_blank>
                 Beforschung digitaler Anwendungen
               </semantic-link>
             </li>
@@ -130,115 +142,11 @@
         </div>
       </div>
     </div>
-    <div class="grid-demo" data-flex-layout="column top-stretch">
-      <bs-panel>
-        <h2>How to: Datenerfassung</h2>
-
-        <p>
-          Die Datenerfassung ist in verschiedene Bereiche aufgeteilt. Die Eingabe erfolgt in unterschiedlichen
-          Formularen,
-          die miteinander verknüpft werden. Daher ist es sinnvoll, bestimmte Datensäte
-          vor anderen anzulegen. Befolgen Sie die beschriebenen Schritte, um den Kontext einer digitalen Anwendung
-          ausführlich zu dokumentieren.
-        </p>
-        <p>
-          Achten Sie auf die <b>Infofelder</b>! Sie erhalten Hinweise zu dem jeweiligen Datenfeld und unterstützen Sie
-          bei der
-          Eingabe.
-        </p>
-
-        <h3>Schritt 1: Projektkontext</h3>
-        <div class="gap">Zunächst sollte der betreffende Projektkontext erfasst werden. Füllen Sie dazu das Formular
-          <semantic-link title="m4p0:Project" iri='[[resolvePrefix ":Project"]]' target=_blank>
-            Projekt
-          </semantic-link> aus.</div>
-
-        <h3>Schritt 2: Digitale Anwendung</h3>
-        <div class="gap">
-          Um Kerninformationen über die digitale Anwendung wie Titel, verwendete Technologie, Anwendungsbereich etc.
-          Jede Anwendung muss einem Projekt zugeordnet werden. Daher sollte das entsprechende Projekt bereits vorher
-          angelegt sein.
-          anzugeben, füllen Sie das Formular <semantic-link title="m4p0:DigitalApp"
-            iri='[[resolvePrefix ":DigitalApp"]]' target=_blank>
-            Digitale Anwendung
-          </semantic-link>
-          aus.
-        </div>
-        <h3>Schritt 3: Entstehungskontext und Betrieb der digitalen Anwendung</h3>
-        <div class="gap">
-          <p>
-            Mit den folgenden Punkten wird die digitale Anwendung in den Kontext ihrer Enstehung gesetzt. Füllen Sie
-            dazu
-            die Formulare für
-
-            <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]' target=_blank>
-              Vermittlungskonzept
-            </semantic-link>,
-
-            <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
-              Entwicklung
-            </semantic-link>,
-
-            <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]' target=_blank>
-              Beforschung
-            </semantic-link>
-            und
-            <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]' target=_blank>
-              Betrieb
-            </semantic-link>
-            aus.
-            Die Reihenfolge ist dabei beliebig.
-          </p>
-          <p>
-            Das <b>Vermittlungskonzept</b> beschreibt den Inhalt der digitalen Anwendung und wie dieser mittels
-            eines Formates umgesetzt ist. Es beschreibt weiterhin angesprochene Nutzer-/Besuchergruppen und wie die
-            digitale Anwendung deren Bedürfnisse adressiert.
-          </p>
-
-          <p>
-            Die <b>Entwicklung</b> einer digitalen Anwendung wird von der Idee bis zur Umsetzung beschrieben. Jeder
-            Schritt wird dabei einzeln erfasst. Dazu muss jeweils ein neues Formular <semantic-link
-              title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
-              Entwicklung
-            </semantic-link>
-            ausgefüllt werden.
-          </p>
-
-          <p>Hier beschreiben Sie welche Aktivitäten im Rahmen der <b>Beforschung</b> der digitalen
-            Anwendung
-            stattgefunden haben.
-            Geben Sie auch entstandene Hilfsmittel und Publikationen an.
-          </p>
-
-          <p>
-            Hier können Sie dokumentieren, welche Anforderungen an den <b>Betrieb</b> und die Nutzung der digitalen
-            Anwendung zu
-            stellen sind und welche
-            Erkenntnisse aus den aktiven Betreib gewonnen wurden.
-          </p>
-        </div>
-        <h3>Schritt 4: Daten überprüfen und bearbeiten</h3>
-        <div class="gap">
-          <p>
-          Sobald ein Formular oder Unterformular gespeichert wird, entsteht ein neuer Datensatz mit eigenen Identifier.
-          Der Identifier entspricht der jeweiligen URL des Datensatzes. Der Datensatz ist über diesen Identifier
-          aufrufbar.</br>
-        
-        </p>
-          <p>
-            Sie finden bereits erstellte Datensätze auch über die bereitgestellten Listen.
-            </br>
-            Bearbeiten und ändern Sie Daten, indem Sie die Datenfelder überschreiben bzw. neue hinzufügen. Es ist nicht
-            möglich Datensätze zu löschen. </br>
-            Kontaktieren Sie den Administrator des Systems, wenn Sie Datensätze unwiderruflich löschen wollen.
-          </p>
-        </div>
-
-
-      </bs-panel>
-    </div>
+   
 
   </div>
+
+</div>
 
 
 </div>
