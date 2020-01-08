@@ -3,6 +3,11 @@
 
     
     <div class="gap">
+        <semantic-link
+        iri='[[resolvePrefix ":EducationalConcept"]]'
+    >
+        <button>neues Vermittlungskonzept hinzufügen</button>
+    </semantic-link>
         <semantic-table
             query='SELECT ?s ?p ?o WHERE {
                 ?s m4p0:isEducationalConceptOf ?o

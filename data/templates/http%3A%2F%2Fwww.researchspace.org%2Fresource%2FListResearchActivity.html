@@ -3,6 +3,11 @@
    
         
         <div class="gap">
+            <semantic-link
+            iri='[[resolvePrefix ":ResearchActivity"]]'
+        >
+            <button>neues Beforschung hinzufügen</button>
+        </semantic-link>
             <semantic-table
                 query='SELECT * WHERE {
                     ?s m4p0:researched ?o
