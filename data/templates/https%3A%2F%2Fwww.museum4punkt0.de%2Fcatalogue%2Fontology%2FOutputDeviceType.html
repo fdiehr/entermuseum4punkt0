@@ -1,27 +1,26 @@
 
+
 <bs-panel>
-    <h1>Vokabulare</h1>
+    <h1>Vokabular: Art des Ausspielgeräts</h1>
 
     <div class="gap">
 
         <semantic-query query='
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
-        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        SELECT * WHERE {
-            ?s skos:inScheme ?o.
-          
-          
-           }          
+       PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+       PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+	   SELECT * WHERE {
+             ?s skos:inScheme m4p0:OutputDeviceType;
+                skos:prefLabel ?preflabel.
+  }
         ' template='{{> template}}'>
             <template id='template'>
                 <div>
-                    <b>Vokabulare</b>
+                    <b>Begriffe</b>
                     <ul>
                         {{#each bindings}}
                         <li>
-                            <semantic-link uri="{{o.value}}">
-                                {{o.value}}
+                            <semantic-link uri="{{s.value}}">
+                                {{prefLabel.value}}
                             </semantic-link>
                         </li>
                         {{/each}}
@@ -33,3 +32,8 @@
     </div>
 
 </bs-panel>
+
+
+
+
+ 

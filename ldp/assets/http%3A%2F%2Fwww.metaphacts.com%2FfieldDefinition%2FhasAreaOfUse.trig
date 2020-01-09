@@ -1,10 +1,13 @@
 
 <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse/context> {
-  _:genid-37daf887853440a0b1ce4bcf4878b949-ui7b39 a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-8al1q <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {VALUES (?value ?label) {    (<https://www.museum4punkt0.de/catalogue/ontology/Online>  \"online\")
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-mzvx2 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:hasAreaOfUse ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-ljykkf <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {VALUES (?value ?label) {    (<https://www.museum4punkt0.de/catalogue/ontology/Online>  \"online\")
     (<https://www.museum4punkt0.de/catalogue/ontology/Outside> \"außer Haus\")
     (<https://www.museum4punkt0.de/catalogue/ontology/PermanentExhibition> \"Dauerausstellung\")
     (<https://www.museum4punkt0.de/catalogue/ontology/TemporaryExhibition> \"Sonderausstellung\")
@@ -13,36 +16,34 @@
   }
 }""" .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-73a0c a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-37daf887853440a0b1ce4bcf4878b949-4ojv4;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "In welchem Bereich des Museums oder außerhalb kann die digitale Anwendung eingesetzt werden? Für welchen Bereich ist sie konzipiert worden?";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-37daf887853440a0b1ce4bcf4878b949-73a0c .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-psys7o;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-mzvx2 .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-4ojv4 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasAreaOfUse $value} WHERE {}";
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-bnchch a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-psys7o <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasAreaOfUse $value} WHERE {}";
     a <http://spinrdf.org/sp#Query> .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-73a0c <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasAreaOfUse $value} WHERE {}" .
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-bnchch .
   
-  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-37daf887853440a0b1ce4bcf4878b949-ui7b39 .
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-mzvx2 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-8al1q a <http://spinrdf.org/sp#Query> .
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-ljykkf a <http://spinrdf.org/sp#Query> .
   
-  _:genid-37daf887853440a0b1ce4bcf4878b949-ui7b39 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject m4p0:hasMaturityLevel ?value.
-  ?value rdfs:label ?label.
-}""" .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
-      _:genid-37daf887853440a0b1ce4bcf4878b949-8al1q;
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Anwendungsbereich"@de;
-    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-ljykkf .
+  
+  _:genid-f8738cba4e9c42d698181b3b4a2b9aa8-bnchch <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasAreaOfUse $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T10:42:24.483Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T14:45:42.617Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasAreaOfUse> .
