@@ -1,0 +1,40 @@
+
+<bs-panel>
+    <h1>Vokabular: Anwendungsbereich</h1>
+
+    <div class="gap">
+
+        <semantic-query query='
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+          SELECT $value $label WHERE {VALUES (?value ?label) {    (<https://www.museum4punkt0.de/catalogue/ontology/Online>  "online")
+    (<https://www.museum4punkt0.de/catalogue/ontology/Outside> "außer Haus")
+    (<https://www.museum4punkt0.de/catalogue/ontology/PermanentExhibition> "Dauerausstellung")
+    (<https://www.museum4punkt0.de/catalogue/ontology/TemporaryExhibition> "Sonderausstellung")
+    (<https://www.museum4punkt0.de/catalogue/ontology/Walkthrough> "Weg durch das Museum")
+ 
+  }
+}
+        ' template='{{> template}}'>
+            <template id='template'>
+                <div>
+                    
+                    <ul>
+                        {{#each bindings}}
+                        <li>
+                            <semantic-link uri="{{value.value}}">
+                                {{label.value}}
+                            </semantic-link>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </template>
+        </semantic-query>
+
+    </div>
+
+</bs-panel>
+
+
