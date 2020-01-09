@@ -116,12 +116,13 @@
         </p>
         <semantic-form-autocomplete-input for="usedTool">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
-                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+            toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                         
+            toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
                                     P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
                                    
                                     ]]">
-
+                                    <semantic-form-hidden-input for="toolRdfType"></semantic-form-hidden-input>
                 <semantic-form-text-input for="toolTitle">
                 </semantic-form-text-input>
 
@@ -178,12 +179,14 @@
         </p>
         <semantic-form-autocomplete-input for="usedSoftware">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
-                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+            softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                    
+            toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                 version='http://www.metaphacts.com/fieldDefinition/version'
                                 hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
                                 P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
                                 ]]">
-                <semantic-form-text-input for="toolTitle">
+                                <semantic-form-hidden-input for="softwareRdfType"></semantic-form-hidden-input>
+                                <semantic-form-text-input for="toolTitle">
                 </semantic-form-text-input>
                 <semantic-form-text-input for="version">
                 </semantic-form-text-input>
