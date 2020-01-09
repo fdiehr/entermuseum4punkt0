@@ -1,0 +1,18 @@
+<bs-panel>
+    <h1>Vokabulare</h1>
+
+
+    <div class="gap">
+        <semantic-table
+            query='SELECT * WHERE {
+                ?subject a skos:ConceptScheme ;
+                 ?voc_title .
+            }'
+            column-configuration='[
+            {
+                "variableName": "subject",
+                "displayName": "Bezeichnung des Vokabulars"
+            }]'
+        ></semantic-table>
+    </div>
+</bs-panel>
