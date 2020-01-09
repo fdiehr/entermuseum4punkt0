@@ -14,7 +14,7 @@
   
   _:genid-0ee17d3c20fb43a39cb565984fcdd27f-9pepjo <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/TargetAudience>} WHERE {}" .
   
-  _:genid-0ee17d3c20fb43a39cb565984fcdd27f-89v1lo <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/TargetAudience>. <https://www.museum4punkt0.de/catalogue/ontology/TargetAudience> a skos:ConceptScheme} WHERE {}" .
+  _:genid-0ee17d3c20fb43a39cb565984fcdd27f-89v1lo <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/TargetAudience>. <https://www.museum4punkt0.de/catalogue/ontology/TargetAudience> a skos:ConceptScheme; rdfs:label "Zielgruppe"} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience> <http://www.metaphacts.com/ontology/fields#maxOccurs>
       "1" .
