@@ -1,38 +1,37 @@
 
 <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod/context> {
-  <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-fe8b3f30cac848a69f788fa1ff906cfe-rrxzt .
-  
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-no382 <http://spinrdf.org/sp#text> "INSERT { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod>} WHERE {}" .
-  
   <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-fe8b3f30cac848a69f788fa1ff906cfe-9bjo0j;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-fe8b3f30cac848a69f788fa1ff906cfe-no382 .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-435f7b113a1a41838b86c4f4e73041a6-my0l8l .
   
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-rrxzt a <http://spinrdf.org/sp#Query> .
+  _:genid-435f7b113a1a41838b86c4f4e73041a6-789r1u a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> <http://www.metaphacts.com/ontology/fields#minOccurs>
-      "1" .
-  
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-9bjo0j <http://spinrdf.org/sp#text> "DELETE { $subject a $value . $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod>} WHERE {}" .
-  
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-no382 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-rrxzt <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-435f7b113a1a41838b86c4f4e73041a6-fm1kdk <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject skos:inScheme ?value.
 }""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-435f7b113a1a41838b86c4f4e73041a6-my0l8l <http://spinrdf.org/sp#text> "INSERT { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod>. m4p0:ResearchMethod a skos:ConceptScheme} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-435f7b113a1a41838b86c4f4e73041a6-789r1u;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-435f7b113a1a41838b86c4f4e73041a6-fm1kdk .
+  
+  _:genid-435f7b113a1a41838b86c4f4e73041a6-789r1u <http://spinrdf.org/sp#text> "DELETE { $subject a $value . $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod>} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> <http://www.w3.org/2000/01/rdf-schema#label>
       "inSchemeResearchMethod"@de;
     <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
   
-  _:genid-fe8b3f30cac848a69f788fa1ff906cfe-9bjo0j a <http://spinrdf.org/sp#Query> .
+  _:genid-435f7b113a1a41838b86c4f4e73041a6-fm1kdk a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T15:04:02.574Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:27:13.808Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod> .

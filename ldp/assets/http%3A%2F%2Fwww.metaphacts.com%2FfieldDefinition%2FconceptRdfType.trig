@@ -1,0 +1,28 @@
+
+<http://www.metaphacts.com/fieldDefinition/conceptRdfType/context> {
+  _:genid-33166c8899be4a489076e6651f555e20-c4ere7 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(skos:Concept as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/conceptRdfType> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-33166c8899be4a489076e6651f555e20-c4ere7;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-33166c8899be4a489076e6651f555e20-0gypr .
+  
+  _:genid-33166c8899be4a489076e6651f555e20-0gypr <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  _:genid-33166c8899be4a489076e6651f555e20-c4ere7 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-33166c8899be4a489076e6651f555e20-0gypr a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/conceptRdfType> <http://www.w3.org/2000/01/rdf-schema#label>
+      "conceptRdfType"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:31:17.169Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/conceptRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/conceptRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

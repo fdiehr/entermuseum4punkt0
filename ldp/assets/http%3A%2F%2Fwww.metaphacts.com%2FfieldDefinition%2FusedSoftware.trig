@@ -2,45 +2,51 @@
 <http://www.metaphacts.com/fieldDefinition/usedSoftware/context> {
   <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#comment>
       "Geben Sie an welche Software für die Entwicklung der digitalen Anwendung genutzt wurde.";
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-61a9054e59af4257aea65bda448d0656-jery8 .
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-61a9054e59af4257aea65bda448d0656-jery8 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-61a9054e59af4257aea65bda448d0656-61prnp a <http://spinrdf.org/sp#Query> .
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-611y3b <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:usedSoftware $value. $value a m4p0:Software} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
       <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-61a9054e59af4257aea65bda448d0656-5xq9ek;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-61a9054e59af4257aea65bda448d0656-61prnp;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-61a9054e59af4257aea65bda448d0656-o4vbgb;
-    <http://www.w3.org/2000/01/rdf-schema#label> "genutzte Software"@de;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> .
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-cd14723ddfe84ca0832cf9da1efdb294-3psugb .
   
-  _:genid-61a9054e59af4257aea65bda448d0656-o4vbgb <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-3psugb a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-cd14723ddfe84ca0832cf9da1efdb294-d9hte4;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-cd14723ddfe84ca0832cf9da1efdb294-j1zsam .
+  
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-3psugb <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a m4p0:Software ;
+    m4p0:toolTitle ?label .
+  FILTER REGEX(STR(?label), \"?token\", \"i\")
+} LIMIT 10""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#label>
+      "genutzte Software"@de .
+  
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-611y3b a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> .
+  
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-j1zsam <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject m4p0:usedSoftware ?value.
   }""" .
   
-  _:genid-61a9054e59af4257aea65bda448d0656-5xq9ek a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-61a9054e59af4257aea65bda448d0656-61prnp <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:usedSoftware $value. $value a m4p0:Software} WHERE {}" .
-  
-  _:genid-61a9054e59af4257aea65bda448d0656-5xq9ek <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:usedSoftware $value. $value a m4p0:Software} WHERE {}" .
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-d9hte4 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:usedSoftware $value. $value a m4p0:Software} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.metaphacts.com/ontology/fields#range>
       <https://www.museum4punkt0.de/catalogue/ontology/Software> .
   
-  _:genid-61a9054e59af4257aea65bda448d0656-o4vbgb a <http://spinrdf.org/sp#Query> .
+  _:genid-cd14723ddfe84ca0832cf9da1efdb294-j1zsam a <http://spinrdf.org/sp#Query> .
   
-  _:genid-61a9054e59af4257aea65bda448d0656-jery8 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  ?value a m4p0:Software ;
-    m4p0:toolTitle ?label .
-  FILTER REGEX(STR(?label), \"?token\")
-} LIMIT 10""" .
-  
-  <http://www.metaphacts.com/fieldDefinition/usedSoftware> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-24T09:33:17.788Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  <http://www.metaphacts.com/fieldDefinition/usedSoftware> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-cd14723ddfe84ca0832cf9da1efdb294-611y3b;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T08:46:24.979Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/usedSoftware> .

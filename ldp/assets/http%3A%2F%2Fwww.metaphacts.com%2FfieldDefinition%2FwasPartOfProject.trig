@@ -1,49 +1,47 @@
 
 <http://www.metaphacts.com/fieldDefinition/wasPartOfProject/context> {
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-fsud9c a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-mwq6si a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-8694d18cd9644620ac0b2bf58ca03882-huy8vm;
     <http://www.w3.org/2000/01/rdf-schema#label> "ist Teilprojekt von"@de .
   
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-huy8vm a <http://spinrdf.org/sp#Query> .
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-gwdsnp a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-8694d18cd9644620ac0b2bf58ca03882-l2geuj;
-    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Project>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-8694d18cd9644620ac0b2bf58ca03882-mwq6si;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.metaphacts.com/ontology/fields#range>
+      <https://www.museum4punkt0.de/catalogue/ontology/Project>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Project>;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-0aa80672a67445c68642f45c7c4a2c0e-1neish .
   
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-l2geuj <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:wasPartOfProject $value} WHERE {}" .
-  
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-mwq6si <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:wasPartOfProject $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.metaphacts.com/ontology/fields#domain>
-      <https://www.museum4punkt0.de/catalogue/ontology/Project> .
-  
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-l2geuj a <http://spinrdf.org/sp#Query> .
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-1neish a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.w3.org/2000/01/rdf-schema#comment>
       "Ist das beschriebene Projekt Teil eines größeren Verbunds? Gibt es einen übergeordneten Projektzusammenhang, dem das beschriebene Projekt untergeordnet ist?" .
   
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-huy8vm <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  ?value a m4p0:Project ;
-    m4p0:projectTitle ?label .
-  FILTER REGEX(STR(?label), \"?token\")
-} LIMIT 10""" .
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-26fgsc a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-8694d18cd9644620ac0b2bf58ca03882-fsud9c .
+  <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-0aa80672a67445c68642f45c7c4a2c0e-26fgsc;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0aa80672a67445c68642f45c7c4a2c0e-ugv3jb;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0aa80672a67445c68642f45c7c4a2c0e-gwdsnp .
   
-  _:genid-8694d18cd9644620ac0b2bf58ca03882-fsud9c <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-26fgsc <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:wasPartOfProject $value} WHERE {}" .
+  
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-ugv3jb <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:wasPartOfProject $value} WHERE {}" .
+  
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-gwdsnp <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject m4p0:wasPartOfProject ?value.
 }""" .
   
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-1neish <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a m4p0:Project ;
+    m4p0:projectTitle ?label .
+  FILTER REGEX(STR(?label), \"?token\", \"i\")
+} LIMIT 10""" .
+  
+  _:genid-0aa80672a67445c68642f45c7c4a2c0e-ugv3jb a <http://spinrdf.org/sp#Query> .
+  
   <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-06T12:55:51.545Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T08:51:50.193Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/wasPartOfProject> .

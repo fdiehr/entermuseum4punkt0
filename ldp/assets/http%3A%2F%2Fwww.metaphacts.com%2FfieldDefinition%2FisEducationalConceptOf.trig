@@ -1,38 +1,49 @@
 
 <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf/context> {
-  <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e163ea91f11142209281ee1aca140763-1sb7st .
-  
-  _:genid-e163ea91f11142209281ee1aca140763-y40crf a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-e163ea91f11142209281ee1aca140763-zrvmo7 .
+      _:genid-5a102d49d7ef481a935c897fe7477bec-v99zuo;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-e163ea91f11142209281ee1aca140763-zrvmo7 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:isEducationalConceptOf $value. $value a m4p0:DigitalApp.} WHERE {}" .
+  _:genid-5a102d49d7ef481a935c897fe7477bec-9a1wh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5a102d49d7ef481a935c897fe7477bec-v99zuo <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:isEducationalConceptOf $value. $value a m4p0:DigitalApp.} WHERE {}" .
+  
+  _:genid-5a102d49d7ef481a935c897fe7477bec-gi70t8 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5a102d49d7ef481a935c897fe7477bec-v99zuo a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5a102d49d7ef481a935c897fe7477bec-vrkzn5 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a m4p0:DigitalApp ;
+    m4p0:digitalAppTitle ?label .
+  FILTER REGEX(STR(?label), \"?token\", \"i\")
+} LIMIT 10""" .
   
   <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-e163ea91f11142209281ee1aca140763-y40crf;
+      _:genid-5a102d49d7ef481a935c897fe7477bec-9a1wh;
     <http://www.metaphacts.com/ontology/fields#minOccurs> "1" .
   
-  _:genid-e163ea91f11142209281ee1aca140763-1sb7st a <http://spinrdf.org/sp#Query> .
+  _:genid-5a102d49d7ef481a935c897fe7477bec-9a1wh <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:isEducationalConceptOf $value. $value a m4p0:DigitalApp.} WHERE {}" .
   
-  _:genid-e163ea91f11142209281ee1aca140763-zrvmo7 a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
+      _:genid-5a102d49d7ef481a935c897fe7477bec-vrkzn5 .
   
-  _:genid-e163ea91f11142209281ee1aca140763-y40crf <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:isEducationalConceptOf $value. $value a m4p0:DigitalApp.} WHERE {}" .
+  _:genid-5a102d49d7ef481a935c897fe7477bec-vrkzn5 a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Digitale Anwendung"@de .
+      "Digitale Anwendung"@de;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Wählen Sie eine digitale Anwendung aus, zu dem das Vermittlungskonzept gehört." .
   
-  _:genid-e163ea91f11142209281ee1aca140763-1sb7st <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject m4p0:isEducationalConceptOf $value. $value a m4p0:DigitalApp.
+  _:genid-5a102d49d7ef481a935c897fe7477bec-gi70t8 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:isEducationalConceptOf ?value. ?value a m4p0:DigitalApp.
+  
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "Wählen Sie eine digitale Anwendung aus, zu dem das Vermittlungskonzept gehört.";
+  <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-5a102d49d7ef481a935c897fe7477bec-gi70t8;
     <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-13T12:46:47.599Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T08:40:29.005Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf> .

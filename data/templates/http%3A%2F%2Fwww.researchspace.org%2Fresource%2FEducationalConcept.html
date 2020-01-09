@@ -47,10 +47,12 @@
                 <semantic-form
                     new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                     fields="[[fieldDefinitions
+                    conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                     inSchemeTargetAudience='http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience'    
                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                         ]]">
-                    <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
+                        <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                        <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
                     </semantic-form-hidden-input>
                     <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                     </semantic-form-text-input>
@@ -75,9 +77,11 @@
                 <semantic-form
                     new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                     fields="[[fieldDefinitions
-                inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    
+                    conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
+                    inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    
                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'                
                     ]]">
+                    <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
                     <semantic-form-hidden-input for="inSchemeSubject" default-value='skos:Concept'>
                     </semantic-form-hidden-input>
                     <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>

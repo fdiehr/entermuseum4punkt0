@@ -1,32 +1,34 @@
 
 <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise/context> {
-  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
   
-  _:genid-d2f1c42e43c042e1b25992f2de38900f-sgdaai <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-0614042fa8ad401a9345f8872a452fab-sibvtm a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-0614042fa8ad401a9345f8872a452fab-jd20tc;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0614042fa8ad401a9345f8872a452fab-mh8q0o .
+  
+  _:genid-0614042fa8ad401a9345f8872a452fab-mh8q0o a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Expertise. m4p0:Expertise a skos:ConceptScheme.} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> <http://www.w3.org/2000/01/rdf-schema#label>
+      "inSchemeExpertise"@de .
+  
+  _:genid-0614042fa8ad401a9345f8872a452fab-sibvtm <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
  $subject skos:inScheme ?value
 }""" .
   
-  _:genid-d2f1c42e43c042e1b25992f2de38900f-zdx22d <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Expertise} WHERE {}" .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-0614042fa8ad401a9345f8872a452fab-sibvtm .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.w3.org/2004/02/skos/core#Concept>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d2f1c42e43c042e1b25992f2de38900f-sgdaai;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d2f1c42e43c042e1b25992f2de38900f-zdx22d .
-  
-  _:genid-d2f1c42e43c042e1b25992f2de38900f-sgdaai a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-d2f1c42e43c042e1b25992f2de38900f-eiouw <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:Expertise} WHERE {}";
+  _:genid-0614042fa8ad401a9345f8872a452fab-jd20tc <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:Expertise} WHERE {}";
     a <http://spinrdf.org/sp#Query> .
   
-  _:genid-d2f1c42e43c042e1b25992f2de38900f-zdx22d a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-d2f1c42e43c042e1b25992f2de38900f-eiouw;
-    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeExpertise"@de;
-    a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-21T15:14:36.953Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:24:41.824Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeExpertise> .

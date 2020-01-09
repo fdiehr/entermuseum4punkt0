@@ -55,10 +55,12 @@
         </semantic-form-checklist-input>
         <semantic-form-tree-picker-input for="hasCreationMethod">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
-                                                inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
+            conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                    
+            inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                     ]]">
+                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
                 <semantic-form-hidden-input for="inSchemeCreationMethod" default-value='skos:Concept'>
                 </semantic-form-hidden-input>
                 <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
@@ -83,10 +85,14 @@
         </p>
         <semantic-form-tree-picker-input for="needsExpertise">
             <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
-                                                    inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
+            conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                        
+            inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
                                                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                     altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                         ]]">
+
+                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+
                 <semantic-form-hidden-input for="inSchemeExpertise" default-value='skos:Concept'>
                 </semantic-form-hidden-input>
                 <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
@@ -99,7 +105,7 @@
             </semantic-form>
         </semantic-form-tree-picker-input>
 
-       <h3>genutze Hilfsmittel und Geräte</h3>
+        <h3>genutze Hilfsmittel und Geräte</h3>
         <p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für
             das Scannen von 3D-Digitalisaten
             wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig.
@@ -122,10 +128,12 @@
                 <semantic-form-tree-picker-input for="hasToolType">
                     <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
-                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                        conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                        
+                        inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                     ]]">
+                        <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
                         <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
                         </semantic-form-hidden-input>
                         <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>

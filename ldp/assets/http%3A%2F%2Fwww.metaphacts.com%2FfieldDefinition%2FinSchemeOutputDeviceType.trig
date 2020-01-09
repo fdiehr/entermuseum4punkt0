@@ -1,36 +1,36 @@
 
 <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType/context> {
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-jt2u6n a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
     <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeOutputDeviceType"@de .
   
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-jpn3ne a <http://spinrdf.org/sp#Query> .
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-m5dgue <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:OutputDeviceType} WHERE {}" .
+  
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-oztd6e <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:OutputDeviceType. m4p0:OutputDeviceType a skos:ConceptScheme} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-7fd311a6408641d6b4e24c0cb608ec60-8z0qm;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-m5dgue a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-27f950477a8845bea3c65b9dd5482a4f-4vy0xf .
+      _:genid-7fd311a6408641d6b4e24c0cb608ec60-m5dgue .
   
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-jt2u6n <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:OutputDeviceType} WHERE {}" .
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-8z0qm a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-7fd311a6408641d6b4e24c0cb608ec60-oztd6e .
   
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-jpn3ne <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-8z0qm <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject skos:inScheme ?value.
 }""" .
   
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-4vy0xf <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:OutputDeviceType} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-27f950477a8845bea3c65b9dd5482a4f-jpn3ne;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-27f950477a8845bea3c65b9dd5482a4f-jt2u6n .
-  
-  _:genid-27f950477a8845bea3c65b9dd5482a4f-4vy0xf a <http://spinrdf.org/sp#Query> .
+  _:genid-7fd311a6408641d6b4e24c0cb608ec60-oztd6e a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:47:26.381Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:29:27.350Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType> .

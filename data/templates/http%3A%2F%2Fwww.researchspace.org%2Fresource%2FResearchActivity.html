@@ -48,11 +48,13 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
 
             <semantic-form-tree-picker-input for="hasResearchMethod">
                 <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
-                                                inSchemeResearchMethod='http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod'    
+                conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                
+                inSchemeResearchMethod='http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                 ]]">
-                    <semantic-form-hidden-input for="inSchemeResearchMethod" default-value='skos:Concept'>
+                                                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                                                <semantic-form-hidden-input for="inSchemeResearchMethod" default-value='skos:Concept'>
                     </semantic-form-hidden-input>
                     <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                     </semantic-form-text-input>
@@ -68,11 +70,13 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             </semantic-form-text-input>
             <semantic-form-tree-picker-input for="hasExperimenteeType">
                 <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
-                                            inSchemeExperimenteeType='http://www.metaphacts.com/fieldDefinition/inSchemeExperimenteeType'    
+                conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                            
+                inSchemeExperimenteeType='http://www.metaphacts.com/fieldDefinition/inSchemeExperimenteeType'    
                                             prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                             altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                 ]]">
-                    <semantic-form-hidden-input for="inSchemeExperimenteeType" default-value='skos:Concept'>
+                                                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                                                <semantic-form-hidden-input for="inSchemeExperimenteeType" default-value='skos:Concept'>
                     </semantic-form-hidden-input>
                     <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                     </semantic-form-text-input>
@@ -117,11 +121,13 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
                     <semantic-form-tree-picker-input for="hasToolType">
                         <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                             fields="[[fieldDefinitions
-                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                            conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                    
+                            inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                               
                                                     ]]">
+                                                    <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
                             <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
                             </semantic-form-hidden-input>
                             <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
@@ -217,11 +223,13 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
 
             <semantic-form-tree-picker-input for="hasToolType">
                 <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
-                                                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                               
+                inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                 altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                                     ]]">
-                    <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                                                    <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                                                    <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
                     </semantic-form-hidden-input>
                     <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                     </semantic-form-text-input>

@@ -63,10 +63,12 @@
                 <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasTouchpoints">
                     <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
                         fields="[[fieldDefinitions
-        inSchemeTouchpoints='http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints'
+                        conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
+                        inSchemeTouchpoints='http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints'
         prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
         ]]">
-                        <semantic-form-hidden-input for="inSchemeTouchpoints" default-value='skos:Concept'>
+        <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>                
+        <semantic-form-hidden-input for="inSchemeTouchpoints" default-value='skos:Concept'>
                         </semantic-form-hidden-input>
                         <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                         </semantic-form-text-input>
@@ -74,7 +76,7 @@
                         <semantic-form-errors></semantic-form-errors>
                         <button name='submit' class='btn btn-default'>Speichern</button>
 
-                    </semantic-form>
+                    </semantic-form-hidden-input>
                 </semantic-form-tree-picker-input>
                 <h3>Projekt</h3>
 <p>Geben Sie ein Projekt an, in dessen Zusammenhang die digitale Anwendung entwickelt wurde.</p>
