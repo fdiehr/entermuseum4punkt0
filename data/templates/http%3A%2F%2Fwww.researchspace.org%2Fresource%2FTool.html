@@ -22,19 +22,17 @@
         <semantic-form-text-input for="toolTitle">
         </semantic-form-text-input>
         <semantic-form-tree-picker-input for="hasToolType">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
-                fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
                 conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                       
                 inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'  
-                
                                         prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                         altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
                                             ]]">
-                                            <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
-                                           <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
 
                 </semantic-form-hidden-input>
-                 <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
                 </semantic-form-text-input>
                 <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
                 </semantic-form-text-input>
