@@ -20,7 +20,7 @@
       </semantic-link-container>
       <semantic-link-container uri=":How">
         <li title="Hilfe">
-          <a>Hilfe</a>
+          <a>Hilfe <i class="fa fa-question-circle"></i></a>
         </li>
       </semantic-link-container>
 
@@ -137,7 +137,18 @@
     </ul>
     <bs-nav data-pull-right="true">
       <ul class="nav navbar-nav">
-        <semantic-link-container uri="http://www.metaphacts.com/resource/assets/Fields">
+        <semantic-link-container uri="http://help.metaphacts.com/resource/SemanticSimpleSearch">
+          <li title="Search">
+            <a>Suche</a>
+          </li>
+        </semantic-link-container>
+       
+        
+      </ul>
+     
+      <mp-nav-account></mp-nav-account>
+      <mp-anonymous-hidden>
+         <semantic-link-container uri="http://www.metaphacts.com/resource/assets/Fields">
           <li title="Fields">
             <a>Fields</a>
           </li>
@@ -145,22 +156,18 @@
         <li>
           <mp-link url="/sparql" title="Sparql Endpoint">SPARQL</mp-link>
         </li>
-        
-      </ul>
-     
-      <mp-nav-account></mp-nav-account>
-      <mp-anonymous-hidden>
         <semantic-link-container uri="http://www.metaphacts.com/resource/admin/">
           <li title="System Settings">
             <a><i class="fa fa-cog"></i></a>
           </li>
         </semantic-link-container>
-      </mp-anonymous-hidden>
-      <semantic-link-container uri="http://help.metaphacts.com/resource/Start">
+         <semantic-link-container uri="http://help.metaphacts.com/resource/Start">
         <li title="Help">
           <a><i class="fa fa-question-circle"></i></a>
         </li>
       </semantic-link-container>
+      </mp-anonymous-hidden>
+     
     </bs-nav>
   </bs-navbar-collapse>
 </bs-navbar>
