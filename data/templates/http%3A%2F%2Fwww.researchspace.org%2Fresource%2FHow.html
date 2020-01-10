@@ -143,6 +143,7 @@
               über das Menü
               oder die Startseite erreichbar.)
             </p>
+            <h4>Listen</h4>
             <p>
               Suchen Sie den betreffenden Datensatz über die entsprechende Liste.
             </p>
@@ -166,13 +167,22 @@
                 bearbeiten</b> und können nun ein weiteres Untersuchungssetting hinzufügen. (Vergessen Sie nicht zu
               speichern!)
             </div>
+            <h4>Einfache Suche</h4>
+            <div class="gap">
+              Alternativ können Sie auch die <b>Einfache</b>
+              <semantic-link title=":SimpleSearch" iri="http://www.metaphacts.com/resource/SimpleSearch" target=_blank>
+                <b> Suche</b>
+              </semantic-link>
+              benutzen. Beachten Sie, dass diese Suche nur Datensätze findet, die einen Titel/einen Namen** haben (wie
+              z.B. Digitale Anwendung, Projekt, Insitution).
+            </div>
             <div class="alert alert-info">
               Bearbeiten und ändern Sie Daten, indem Sie die Datenfelder überschreiben bzw. neue hinzufügen.
             </div>
             <p>
               Es ist nicht möglich Datensätze zu löschen. </br>
               Kontaktieren Sie den Administrator des Systems, wenn Sie Datensätze unwiderruflich löschen wollen.
-            </p>
+            </p>            
             <div class="gap">
               *Nicht alle Datensätze haben einen Titel oder ein Datum über das man sie eindeutig benennen kann. Daher
               sehen
@@ -195,6 +205,9 @@
                 Betrieb
               </semantic-link>
               .)
+            </div>
+            <div class="gap">
+              **Es werden nur Datensätze gefunden, die ein <i>rdfs:label</i> oder ein <i>skos:prefLabel</i> haben.
             </div>
           </div>
         </div>
@@ -243,6 +256,9 @@
             <h4>Daten suchen</h4>
             <b>Listen</b> über Menü und <semantic-link title=":Home" iri='[[resolvePrefix ":Home"]]' target=_blank>
               Startseite
+            </semantic-link> oder</br>
+            <semantic-link title=":SimpleSearch" iri="http://www.metaphacts.com/resource/SimpleSearch" target=_blank>
+              Suche
             </semantic-link>
           </div>
           <div>
