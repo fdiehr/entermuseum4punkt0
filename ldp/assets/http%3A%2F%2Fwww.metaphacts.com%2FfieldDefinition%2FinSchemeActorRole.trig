@@ -3,44 +3,41 @@
   <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
   
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-gw975ei <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject skos:inScheme ?value.
-}""" .
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-oi6mwi a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-v3ml4 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-oi6mwi <http://spinrdf.org/sp#text> "DELETE { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#treePatterns>
       """{
   \"type\": \"simple\",
   \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>\"
 }"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-gw975ei .
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-f82f9e4a956f488eb314cd2cc4654d8d-oi6mwi;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "1" .
   
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-8pug2d a <http://spinrdf.org/sp#Query> .
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-v3ml4 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject skos:inScheme m4p0:ActorRole; skos:inScheme ?value.
+}""" .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#minOccurs>
-      "1" .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-f82f9e4a956f488eb314cd2cc4654d8d-qc7dzh;
+    <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/ActorRole> .
   
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-8pug2d <http://spinrdf.org/sp#text> "DELETE { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>} WHERE {}" .
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-qc7dzh a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-8pug2d .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-f82f9e4a956f488eb314cd2cc4654d8d-v3ml4 .
   
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-gw975ei a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#range>
-      <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-n9e28 .
-  
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-n9e28 a <http://spinrdf.org/sp#Query> .
+  _:genid-f82f9e4a956f488eb314cd2cc4654d8d-qc7dzh <http://spinrdf.org/sp#text> "INSERT { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>. m4p0:ActorRole a skos:ConceptScheme} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> <http://www.metaphacts.com/ontology/fields#maxOccurs>
       "1";
-    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeActorRole"@de .
-  
-  _:genid-f31a0bb1dfb749ed851f7bcbd46d913e-n9e28 <http://spinrdf.org/sp#text> "INSERT { $subject a $value. $subject skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/ActorRole>. m4p0:ActorRole a skos:ConceptScheme} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeActorRole"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:28:35.042Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T09:26:00.583Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeActorRole> .

@@ -1,4 +1,3 @@
-
 <bs-panel>
     <h1>Vokabulare</h1>
 
@@ -8,11 +7,25 @@
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        SELECT * WHERE {
-            ?s skos:inScheme ?o.
-          
-          
-           }          
+          SELECT ?s ?vocname WHERE {                    
+            VALUES (?s ?vocname) { 
+                (<https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse> "Anwendungsbereich")
+                (<https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType> "Art des Ausspielgeräts")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ToolType> "Art des Hilfsmittels/Geräts")
+                (<https://www.museum4punkt0.de/catalogue/ontology/SoftwareType> "Art der Software")                
+                (<https://www.museum4punkt0.de/catalogue/ontology/CreationMethod> "Entwicklungsmethode")
+                (<https://www.museum4punkt0.de/catalogue/ontology/CreationPhase> "Entwicklungsphase")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Expertise> "Expertise")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Subject> "Inhalt")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType> "Probandentyp")                
+                (<https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel> "Reifegrad")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ActorRole> "Rolle im Projekt")   
+                (<https://www.museum4punkt0.de/catalogue/ontology/Technology> "Technologie")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Touchpoints> "Touchpoints/Kanäle")
+                (<https://www.museum4punkt0.de/catalogue/ontology/EducationFormat> "Vermittlungsansatz")
+                (<https://www.museum4punkt0.de/catalogue/ontology/TargetAudience> "Zielgruppe")
+            }
+          }
         ' template='{{> template}}'>
             <template id='template'>
                 <div>
@@ -20,8 +33,8 @@
                     <ul>
                         {{#each bindings}}
                         <li>
-                            <semantic-link uri="{{o.value}}">
-                                {{o.value}}
+                            <semantic-link uri="{{s.value}}">
+                                {{vocname.value}}
                             </semantic-link>
                         </li>
                         {{/each}}

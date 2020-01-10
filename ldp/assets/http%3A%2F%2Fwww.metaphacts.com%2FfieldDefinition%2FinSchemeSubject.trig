@@ -1,37 +1,36 @@
 
 <http://www.metaphacts.com/fieldDefinition/inSchemeSubject/context> {
-  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-980de57426f743d6b65dd804f719f633-q6nqlc;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-0rvwv <http://spinrdf.org/sp#text> "DELETE { $subject a ?value} WHERE {$subject skos:inScheme m4p0:Subject}" .
+  
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-yg5m76 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
   
-  _:genid-980de57426f743d6b65dd804f719f633-q6nqlc a <http://spinrdf.org/sp#Query> .
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-23bxq a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-980de57426f743d6b65dd804f719f633-5awd6q .
-  
-  _:genid-980de57426f743d6b65dd804f719f633-q6nqlc <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Subject. m4p0:Subject a skos:ConceptScheme} WHERE {}" .
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-yg5m76 <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Subject. m4p0:Subject a skos:ConceptScheme} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
       <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-980de57426f743d6b65dd804f719f633-mbjccc <http://spinrdf.org/sp#text> "DELETE { $subject a ?value} WHERE {$subject skos:inScheme m4p0:Subject}" .
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-0rvwv a <http://spinrdf.org/sp#Query> .
   
-  _:genid-980de57426f743d6b65dd804f719f633-5awd6q a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-0rvwv .
   
-  _:genid-980de57426f743d6b65dd804f719f633-mbjccc a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-980de57426f743d6b65dd804f719f633-5awd6q <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
-  $subject skos:inScheme ?value.
+  _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-23bxq <http://spinrdf.org/sp#text> """SELECT ?value  WHERE {
+  $subject skos:inScheme m4p0:Subject; skos:inScheme ?value.
   
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.w3.org/2000/01/rdf-schema#label>
-      "inSchemeSubject"@de;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-980de57426f743d6b65dd804f719f633-mbjccc;
+  <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-23bxq;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1690163a32574a8bbd0ec0aa8fbef3f7-yg5m76;
+    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeSubject"@de;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:27:43.362Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T09:24:54.706Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeSubject> .

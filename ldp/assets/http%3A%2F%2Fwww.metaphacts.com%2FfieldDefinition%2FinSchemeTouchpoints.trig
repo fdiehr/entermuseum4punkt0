@@ -1,32 +1,38 @@
 
 <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints/context> {
-  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-2ffe1096c54e41f19f409ca1353c51a2-igb48g;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-nvzdz <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Touchpoints. m4p0:Touchpoints a skos:ConceptScheme} WHERE {}" .
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-k0dymb <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:Touchpoints} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.w3.org/2004/02/skos/core#Concept>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-so5a5;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-xxkq4u;
-    <http://www.w3.org/2000/01/rdf-schema#label> "inSchemeTouchpoints"@de;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-nvzdz .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.w3.org/2000/01/rdf-schema#label>
+      "inSchemeTouchpoints"@de .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-xxkq4u <http://spinrdf.org/sp#text> "DELETE {$subject a $value. $subject skos:inScheme m4p0:Touchpoints} WHERE {}" .
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-igb48g a <http://spinrdf.org/sp#Query> .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-so5a5 a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-nvzdz a <http://spinrdf.org/sp#Query> .
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-2em89x a <http://spinrdf.org/sp#Query> .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-so5a5 <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject skos:inScheme ?value.
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-igb48g <http://spinrdf.org/sp#text> "INSERT {$subject a $value. $subject skos:inScheme m4p0:Touchpoints. m4p0:Touchpoints a skos:ConceptScheme} WHERE {}" .
+  
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-k0dymb a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-2ffe1096c54e41f19f409ca1353c51a2-k0dymb .
+  
+  _:genid-2ffe1096c54e41f19f409ca1353c51a2-2em89x <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject skos:inScheme m4p0:Touchpoints; skos:inScheme ?value.
 }""" .
   
-  _:genid-6e2543d5cf1a49d3b4fa9a475e867b36-xxkq4u a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-2ffe1096c54e41f19f409ca1353c51a2-2em89x;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T09:28:56.499Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T09:26:31.031Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints> .

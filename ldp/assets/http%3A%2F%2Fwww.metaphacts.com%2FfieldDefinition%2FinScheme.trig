@@ -1,19 +1,59 @@
 
 <http://www.metaphacts.com/fieldDefinition/inScheme/context> {
+  _:genid-de1c15040d314857bd99305a85f5193d-cqaaqc <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {VALUES (?value ?label) {  (<https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse> \"Anwendungsbereich\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType> \"Art des Ausspielgeräts\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ToolType> \"Art des Hilfsmittels/Geräts\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/SoftwareType> \"Art der Software\")                
+                (<https://www.museum4punkt0.de/catalogue/ontology/CreationMethod> \"Entwicklungsmethode\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/CreationPhase> \"Entwicklungsphase\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Expertise> \"Expertise\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Subject> \"Inhalt\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType> \"Probandentyp\")                
+                (<https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel> \"Reifegrad\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/ActorRole> \"Rolle im Projekt\")   
+                (<https://www.museum4punkt0.de/catalogue/ontology/Technology> \"Technologie\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/Touchpoints> \"Touchpoints/Kanäle\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/EducationFormat> \"Vermittlungsansatz\")
+                (<https://www.museum4punkt0.de/catalogue/ontology/TargetAudience> \"Zielgruppe\")
+  }
+}""" .
+  
   <http://www.metaphacts.com/fieldDefinition/inScheme> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "inScheme"@de;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e733a687a3694427b3a0bd558e138250-yw7y1l .
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.w3.org/2004/02/skos/core#Concept>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-de1c15040d314857bd99305a85f5193d-y1r97r;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Vokabular"@de .
   
-  _:genid-e733a687a3694427b3a0bd558e138250-yw7y1l a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject skos:inScheme $value} WHERE {}" .
+  _:genid-de1c15040d314857bd99305a85f5193d-93odgy a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/inScheme> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.w3.org/2004/02/skos/core#Concept>;
+  _:genid-de1c15040d314857bd99305a85f5193d-cqaaqc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
+      _:genid-de1c15040d314857bd99305a85f5193d-cqaaqc;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-de1c15040d314857bd99305a85f5193d-7yrt1;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
-    a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-11T09:23:08.242Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-de1c15040d314857bd99305a85f5193d-93odgy .
+  
+  _:genid-de1c15040d314857bd99305a85f5193d-y1r97r a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-de1c15040d314857bd99305a85f5193d-7yrt1 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-de1c15040d314857bd99305a85f5193d-y1r97r <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject skos:inScheme ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+  
+  _:genid-de1c15040d314857bd99305a85f5193d-7yrt1 <http://spinrdf.org/sp#text> "INSERT { $subject skos:inScheme $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1" .
+  
+  _:genid-de1c15040d314857bd99305a85f5193d-93odgy <http://spinrdf.org/sp#text> "DELETE { $subject skos:inScheme $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/inScheme> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T09:45:55.372Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/inScheme> .
