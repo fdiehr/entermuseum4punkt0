@@ -7,137 +7,253 @@
   </div>
 
   <div class="page__body--borderless">
+    <div data-flex-layout="row stretch-stretch">
+      <div data-flex-layout="column top-stretch">
+        <div class="grid-demo" style="margin-right: 100px; margin-left: 40px;">
 
+          <h3>Daten erkunden</h3>
+          <div class="gap">
+            Bevor Sie mit der Datenerfassung beginnen, erkunden Sie zunächst welche Daten bereits erfasst wurden!
+            <div class="alert alert-info">
+              Nutzen Sie die bereitgestellten <b>Listen</b> um Daten zu erkunden. Sie erreichen diese über das Menü oder
+              die
+              <semantic-link title=":Home" iri='[[resolvePrefix ":Home"]]' target=_blank>
+                Startseite
+              </semantic-link>
+            </div>
+          </div>
+          <h3>Daten erfassen</h3>
+          <div class="gap">
+            <p>
+              Die Datenerfassung ist in verschiedene Bereiche aufgeteilt. Die Eingabe erfolgt in unterschiedlichen
+              <b>Formularen</b>.
+              Die Formulare bauen aufeinander auf und werden miteinander verknüpft. Daher ist es sinnvoll sein,
+              bestimmte Datensätze
+              vor anderen anzulegen.
+            </p>
+            <div class="alert alert-info">
+              Achten Sie auf die <b>Infofelder</b> in den Formularen! Sie erhalten Hinweise zu dem jeweiligen Datenfeld
+              und unterstützen Sie bei der Eingabe.
+            </div>
+            <p>
+              Es gibt keine Zwischenspeicherfunktion! Wenn die Daten nicht gespeichert wurden und bspw. das Fenster/der
+              Tab wird geschlossen, dann gehenn die Daten unwiderruflich verloren.
+            </p>
 
-    <h3>Daten erkunden</h3>
-    <div class="gap">
-      Bevor Sie mit der Datenerfassung beginnen, erkunden Sie zunächst welche Daten bereits erfasst wurden!</br>
-      Nutzen Sie dazu die bereitgestellten <b>Listen</b>. Sie erreichen diese über das Menü oder die
-      <semantic-link title=":Home" iri='[[resolvePrefix ":Home"]]' target=_blank>
-        Startseite
-      </semantic-link>
+          </div>
+          <h4>Schritt 1: Projektkontext</h4>
+          <div class="gap">Erfassen Sie das Projekt in dessen Kontext die digitale Anwendung entstanden ist. Füllen Sie
+            dazu das
+            <b>Formular </b>
+            <semantic-link title="m4p0:Project" iri='[[resolvePrefix ":Project"]]' target=_blank>
+              <b>Projekt</b>
+            </semantic-link> aus.
+          </div>
+
+          <h4>Schritt 2: Digitale Anwendung</h4>
+          <div class="gap">
+            Erfassen Sie Kerninformationen der digitalen Anwendung wie Titel, verwendete Technologie, Anwendungsbereich
+            etc.
+            Jede Anwendung muss einem Projekt zugeordnet werden. Daher sollte das entsprechende Projekt bereits vorher
+            angelegt sein.
+            Füllen Sie dazu das <b>Formular </b>
+            <semantic-link title="m4p0:DigitalApp" iri='[[resolvePrefix ":DigitalApp"]]' target=_blank>
+              <b>Digitale Anwendung</b>
+            </semantic-link>
+            aus.
+          </div>
+          <h4>Schritt 3: Entstehungskontext und Betrieb der digitalen Anwendung</h4>
+          <div class="gap">
+            <p>
+              Mit den folgenden Punkten wird die digitale Anwendung in den Kontext ihrer Enstehung gesetzt. Füllen Sie
+              dazu
+              die Formulare für
+
+              <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]'
+                target=_blank>
+                Vermittlungskonzept
+              </semantic-link>,
+
+              <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
+                Entwicklung
+              </semantic-link>,
+
+              <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]' target=_blank>
+                Beforschung
+              </semantic-link>
+              und
+              <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]' target=_blank>
+                Betrieb
+              </semantic-link>
+              aus.
+              Die Reihenfolge ist dabei beliebig. Um bspw. ein Vermittlungskonzept anzulegen, muss die dazugehörige
+              digitale Anwendung bereits erfasst und gespeichert sein.
+            </p>
+            <p>
+              Das <b>Vermittlungskonzept</b> beschreibt den Inhalt der digitalen Anwendung und wie dieser mittels
+              eines Formates umgesetzt ist. In dem <b>Formular </b>
+              <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]'
+                target=_blank>
+                <b> Vermittlungskonzept </b>
+              </semantic-link>
+              können Sie außerdem den Kreis der angesprochenen
+              Nutzer-/Besuchergruppen und deren Bedürfnisse an die Anwendung beschreiben.
+            </p>
+
+            <p>
+              Die Entwicklung einer digitalen Anwendung wird von der Idee bis zur Umsetzung beschrieben. Jeder
+              Schritt wird dabei einzeln erfasst. Dazu muss jeweils ein neues <b>Formular </b>
+              <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
+                <b>Entwicklung</b>
+              </semantic-link>
+              ausgefüllt werden.
+            </p>
+
+            <p>
+              Im Zuge der Entwicklung und/oder Evaluation der Anwendung wurden Testings und Untersuchungen durchgeführt.
+              Im
+              <b>Formular </b>
+              <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]' target=_blank>
+                <b>Beforschung</b>
+              </semantic-link>
+              beschreiben Sie welche Aktivitäten im Rahmen der Untersuchungen der digitalen
+              Anwendung stattgefunden haben. Hier können Sie auch entstandene Hilfsmittel und Publikationen angeben.
+            </p>
+
+            <p>
+              Nach der erfolgreichen (auch prototypischen) Umsetzung einer Anwendung wird diese im aktiven Betrieb
+              getestet oder in den aktiven Betrieb (des Museums) überführt.</br>
+              Im <b>Formular </b>
+              <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]' target=_blank>
+                <b>Betrieb</b>
+              </semantic-link>
+              geben Sie an welche Anforderungen an den Betrieb und die Nutzung der digitalen
+              Anwendung zu stellen sind und welche Erkenntnisse aus den aktiven Betrieb gewonnen wurden.
+            </p>
+          </div>
+          <h3>Daten überprüfen und bearbeiten</h3>
+          <div class="gap">
+            <p>
+              Sobald ein Formular oder Unterformular gespeichert wird, entsteht ein neuer Datensatz mit eigenen
+              Identifier
+              (ID). Der Identifier entspricht der jeweiligen URL des Datensatzes. Der Datensatz ist über diesen
+              Identifier
+              aufrufbar.</br>
+              Sie finden bereits erstellte Datensätze auch über die bereitgestellten <b>Listen</b>. (Die Listen sind
+              über das Menü
+              oder die Startseite erreichbar.)
+            </p>
+            <p>
+              Suchen Sie den betreffenden Datensatz über die entsprechende Liste.
+            </p>
+            <div class="gap">
+              <h4>Beispiel</h4>
+              Sie möchten ein weiteres Untersuchungssetting zur Befroschung einer bestimmten digitalen
+              Anwendung hinzufügen.</br>
+              <h5>Schritt 1:</h5>
+              Dazu rufen Sie die <b>Liste </b>
+              <semantic-link title="m4p0:ListResearchActivity" iri='[[resolvePrefix ":ListResearchActivity"]]'
+                target=_blank>
+                <b>Beforschung</b>
+              </semantic-link>
+              auf. In der Tabelle finden Sie die Datensätze*
+              und ihre dazugehörigen digitalen Anwendungen.
+              <h5>Schritt 2:</h5>
+              Suchen Sie die betreffende Anwendung heraus und wählen Sie die ID
+              des Datensatzes der "Beforschung" aus, bei der Sie die Hinzufügung machen möchten.
+              <h5>Schritt 3:</h5>
+              Sie gelangen nun zum Datensatz der betreffenden <b>Beforschung</b>. Hier gehen Sie auf <b>Datensatz
+                bearbeiten</b> und können nun ein weiteres Untersuchungssetting hinzufügen. (Vergessen Sie nicht zu
+              speichern!)
+            </div>
+            <div class="alert alert-info">
+              Bearbeiten und ändern Sie Daten, indem Sie die Datenfelder überschreiben bzw. neue hinzufügen.
+            </div>
+            <p>
+              Es ist nicht möglich Datensätze zu löschen. </br>
+              Kontaktieren Sie den Administrator des Systems, wenn Sie Datensätze unwiderruflich löschen wollen.
+            </p>
+            <div class="gap">
+              *Nicht alle Datensätze haben einen Titel oder ein Datum über das man sie eindeutig benennen kann. Daher
+              sehen
+              Sie in den Listen die entsprechenden Identifier der Datensätze. (Dies gilt insbesondere für die
+              <b>Listen</b>
+              <semantic-link title="m4p0:ListEducationalConcept" iri='[[resolvePrefix ":ListEducationalConcept"]]'
+                target=_blank>
+                Vermittlungskonzept
+              </semantic-link>,
+              <semantic-link title="m4p0:ListCreation" iri='[[resolvePrefix ":ListCreation"]]' target=_blank>
+                Entwicklung
+              </semantic-link>,
+
+              <semantic-link title="m4p0:ListResearchActivity" iri='[[resolvePrefix ":ListResearchActivity"]]'
+                target=_blank>
+                Beforschung
+              </semantic-link>
+              und
+              <semantic-link title="m4p0:ListOperation" iri='[[resolvePrefix ":ListOperation"]]' target=_blank>
+                Betrieb
+              </semantic-link>
+              .)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-demo" data-flex-layout="column top-stretch" style="max-width: fit-content">
+        <div class="gap">
+          <h3>Im Überblick:</h3>
+          <div class="gap">
+            <h4>Daten erfassen</h4>
+            <ol>
+              <li>
+                <semantic-link title="m4p0:Project" iri='[[resolvePrefix ":Project"]]' target=_blank>
+                  Projekt
+                </semantic-link>
+              </li>
+              <li>
+                <semantic-link title="m4p0:DigitalApp" iri='[[resolvePrefix ":DigitalApp"]]' target=_blank>
+                  Digitale Anwendung
+                </semantic-link>
+              </li>
+              <li>
+                <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]'
+                  target=_blank>
+                  Vermittlungskonzept
+                </semantic-link>
+              </li>
+              <li>
+                <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
+                  Entwicklung
+                </semantic-link>
+              </li>
+              <li>
+                <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]' target=_blank>
+                  Beforschung
+                </semantic-link>
+              </li>
+              <li>
+                <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]' target=_blank>
+                  Betrieb
+                </semantic-link>
+              </li>
+            </ol>
+          </div>
+          <div class="gap">
+            <h4>Daten suchen</h4>
+            <b>Listen</b> über Menü und <semantic-link title=":Home" iri='[[resolvePrefix ":Home"]]' target=_blank>
+              Startseite
+            </semantic-link>
+          </div>
+          <div>
+            <h4>Daten bearbeiten</h4>
+            <b>Formular</b> aufrufen und Daten überschreiben oder hinzufügen.</br>
+            Löschen von Datensätzen ist nicht möglich.
+          </div>
+        </div>
+
+      </div>
     </div>
-    <h3>Daten erfassen</h3>
-    <div class="gap">
-      <p>
-        Die Datenerfassung ist in verschiedene Bereiche aufgeteilt. Die Eingabe erfolgt in unterschiedlichen
-        Formularen,
-        die miteinander verknüpft werden. Daher kann es sinnvoll sein, bestimmte Datensätze
-        vor anderen anzulegen. Befolgen Sie die beschriebenen Schritte, um den Kontext einer digitalen Anwendung
-        ausführlich zu dokumentieren.
-      </p>
-      <p>
-        Achten Sie in den Formularen auf die <b>Infofelder</b>! Sie erhalten Hinweise zu dem jeweiligen Datenfeld und
-        unterstützen Sie
-        bei der
-        Eingabe.
-      </p>
-      <p>
-        Es gibt keine Zwischenspeicherfunktion! Wenn die Daten nicht gespeichert wurden und bspw. das Fenster/der Tab
-        wird geschlossen, dann gehenn die Daten unwiderruflich verloren.
-      </p>
-    </div>
-    <h4>Schritt 1: Projektkontext</h4>
-    <div class="gap">Zunächst sollte der betreffende Projektkontext erfasst werden. Füllen Sie dazu das Formular
-      <semantic-link title="m4p0:Project" iri='[[resolvePrefix ":Project"]]' target=_blank>
-        Projekt
-      </semantic-link> aus.</div>
-
-    <h4>Schritt 2: Digitale Anwendung</h4>
-    <div class="gap">
-      Um Kerninformationen über die digitale Anwendung wie Titel, verwendete Technologie, Anwendungsbereich etc.
-      Jede Anwendung muss einem Projekt zugeordnet werden. Daher sollte das entsprechende Projekt bereits vorher
-      angelegt sein.
-      anzugeben, füllen Sie das Formular <semantic-link title="m4p0:DigitalApp" iri='[[resolvePrefix ":DigitalApp"]]'
-        target=_blank>
-        Digitale Anwendung
-      </semantic-link>
-      aus.
-    </div>
-    <h4>Schritt 3: Entstehungskontext und Betrieb der digitalen Anwendung</h4>
-    <div class="gap">
-      <p>
-        Mit den folgenden Punkten wird die digitale Anwendung in den Kontext ihrer Enstehung gesetzt. Füllen Sie
-        dazu
-        die Formulare für
-
-        <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]' target=_blank>
-          Vermittlungskonzept
-        </semantic-link>,
-
-        <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
-          Entwicklung
-        </semantic-link>,
-
-        <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]' target=_blank>
-          Beforschung
-        </semantic-link>
-        und
-        <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]' target=_blank>
-          Betrieb
-        </semantic-link>
-        aus.
-        Die Reihenfolge ist dabei beliebig.
-      </p>
-      <p>
-        Das <b>Vermittlungskonzept</b> beschreibt den Inhalt der digitalen Anwendung und wie dieser mittels
-        eines Formates umgesetzt ist. Es beschreibt weiterhin angesprochene Nutzer-/Besuchergruppen und wie die
-        digitale Anwendung deren Bedürfnisse adressiert.
-      </p>
-
-      <p>
-        Die <b>Entwicklung</b> einer digitalen Anwendung wird von der Idee bis zur Umsetzung beschrieben. Jeder
-        Schritt wird dabei einzeln erfasst. Dazu muss jeweils ein neues Formular <semantic-link title="crm:E65_Creation"
-          iri='[[resolvePrefix ":E65_Creation"]]' target=_blank>
-          Entwicklung
-        </semantic-link>
-        ausgefüllt werden.
-      </p>
-
-      <p>
-        Im Zuge der Entwicklung und/oder Evaluation der Anwendung wurden Testings und Untersucheungen durchgeführt. Im
-        Formular <b>Beforschung</b> beschreiben Sie welche Aktivitäten im Rahmen der Untersuchungen der digitalen
-        Anwendung stattgefunden haben. Hier können Sie auch entstandene Hilfsmittel und Publikationen angeben.
-      </p>
-
-      <p>
-        Nach der erfolgreichen (auch prototypischen) Umsetzung einer Anwendung wird diese im aktiven <b>Betrieb</b>
-        getestet oder in den aktiven Betrieb (des Museums) überführt.</br>
-        Im Formular geben Sie an welche Anforderungen an den Betrieb und die Nutzung der digitalen
-        Anwendung zu stellen sind und welche Erkenntnisse aus den aktiven Betrieb gewonnen wurden.
-      </p>
-    </div>
-    <h3>Daten überprüfen und bearbeiten</h3>
-    <div class="gap">
-      <p>
-        Sobald ein Formular oder Unterformular gespeichert wird, entsteht ein neuer Datensatz mit eigenen Identifier.
-        Der Identifier entspricht der jeweiligen URL des Datensatzes. Der Datensatz ist über diesen Identifier
-        aufrufbar.</br>
-
-      </p>
-      <p>
-        Sie finden bereits erstellte Datensätze auch über die bereitgestellten Listen.</br>
-        Um bereits eingegebene Daten zu überprüfen und zu bearbeiten suchen Sie den betreffenden Datensatz über die
-        entsprechende Liste.
-        <h4>Beispiel</h4>
-        Sie möchten beispielsweise ein weiteres Untersuchungssetting zur Befroschung einer bestimmten digitalen
-        Anwendung hinzufügen.</br>
-        Dazu rufen Sie die Liste "Beforschung" auf. In der Tabelle finden Sie IDs der Datensätze*
-        und die dazugehörigen digitalen Anwendungen. Suchen Sie die betreffende Anwendung heraus und wählen Sie die ID
-        des Datensatzes der "Beforschung" aus. Sie gelangen zum Datensatz "Beforschung". Hier gehen Sie auf "Datensatz
-        bearbeiten" und nun ein weiteres Untersuchungssetting hinzufügen. (Speichern nicht vergessen!)
-        </br>
-        Bearbeiten und ändern Sie Daten, indem Sie die Datenfelder überschreiben bzw. neue hinzufügen. Es ist nicht
-        möglich Datensätze zu löschen. </br>
-        Kontaktieren Sie den Administrator des Systems, wenn Sie Datensätze unwiderruflich löschen wollen.
-      </p>
-      <p>
-        *Nicht alle Datensätze haben einen Titel oder ein Datum über das man sie eindeutig benennen kann. Daher sehen
-        Sie in den Listen die entsprechenden Identifier der Datensätze. (Dies gilt insbesondere für Vermittlungskonzept,
-        Entwicklung, Beforschung und Betrieb.)
-      </p>
-    </div>
-
   </div>
 
 </div>
