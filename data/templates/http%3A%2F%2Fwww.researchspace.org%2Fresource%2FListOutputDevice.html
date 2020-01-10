@@ -12,7 +12,8 @@
         <div class="gap">
             <semantic-table
                 query='SELECT * WHERE {
-                    ?s m4p0:toolTitle ?label. 
+                    ?s a m4p0:OutputDevice;
+                    m4p0:toolTitle ?label. 
                     
                 }'
                 column-configuration='[
