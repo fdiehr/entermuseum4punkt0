@@ -1,6 +1,6 @@
 
 <bs-panel>
-        <h1>Entwicklungsschritte</h1>
+        <h1>Entwicklung</h1>
    
         <div class="gap">
             <semantic-link
@@ -11,14 +11,16 @@
         </div>
         <div class="gap">
             <semantic-table
-                query= 'SELECT ?s ?p ?o WHERE {
-                    ?s m4p0:hasCreatedDigitalApp ?o. 
-                    
-                }'
+                query= 'SELECT * WHERE {
+                    ?s a crm:E65_Creation; 
+                       m4p0:hasCreatedDigitalApp ?o. 
+                                        
+                                    }'
                 column-configuration='[
-                {"variableName": "s", "displayName": "Entwicklung"}, 
-                {"variableName": "p", "displayName": "gehört zu"},  
-                {"variableName": "o", "displayName": "digitale Anwendung"}
+                {"variableName": "o", "displayName": "digitale Anwendung"},                
+                {"variableName": "s", "displayName": "Entwicklung"} 
+                 
+                
     
                 ]'                     
             
