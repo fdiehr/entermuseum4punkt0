@@ -2,41 +2,42 @@
 <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType/context> {
   <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-5ba4504785c7451a9e02b368934f0a58-qxg5wf a <http://spinrdf.org/sp#Query> .
+  _:genid-12b6828403de4a8f81d21367b24c86ec-02qqol <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject m4p0:hasExperimenteeType ?value.
+
+}""";
+    a <http://spinrdf.org/sp#Query> .
   
-  _:genid-5ba4504785c7451a9e02b368934f0a58-0u4199 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-5ba4504785c7451a9e02b368934f0a58-o8q9eh;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
     <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-5ba4504785c7451a9e02b368934f0a58-0u4199;
     <http://www.metaphacts.com/ontology/fields#treePatterns> """{
   \"type\": \"simple\",
   \"schemePattern\": \"?item <http://www.w3.org/2004/02/skos/core#inScheme> <https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType>\"
 }"""^^<http://www.metaphacts.com/ontologies/platform#syntheticJson> .
   
-  _:genid-5ba4504785c7451a9e02b368934f0a58-o8q9eh <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject m4p0:hasExperimenteeType ?value.
-
-}""" .
-  
-  _:genid-5ba4504785c7451a9e02b368934f0a58-0u4199 <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
-  
-  _:genid-5ba4504785c7451a9e02b368934f0a58-o8q9eh a <http://spinrdf.org/sp#Query> .
+  _:genid-12b6828403de4a8f81d21367b24c86ec-doi2ru a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.w3.org/2000/01/rdf-schema#comment>
       "Geben Sie an mit welcher Art Probanden Sie die Untersuchung durchgeführt haben, z.B. Kinder im Grundschulalter, Erwachsene Museumsbesucher, Schüler (15-17 Jahre)";
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5ba4504785c7451a9e02b368934f0a58-qxg5wf .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-12b6828403de4a8f81d21367b24c86ec-yj81j;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-12b6828403de4a8f81d21367b24c86ec-doi2ru .
   
-  _:genid-5ba4504785c7451a9e02b368934f0a58-qxg5wf <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
+  _:genid-12b6828403de4a8f81d21367b24c86ec-yj81j <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
   
-  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Probandentyp"@de;
+  _:genid-12b6828403de4a8f81d21367b24c86ec-doi2ru <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasExperimenteeType $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#domain>
+      <https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity> .
+  
+  _:genid-12b6828403de4a8f81d21367b24c86ec-yj81j a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-12b6828403de4a8f81d21367b24c86ec-02qqol;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Probandentyp"@de;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-06T13:18:47.762Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T14:39:39.430Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasExperimenteeType> .

@@ -1,47 +1,49 @@
 
 <http://www.metaphacts.com/fieldDefinition/hasCreationPhase/context> {
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-0c27t a <http://spinrdf.org/sp#Query> .
-  
   <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#domain>
-      <http://www.cidoc-crm.org/cidoc-crm/E65_Creation>;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+      <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> .
   
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-sm1sga <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasCreationPhase $value} WHERE {}" .
+  _:genid-d78a400d266d493b8b814cdb15163393-866dg a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-4fafb49c36934e70b62e7dfdf983fdf0-sm1sga .
+  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-pkinjv <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {  VALUES ($value $label) {   (<https://www.museum4punkt0.de/catalogue/ontology/Brainstorming> \"Ideenfindung und -recherche\") 
-(<https://www.museum4punkt0.de/catalogue/ontology/Conception> \"Konzeption\")       (<https://www.museum4punkt0.de/catalogue/ontology/MaterialProduction> \"Materialerzeugung und -beschaffung\")(<https://www.museum4punkt0.de/catalogue/ontology/Realisation> \"Umsetzung/Realisierung\")}}""" .
+  _:genid-d78a400d266d493b8b814cdb15163393-vya7hq a <http://spinrdf.org/sp#Query> .
   
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-0c27t <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-d78a400d266d493b8b814cdb15163393-kh3p2 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
+      _:genid-d78a400d266d493b8b814cdb15163393-kh3p2;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-d78a400d266d493b8b814cdb15163393-866dg .
+  
+  _:genid-d78a400d266d493b8b814cdb15163393-866dg <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasCreationPhase $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d78a400d266d493b8b814cdb15163393-lnkbu2 .
+  
+  _:genid-d78a400d266d493b8b814cdb15163393-lnkbu2 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:hasCreationPhase $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "1" .
+  
+  _:genid-d78a400d266d493b8b814cdb15163393-lnkbu2 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d78a400d266d493b8b814cdb15163393-vya7hq <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   $subject m4p0:hasCreationPhase ?value.
   ?value rdfs:label ?label.
 }""" .
   
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-sm1sga a <http://spinrdf.org/sp#Query> .
+  _:genid-d78a400d266d493b8b814cdb15163393-kh3p2 <http://spinrdf.org/sp#text> """SELECT $value $label WHERE {  VALUES ($value $label) {   (<https://www.museum4punkt0.de/catalogue/ontology/Brainstorming> \"Ideenfindung und -recherche\") 
+(<https://www.museum4punkt0.de/catalogue/ontology/Conception> \"Konzeption\")       (<https://www.museum4punkt0.de/catalogue/ontology/MaterialProduction> \"Materialerzeugung und -beschaffung\")(<https://www.museum4punkt0.de/catalogue/ontology/Realisation> \"Umsetzung/Realisierung\")}}""" .
   
-  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-4fafb49c36934e70b62e7dfdf983fdf0-0c27t;
-    <http://www.w3.org/2000/01/rdf-schema#label> "übergeordnete Entwicklungsphase"@de;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "Ordnen Sie dem hier beschriebenen Entwicklungsschritt eine übergeordnete Phase des Entwicklungsablaufes zu. " .
-  
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-u62dje a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-pkinjv a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#valueSetPattern>
-      _:genid-4fafb49c36934e70b62e7dfdf983fdf0-pkinjv;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
-  
-  _:genid-4fafb49c36934e70b62e7dfdf983fdf0-u62dje <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:hasCreationPhase $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-4fafb49c36934e70b62e7dfdf983fdf0-u62dje;
+  <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> <http://www.w3.org/2000/01/rdf-schema#label>
+      "übergeordnete Entwicklungsphase"@de;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Ordnen Sie dem hier beschriebenen Entwicklungsschritt eine übergeordnete Phase des Entwicklungsablaufes zu. ";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d78a400d266d493b8b814cdb15163393-vya7hq;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-12-12T16:27:08.271Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-10T12:15:09.563Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasCreationPhase> .
