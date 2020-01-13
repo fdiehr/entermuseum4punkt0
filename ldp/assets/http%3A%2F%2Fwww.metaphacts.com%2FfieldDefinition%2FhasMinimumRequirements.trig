@@ -1,0 +1,37 @@
+
+<http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements/context> {
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-2a632738626f455eb090ccafc614f2ce-n1dhpqa a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Mindestanforderungen der Hardware.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2a632738626f455eb090ccafc614f2ce-hdmeio;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-2a632738626f455eb090ccafc614f2ce-tmkxzb <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
+  
+  _:genid-2a632738626f455eb090ccafc614f2ce-hdmeio a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Mindestanforderungen"@de .
+  
+  _:genid-2a632738626f455eb090ccafc614f2ce-n1dhpqa <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject a m4p0:Operation; m4p0:hasMinimumRequirements ?value
+}""" .
+  
+  _:genid-2a632738626f455eb090ccafc614f2ce-tmkxzb a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-2a632738626f455eb090ccafc614f2ce-n1dhpqa;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-2a632738626f455eb090ccafc614f2ce-tmkxzb;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-13T13:32:30.605Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> a <http://www.w3.org/ns/ldp#Resource> .
+}
