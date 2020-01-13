@@ -9,9 +9,8 @@
    -->
 <bs-panel>
     <h1>Projekt und Beteiligte</h1>
-    <p>In welchem Kontext ist die digitale Anwendung entstanden? Gab es ein, bspw. mit Drittmitteln gefördertes,
-        Projekt,
-        dass die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am Entstehungsprozess der
+    <p>In welchem Kontext ist die digitale Anwendung entstanden? Gab es ein Projekt (bspw. mit Drittmitteln gefördert),
+das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am Entstehungsprozess der
         digitalen Anwendung beteiligt und in welcher Rolle? Ist das Projekt Bestandteil eines größeren
         (Verbund-)Projektes?</p>
 
@@ -112,11 +111,11 @@
                     <button name='submit' class='btn btn-default'>Speichern</button>
                 </semantic-form>
             </semantic-form-autocomplete-input>
-            
 
-    
-    </semantic-form-composite-input>
-    <!--
+
+
+        </semantic-form-composite-input>
+        <!--
         <semantic-form-autocomplete-input for="hasEmployee">
 
 
@@ -177,28 +176,28 @@
 
         </semantic-form-autocomplete-input>
         -->
-    <h2>Förderung</h2>
+        <h2>Förderung</h2>
 
-    <semantic-form-autocomplete-input for="wasFundedBy">
-        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}" fields="[[fieldDefinitions
+        <semantic-form-autocomplete-input for="wasFundedBy">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}" fields="[[fieldDefinitions
                 groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'   
                 legalName='http://www.metaphacts.com/fieldDefinition/legalName'
                 urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
                        
                        ]]">
-            <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
-            <semantic-form-text-input for="legalName"></semantic-form-text-input>
-            <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
+                <semantic-form-hidden-input for="groupRdfType"></semantic-form-hidden-input>
+                <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                <semantic-form-text-input for="urlOrg"></semantic-form-text-input>
 
-            <semantic-form-errors></semantic-form-errors>
-            <button name='submit' class='btn btn-default'>Speichern</button>
-        </semantic-form>
-    </semantic-form-autocomplete-input>
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+            </semantic-form>
+        </semantic-form-autocomplete-input>
 
-    <semantic-form-errors></semantic-form-errors>
-    <semantic-form-recover-notification></semantic-form-recover-notification>
-    <button name="submit" class="btn btn-default"
-        style="background-color: lightgray; border-style:outset;">Speichern</button>
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default"
+            style="background-color: lightgray; border-style:outset;">Speichern</button>
 
     </semantic-form>
 </bs-panel>
