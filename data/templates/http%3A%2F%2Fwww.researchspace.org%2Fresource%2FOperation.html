@@ -138,11 +138,13 @@
                             <semantic-form-autocomplete-input for="usesSoftware">
                             <semantic-form new-subject-template
                                 for="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
-                                                    toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                    
+                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                                     version='http://www.metaphacts.com/fieldDefinition/version'
                                                     hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'                        
                                                     ]]">
-                                <semantic-form-text-input for="toolTitle">
+                                                    <semantic-form-hidden-input for="softwareRdfType"></semantic-form-hidden-input>
+                                                    <semantic-form-text-input for="toolTitle">
                                 </semantic-form-text-input>
                                 <semantic-form-text-input for="version">
                                 </semantic-form-text-input>
