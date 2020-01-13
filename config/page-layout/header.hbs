@@ -13,131 +13,129 @@
 
     <ul class="nav navbar-nav">
 
-      <semantic-link-container iri='[[resolvePrefix ":Home"]]'>
-        <li title="Home">
-          <a>Startseite</a>
-        </li>
-      </semantic-link-container>
-      <semantic-link-container iri='[[resolvePrefix ":How"]]'>
-        <li title="Hilfe">
-          <a>Hilfe</a>
-        </li>
-      </semantic-link-container>
+      <semantic-link title="m4p0:Home" iri='[[resolvePrefix ":Home"]]'>
+        Startseite
+      </semantic-link>
+      <semantic-link title="m4p0:How" iri='[[resolvePrefix ":How"]]'>
+        Hilfe
+      </semantic-link>
 
       <bs-nav-dropdown title="Neuer Datensatz" id="basic-nav-dropdown">
+        <bs-menu-item>
+          <semantic-link title="m4p0:DigitalApp" iri='[[resolvePrefix ":DigitalApp"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":DigitalApp"]]'>
-          <bs-menu-item>
             Digitale Anwendung
-          </bs-menu-item>
-        </semantic-link-container>
 
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link title="m4p0:EducationalConcept" iri='[[resolvePrefix ":EducationalConcept"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":EducationalConcept"]]'>
-          <bs-menu-item>
             Vermittlungskonzept
-          </bs-menu-item>
-        </semantic-link-container>
 
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link title="crm:E65_Creation" iri='[[resolvePrefix ":E65_Creation"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":E65_Creation"]]'>
-          <bs-menu-item>
             Entwicklung
-          </bs-menu-item>
-        </semantic-link-container>
 
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link title="m4p0:ResearchActivity" iri='[[resolvePrefix ":ResearchActivity"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":ResearchActivity"]]'>
-          <bs-menu-item>
             Beforschung
-          </bs-menu-item>
-        </semantic-link-container>
 
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link title="m4p0:Operation" iri='[[resolvePrefix ":Operation"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":Operation"]]'>
-          <bs-menu-item>
             Betrieb
-          </bs-menu-item>
-        </semantic-link-container>
 
-
-        <semantic-link-container iri='[[resolvePrefix ":Project"]]'>
-          <bs-menu-item>
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link title="m4p0:Project" iri='[[resolvePrefix ":Project"]]'>
             Projekt
-          </bs-menu-item>
-        </semantic-link-container>
 
+          </semantic-link>
+        </bs-menu-item>
 
       </bs-nav-dropdown>
       <bs-nav-dropdown title="Listen" id="basic-nav-dropdown">
+        <bs-menu-item>
+          <semantic-link iri='[[resolvePrefix ":ListApps"]]'>
 
-        <semantic-link-container iri='[[resolvePrefix ":ListApps"]]'>
-          <bs-menu-item>
             Digitale Anwendungen
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListEducationalConcept"]]'>
-          <bs-menu-item>
+
+          </semantic-link>
+        </bs-menu-item>
+        <bs-menu-item>
+          <semantic-link iri='[[resolvePrefix ":ListEducationalConcept"]]'>
+
             Vermittlungskonzept
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListCreation"]]'>
-          <bs-menu-item>
+
+          </semantic-link>
+        </bs-menu-item>  
+        <bs-menu-item>
+        <semantic-link iri='[[resolvePrefix ":ListCreation"]]'>
+        
             Entwicklung
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container  iri='[[resolvePrefix ":ListResearchActivity"]]'>
-          <bs-menu-item>
+         
+        </semantic-link> </bs-menu-item>
+       <bs-menu-item>
+         <semantic-link iri='[[resolvePrefix ":ListResearchActivity"]]'>
+          
             Befroschung
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListOperations"]]'>
-          <bs-menu-item>
+         
+        </semantic-link> </bs-menu-item>
+       <bs-menu-item>  <semantic-link iri='[[resolvePrefix ":ListOperations"]]'>
+        
             Betrieb
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListProjects"]]'>
-          <bs-menu-item>
+         
+        </semantic-link> </bs-menu-item>
+       <bs-menu-item>  <semantic-link iri='[[resolvePrefix ":ListProjects"]]'>
+         
             Projekte
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListGroups"]]'>
-          <bs-menu-item>
+       
+        </semantic-link>   </bs-menu-item>
+        <bs-menu-item> <semantic-link iri='[[resolvePrefix ":ListGroups"]]'>
+         
             Institutionen
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListPersons"]]'>
-          <bs-menu-item>
+          
+        </semantic-link></bs-menu-item>
+       <bs-menu-item>  <semantic-link iri='[[resolvePrefix ":ListPersons"]]'>
+         
             Personen
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListOutputDevice"]]'>
-          <bs-menu-item>
+          
+        </semantic-link></bs-menu-item>
+       <bs-menu-item></bs-menu-item> <semantic-link iri='[[resolvePrefix ":ListOutputDevice"]]'>
+          
             Ausspielgeräte
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListTool"]]'>
-          <bs-menu-item>
+     
+        </semantic-link>     </bs-menu-item>
+        <bs-menu-item> <semantic-link iri='[[resolvePrefix ":ListTool"]]'>
+         
             Geräte, Software und Hilfsmittel
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListDocument"]]'>
-          <bs-menu-item>
+          
+        </semantic-link></bs-menu-item>
+     <bs-menu-item>    <semantic-link iri='[[resolvePrefix ":ListDocument"]]'>
+         
             Quellen
-          </bs-menu-item>
-        </semantic-link-container>
-        <semantic-link-container iri='[[resolvePrefix ":ListVocabs"]]'>
-          <bs-menu-item>
+          
+        </semantic-link></bs-menu-item>
+         <bs-menu-item></bs-menu-item> <semantic-link iri='[[resolvePrefix ":ListVocabs"]]'>
+        
             Vokabulare
-          </bs-menu-item>
-        </semantic-link-container>
+         
+        </semantic-link> </bs-menu-item>
 
       </bs-nav-dropdown>
-      <semantic-link-container uri="http://www.metaphacts.com/resource/SimpleSearch">
-        <li title="Search">
-          <a>Suche</a>
-        </li>
-      </semantic-link-container>
+      <semantic-link uri="http://www.metaphacts.com/resource/SimpleSearch">
+        Suche
+      </semantic-link>
     </ul>
     <bs-nav data-pull-right="true">
       <ul class="nav navbar-nav">
