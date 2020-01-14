@@ -10,7 +10,7 @@
                 -->
 
 <bs-panel>
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}"
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
         subject='[[urlParam "tool"]]' post-action='redirect' browser-persistence=false form-id='Tool' fields="[[fieldDefinitions 
     toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'    
     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -22,7 +22,7 @@
         <semantic-form-text-input for="toolTitle">
         </semantic-form-text-input>
         <semantic-form-tree-picker-input for="hasToolType">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                 fields="[[fieldDefinitions
                 conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                       
                 inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'  
@@ -44,7 +44,7 @@
             </semantic-form>
         </semantic-form-tree-picker-input>
         <semantic-form-composite-input for="P70i_is_documented_in"
-            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+            new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
             fields="[[fieldDefinitions]]">
             <h4>Quelle</h4>
             <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">

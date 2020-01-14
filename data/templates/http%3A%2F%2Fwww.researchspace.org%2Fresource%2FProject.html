@@ -14,7 +14,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
         digitalen Anwendung beteiligt und in welcher Rolle? Ist das Projekt Bestandteil eines größeren
         (Verbund-)Projektes?</p>
 
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{UUID}}"
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
         subject='[[urlParam "project"]]' post-action='redirect' browser-persistence=false form-id='Project' fields="[[fieldDefinitions
         projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                        
         projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
@@ -37,7 +37,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
         <h3>Projektkontext</h3>
 
         <semantic-form-autocomplete-input for="hasInsitutionalSupport">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'      
                 legalName='http://www.metaphacts.com/fieldDefinition/legalName'
                 urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'
@@ -50,7 +50,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
             </semantic-form>
         </semantic-form-autocomplete-input>
         <semantic-form-autocomplete-input for="wasPartOfProject">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Project/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 projectRdfType='http://www.metaphacts.com/fieldDefinition/projectRdfType'                      
                 projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
                     ]]">
@@ -64,7 +64,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
 
         <h3>Projektmitarbeiter</h3>
         <semantic-form-composite-input for="hasEmployee"
-            new-subject-template="https://enter.museum4punkt0.de/resources/E21_Person/{{UUID}}" fields="[[fieldDefinitions
+            new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             personRdfType='http://www.metaphacts.com/fieldDefinition/personRdfType'        
             givenName='http://www.metaphacts.com/fieldDefinition/givenName'
                     familyName='http://www.metaphacts.com/fieldDefinition/familyName'
@@ -75,7 +75,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
             <semantic-form-text-input for="givenName"></semantic-form-text-input>
             <semantic-form-text-input for="familyName"></semantic-form-text-input>
             <semantic-form-tree-picker-input for="P14.1_in_the_role_of">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
             inSchemeActorRole='http://www.metaphacts.com/fieldDefinition/inSchemeActorRole'    
             prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -96,7 +96,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
 
             <h4>institutionelle Zugehörigkeit</h4>
             <semantic-form-autocomplete-input for="P107i_is_current_or_former_member_of">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}"
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                     fields="[[fieldDefinitions
                 groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'
                 legalName='http://www.metaphacts.com/fieldDefinition/legalName'
@@ -119,7 +119,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
         <semantic-form-autocomplete-input for="hasEmployee">
 
 
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E21_Person/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             personRdfType='http://www.metaphacts.com/fieldDefinition/personRdfType'        
             givenName='http://www.metaphacts.com/fieldDefinition/givenName'
                     familyName='http://www.metaphacts.com/fieldDefinition/familyName'
@@ -131,7 +131,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
                 <semantic-form-text-input for="familyName"></semantic-form-text-input>
                 <semantic-form-tree-picker-input for="P14.1_in_the_role_of">
 
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions
                         conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                         inSchemeActorRole='http://www.metaphacts.com/fieldDefinition/inSchemeActorRole'    
@@ -154,7 +154,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
                 <h4>institutionelle Zugehörigkeit</h4>
                 <semantic-form-autocomplete-input for="P107i_is_current_or_former_member_of">
                     <semantic-form
-                        new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}"
+                        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions
                             groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'
                             legalName='http://www.metaphacts.com/fieldDefinition/legalName'
@@ -179,7 +179,7 @@ das die Entwicklung der Anwendung ermöglicht hat? Welche Institutionen waren am
         <h2>Förderung</h2>
 
         <semantic-form-autocomplete-input for="wasFundedBy">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/E74_Group/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 groupRdfType='http://www.metaphacts.com/fieldDefinition/groupRdfType'   
                 legalName='http://www.metaphacts.com/fieldDefinition/legalName'
                 urlOrg='http://www.metaphacts.com/fieldDefinition/urlOrg'

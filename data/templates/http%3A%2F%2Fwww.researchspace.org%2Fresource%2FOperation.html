@@ -11,7 +11,7 @@
 
                 <bs-panel>
 
-                        <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Operation/{{UUID}}'
+                        <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
                             subject='[[urlParam "operation"]]' post-action='redirect' browser-persistence=false form-id='Operation' fields="[[fieldDefinitions
                             operationRdfType='http://www.metaphacts.com/fieldDefinition/operationRdfType'
                             operated='http://www.metaphacts.com/fieldDefinition/operated'
@@ -38,7 +38,7 @@
                                 Das Betriebskonzept gibt Hinweise zum Management rund um den aktiven Betrieb im Museum.
                             </p>
                             <semantic-form-composite-input for="P70i_is_documented_in"
-                                new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+                                new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                                 fields="[[fieldDefinitions]]">
                                 <h3>Link zu Zenodo</h3>
                                 <p>Geben Sie hier den Link zum Dokument in Zenodo an. Bei Zenodo wird Ihnen eine stabile URL
@@ -74,7 +74,7 @@
                                 erstellen Sie zunächst ein neues.</p>
                             <semantic-form-autocomplete-input for="usesOutputDevice">
                     
-                                <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/Hardware/{{UUID}}'
+                                <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
                                     fields="[[fieldDefinitions
                                             outputDeviceRdfType='http://www.metaphacts.com/fieldDefinition/outputDeviceRdfType'        
                                             toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -88,7 +88,7 @@
                                     </semantic-form-text-input>
                     
                                     <semantic-form-tree-picker-input for="hasOutputDeviceType">
-                                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                                             fields="[[fieldDefinitions
                                             conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                                             inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
@@ -136,7 +136,7 @@
                     
                             <h3>benötigte Software</h3>
                             <semantic-form-autocomplete-input for="usesSoftware">
-                            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
+                            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
                                 softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                    
                                 toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                                     version='http://www.metaphacts.com/fieldDefinition/version'

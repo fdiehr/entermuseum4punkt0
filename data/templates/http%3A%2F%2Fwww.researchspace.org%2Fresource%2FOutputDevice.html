@@ -11,7 +11,7 @@
 
 <bs-panel>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/OutputDevice/{{UUID}}'
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
         subject='[[urlParam "output"]]' post-action='redirect' browser-persistence=false form-id='OutputDevice'
         fields="[[fieldDefinitions
         
@@ -36,7 +36,7 @@
     Ordnen Sie dem Ausspielgerät einen Typ zu. Handelt es sich bspw. um ein mobiles Endgerät wie ein Tablet oder Smartphone? Oder ist es ein sog. Head-Mounted Display also eine "VR-Brille" oder eine HoloLens?
 </p>
                 <semantic-form-tree-picker-input for="hasOutputDeviceType">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions
                         conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                         inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'

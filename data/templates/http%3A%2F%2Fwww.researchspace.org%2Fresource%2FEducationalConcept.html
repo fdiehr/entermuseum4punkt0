@@ -11,7 +11,7 @@
 
                 <bs-panel>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/EducationalConcept/{{UUID}}'
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
         subject='[[urlParam "edu"]]' 
         post-action='redirect' 
         browser-persistence=false 
@@ -45,7 +45,7 @@
 
             <semantic-form-tree-picker-input for="hasTargetAudience">
                 <semantic-form
-                    new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                     fields="[[fieldDefinitions
                     conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                     inSchemeTargetAudience='http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience'    
@@ -75,7 +75,7 @@
             </semantic-form-text-input>
             <semantic-form-tree-picker-input for="hasSubject">
                 <semantic-form
-                    new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                     fields="[[fieldDefinitions
                     conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                     inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    

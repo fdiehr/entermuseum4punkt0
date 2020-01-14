@@ -10,7 +10,7 @@
                 -->
 
 <bs-panel>
-    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}"
+    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
         subject='[[urlParam "software"]]' post-action='redirect' browser-persistence=false form-id='Software' fields="[[fieldDefinitions 
     softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'    
     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -28,7 +28,7 @@
         <semantic-form-checklist-input for="hasSoftwareType">
         </semantic-form-checklist-input>
         <semantic-form-composite-input for="P70i_is_documented_in"
-            new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+            new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
             fields="[[fieldDefinitions]]">
             <h4>Quelle der Software</h4>
             <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">

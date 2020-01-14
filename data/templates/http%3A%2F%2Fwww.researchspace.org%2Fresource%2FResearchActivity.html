@@ -14,7 +14,7 @@
         </br>
     </p>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/ResearchActivity/{{UUID}}'
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
         subject='[[urlParam "research"]]' post-action='redirect' browser-persistence=false form-id='ResearchActivity'
         fields="[[fieldDefinitions
 researchActivityRdfType='http://www.metaphacts.com/fieldDefinition/researchActivityRdfType'
@@ -47,7 +47,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             <p>Beschreiben Sie die unterschiedlichen Testsituationen bzw. Untersuchungseinheiten.</p>
 
             <semantic-form-tree-picker-input for="hasResearchMethod">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                
                 inSchemeResearchMethod='http://www.metaphacts.com/fieldDefinition/inSchemeResearchMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -69,7 +69,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             <semantic-form-text-input for="descriptionOfResearchSetting" multiline="true">
             </semantic-form-text-input>
             <semantic-form-tree-picker-input for="hasExperimenteeType">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                            
                 inSchemeExperimenteeType='http://www.metaphacts.com/fieldDefinition/inSchemeExperimenteeType'    
                                             prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -108,7 +108,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             </p>
 
             <semantic-form-autocomplete-input for="usedTool">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
                 toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                    
                 toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
@@ -119,7 +119,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
                     </semantic-form-text-input>
 
                     <semantic-form-tree-picker-input for="hasToolType">
-                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                             fields="[[fieldDefinitions
                             conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                    
                             inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
@@ -141,7 +141,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
                     </semantic-form-tree-picker-input>
 
                     <semantic-form-composite-input for="P70i_is_documented_in"
-                        new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
                 documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
                 url='http://www.metaphacts.com/fieldDefinition/url'
@@ -166,7 +166,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             </semantic-form-autocomplete-input>
 
             <semantic-form-autocomplete-input for="usedSoftware">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
      softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                                
      toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     version='http://www.metaphacts.com/fieldDefinition/version'
@@ -181,7 +181,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
                     <semantic-form-checklist-input for="hasSoftwareType">
                     </semantic-form-checklist-input>
                     <semantic-form-composite-input for="P70i_is_documented_in"
-                        new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+                        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions]]">
                         <h5>Quelle der Software</h5>
                         <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
@@ -211,7 +211,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
         Beobachtungsbögen. Geben Sie hier an welche Hilfsmittel während der begleitenden Forschung der digitalen
         Anwendung entstanden sind.</p>
     <semantic-form-autocomplete-input for="hasGeneratedTool">
-        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
+        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
             toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                        
             toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
@@ -222,7 +222,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             </semantic-form-text-input>
 
             <semantic-form-tree-picker-input for="hasToolType">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                               
                 inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -242,7 +242,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             </semantic-form-tree-picker-input>
 
             <semantic-form-composite-input for="P70i_is_documented_in"
-                new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                 documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
                 documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
                 url='http://www.metaphacts.com/fieldDefinition/url'
@@ -269,7 +269,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
     <h3>Erkenntnisse</h3>
     <p>Geben Sie hier an, welche Publikationen aus der begleitenden Forschung hervorgegangen sind.</p>
     <semantic-form-composite-input for='P70i_is_documented_in'
-        new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                     documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'   
                     documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
                     url='http://www.metaphacts.com/fieldDefinition/url'

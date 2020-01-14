@@ -9,7 +9,7 @@
                 -->
 <bs-panel>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/E65_Creation/{{UUID}}'
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
         subject='[[urlParam "creation"]]' post-action='redirect' browser-persistence=false form-id='Creation' fields="[[fieldDefinitions
         creationRdfType='http://www.metaphacts.com/fieldDefinition/creationRdfType'
         hasCreatedDigitalApp='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp'
@@ -54,7 +54,7 @@
         <semantic-form-checklist-input for="hasCreationPhase">
         </semantic-form-checklist-input>
         <semantic-form-tree-picker-input for="hasCreationMethod">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                    
             inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
                                                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -84,7 +84,7 @@
             Expertise sie für welche Entwicklungsschritte benötigen.
         </p>
         <semantic-form-tree-picker-input for="needsExpertise">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}" fields="[[fieldDefinitions
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                                        
             inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
                                                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
@@ -115,7 +115,7 @@
             Einsatz kamen.
         </p>
         <semantic-form-autocomplete-input for="usedTool">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Tool/{{UUID}}" fields="[[fieldDefinitions 
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
             toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                         
             toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                     hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
@@ -127,7 +127,7 @@
                 </semantic-form-text-input>
 
                 <semantic-form-tree-picker-input for="hasToolType">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions
                         conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                        
                         inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
@@ -148,7 +148,7 @@
 
                 </semantic-form-tree-picker-input>
                 <semantic-form-composite-input for="P70i_is_documented_in"
-                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
         documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
         documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
         url='http://www.metaphacts.com/fieldDefinition/url'
@@ -178,7 +178,7 @@
             Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
         </p>
         <semantic-form-autocomplete-input for="usedSoftware">
-            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/Software/{{UUID}}" fields="[[fieldDefinitions 
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
             softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                    
             toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
                                 version='http://www.metaphacts.com/fieldDefinition/version'
@@ -193,7 +193,7 @@
                 <semantic-form-checklist-input for="hasSoftwareType">
                 </semantic-form-checklist-input>
                 <semantic-form-composite-input for="P70i_is_documented_in"
-                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
             documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
             documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
             url='http://www.metaphacts.com/fieldDefinition/url'

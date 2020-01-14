@@ -1,7 +1,7 @@
 
 <bs-panel>
     <h1>Digitale Anwendung</h1>
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/DigitalApp/{{UUID}}'
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
         subject='[[urlParam "app"]]' post-action='redirect' browser-persistence=false form-id='DigitalApp'
         fields="[[fieldDefinitions]]">
 
@@ -39,7 +39,7 @@
 
                 <h4>Sourcecode der digitalen Anwendung</h4>
                 <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in"
-                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                     fields="[[fieldDefinitions]]">
                     <h4>Link zu GitHub</h4>
                     <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
@@ -66,7 +66,7 @@
 
                 <h3>Vermarktung</h3>
                 <semantic-form-tree-picker-input for="http://www.metaphacts.com/fieldDefinition/hasTouchpoints">
-                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{UUID}}"
+                    <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
                         fields="[[fieldDefinitions
                         conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                         inSchemeTouchpoints='http://www.metaphacts.com/fieldDefinition/inSchemeTouchpoints'
