@@ -1,41 +1,39 @@
 
 <http://www.metaphacts.com/fieldDefinition/wasRealisedBy/context> {
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
-      _:genid-2e871f4585f8498581c2c25ae615a62f-1b8bhq;
+      _:genid-01b6f4d53eea4899b01d9b8cba515f08-czprs;
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-2e871f4585f8498581c2c25ae615a62f-1b8bhq a <http://spinrdf.org/sp#Query> .
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-czprs a <http://spinrdf.org/sp#Query> .
   
-  _:genid-2e871f4585f8498581c2c25ae615a62f-qtqouq <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  $subject m4p0:wasRealisedBy ?value. ?value a m4p0:Project.}""" .
-  
-  _:genid-2e871f4585f8498581c2c25ae615a62f-j8rfy a <http://spinrdf.org/sp#Query> .
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-xn2n8v <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Projekt"@de;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-01b6f4d53eea4899b01d9b8cba515f08-7emqni;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-01b6f4d53eea4899b01d9b8cba515f08-xn2n8v .
   
-  _:genid-2e871f4585f8498581c2c25ae615a62f-qtqouq a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#minOccurs>
-      "1";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Projekt"@de .
-  
-  _:genid-2e871f4585f8498581c2c25ae615a62f-1b8bhq <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-czprs <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   ?value a m4p0:Project ;
     m4p0:projectTitle ?label .
   FILTER REGEX(STR(?label), \"?token\", \"i\")
 } LIMIT 10""" .
   
-  _:genid-2e871f4585f8498581c2c25ae615a62f-j8rfy <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:DigitalApp. $subject m4p0:wasRealisedBy $value. $value a m4p0:Project.} WHERE {}" .
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-7emqni <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject m4p0:wasRealisedBy ?value. ?value a m4p0:Project.}""" .
+  
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-xn2n8v a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-01b6f4d53eea4899b01d9b8cba515f08-7emqni a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> <http://www.metaphacts.com/ontology/fields#domain>
       <https://www.museum4punkt0.de/catalogue/ontology/DigitalApp>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2e871f4585f8498581c2c25ae615a62f-j8rfy;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     <http://www.w3.org/2000/01/rdf-schema#comment> "Wählen Sie ein Projekt aus, in dessen Rahmen die digitale Anwendung entstanden ist.";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2e871f4585f8498581c2c25ae615a62f-qtqouq;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T08:51:03.988Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-14T09:34:41.294Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/wasRealisedBy> .
