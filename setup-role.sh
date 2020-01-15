@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ROLE="TODO"
+ROLE="editor=forms:ldp:*"
 
 test -f docker-compose.yml && test -f Dockerfile && echo "The current working directory seems not to be a suited poject folder." && exit 1
 
