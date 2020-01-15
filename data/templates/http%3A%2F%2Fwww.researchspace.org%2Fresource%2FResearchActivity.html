@@ -22,6 +22,8 @@ researched='http://www.metaphacts.com/fieldDefinition/researched'
 descriptionOfResearchAim='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim'
 hasSetting='http://www.metaphacts.com/fieldDefinition/hasSetting'
 P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
+usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
 hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'                                   
 ]]">
 
@@ -39,9 +41,7 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
         researchLocation='http://www.metaphacts.com/fieldDefinition/researchLocation'
         descriptionOfResearchSetting='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchSetting'
         beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
-        endDate='http://www.metaphacts.com/fieldDefinition/endDate'
-        usedTool='http://www.metaphacts.com/fieldDefinition/usedTool'
-        usedSoftware='http://www.metaphacts.com/fieldDefinition/usedSoftware'
+        endDate='http://www.metaphacts.com/fieldDefinition/endDate'        
         ]]">
             <h3>Untersuchungssetting</h3>
             <p>Beschreiben Sie die unterschiedlichen Testsituationen bzw. Untersuchungseinheiten.</p>
@@ -100,111 +100,111 @@ hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
             <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
             <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
 
-            <h3>(nach-)genutzte Tools - Hilfsmittel/Geräte und/oder Software</h3>
-            <p>Geben Sie an, welche Hilfsmittel/Geräte oder welche Software für die Untersuchung
-                verwendet wurden. Dies könnnen bspw. Leitfäden sein anhand derer Sie das Untersuchungskonzept entwickelt
-                haben. Oder
-                eine Umfragesoftware, die sie für die Datenerhebung verwendet haben.
-            </p>
-
-            <semantic-form-autocomplete-input for="usedTool">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
-                toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                    
-                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
-                                    hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
-                                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
-                                    ]]">
-                    <semantic-form-hidden-input for="toolRdfType"></semantic-form-hidden-input>
-                    <semantic-form-text-input for="toolTitle">
-                    </semantic-form-text-input>
-
-                    <semantic-form-tree-picker-input for="hasToolType">
-                        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
-                            fields="[[fieldDefinitions
-                            conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                    
-                            inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
-                                                prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
-                                                altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
-                                                              
-                                                    ]]">
-                                                    <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
-                            <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
-                            </semantic-form-hidden-input>
-                            <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
-                            </semantic-form-text-input>
-                            <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
-                            </semantic-form-text-input>
-
-                            <semantic-form-errors></semantic-form-errors>
-                            <button name='submit' class='btn btn-default'>Speichern</button>
-                        </semantic-form>
-                    </semantic-form-tree-picker-input>
-
-                    <semantic-form-composite-input for="P70i_is_documented_in"
-                        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
-                documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
-                documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
-                url='http://www.metaphacts.com/fieldDefinition/url'
-                doi='http://www.metaphacts.com/fieldDefinition/doi'
-                bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'                
-                ]]">
-                        <h5>Quelle</h5>
-                        <semantic-form-hidden-input for="documentRdfType">
-                        </semantic-form-hidden-input>
-                        <semantic-form-text-input for="documentTitle">
-                        </semantic-form-text-input>
-                        <semantic-form-text-input for="url">
-                        </semantic-form-text-input>
-                        <semantic-form-text-input for="doi">
-                        </semantic-form-text-input>
-                        <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
-
-                    </semantic-form-composite-input>
-                    <semantic-form-errors></semantic-form-errors>
-                    <button name='submit' class='btn btn-default'>Speichern</button>
-                </semantic-form>
-            </semantic-form-autocomplete-input>
-
-            <semantic-form-autocomplete-input for="usedSoftware">
-                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
-     softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                                
-     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
-                                    version='http://www.metaphacts.com/fieldDefinition/version'
-                                    hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
-                                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
-                                    ]]">
-                    <semantic-form-hidden-input for="softwareRdfType"></semantic-form-hidden-input>
-                    <semantic-form-text-input for="toolTitle">
-                    </semantic-form-text-input>
-                    <semantic-form-text-input for="version">
-                    </semantic-form-text-input>
-                    <semantic-form-checklist-input for="hasSoftwareType">
-                    </semantic-form-checklist-input>
-                    <semantic-form-composite-input for="P70i_is_documented_in"
-                        new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
-                        fields="[[fieldDefinitions]]">
-                        <h5>Quelle der Software</h5>
-                        <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
-                        </semantic-form-hidden-input>
-                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
-                        </semantic-form-text-input>
-                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
-                        </semantic-form-text-input>
-
-                    </semantic-form-composite-input>
-
-
-       
-        <semantic-form-errors></semantic-form-errors>
-        <button name='submit' class='btn btn-default'>Speichern</button>
-    </semantic-form>
-    </semantic-form-autocomplete-input>
+            
 
 
     </semantic-form-composite-input>
 
 
+    <h3>(nach-)genutzte Tools - Hilfsmittel/Geräte und/oder Software</h3>
+    <p>Geben Sie an, welche Hilfsmittel/Geräte oder welche Software für die Untersuchung
+        verwendet wurden. Dies könnnen bspw. Leitfäden sein anhand derer Sie das Untersuchungskonzept entwickelt
+        haben. Oder
+        eine Umfragesoftware, die sie für die Datenerhebung verwendet haben.
+    </p>
 
+    <semantic-form-autocomplete-input for="usedTool">
+        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
+        toolRdfType='http://www.metaphacts.com/fieldDefinition/toolRdfType'                    
+        toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                            hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
+                            P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                            ]]">
+            <semantic-form-hidden-input for="toolRdfType"></semantic-form-hidden-input>
+            <semantic-form-text-input for="toolTitle">
+            </semantic-form-text-input>
+
+            <semantic-form-tree-picker-input for="hasToolType">
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
+                    fields="[[fieldDefinitions
+                    conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'                    
+                    inSchemeToolType='http://www.metaphacts.com/fieldDefinition/inSchemeToolType'    
+                                        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                                        altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                                                      
+                                            ]]">
+                                            <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                    <semantic-form-hidden-input for="inSchemeToolType" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Speichern</button>
+                </semantic-form>
+            </semantic-form-tree-picker-input>
+
+            <semantic-form-composite-input for="P70i_is_documented_in"
+                new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
+        documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+        documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+        url='http://www.metaphacts.com/fieldDefinition/url'
+        doi='http://www.metaphacts.com/fieldDefinition/doi'
+        bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'                
+        ]]">
+                <h5>Quelle</h5>
+                <semantic-form-hidden-input for="documentRdfType">
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="documentTitle">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="url">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="doi">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+
+            </semantic-form-composite-input>
+            <semantic-form-errors></semantic-form-errors>
+            <button name='submit' class='btn btn-default'>Speichern</button>
+        </semantic-form>
+    </semantic-form-autocomplete-input>
+
+    <semantic-form-autocomplete-input for="usedSoftware">
+        <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions 
+softwareRdfType='http://www.metaphacts.com/fieldDefinition/softwareRdfType'                                
+toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                            version='http://www.metaphacts.com/fieldDefinition/version'
+                            hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                            P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                            ]]">
+            <semantic-form-hidden-input for="softwareRdfType"></semantic-form-hidden-input>
+            <semantic-form-text-input for="toolTitle">
+            </semantic-form-text-input>
+            <semantic-form-text-input for="version">
+            </semantic-form-text-input>
+            <semantic-form-checklist-input for="hasSoftwareType">
+            </semantic-form-checklist-input>
+            <semantic-form-composite-input for="P70i_is_documented_in"
+                new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
+                fields="[[fieldDefinitions]]">
+                <h5>Quelle der Software</h5>
+                <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType">
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle">
+                </semantic-form-text-input>
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                </semantic-form-text-input>
+
+            </semantic-form-composite-input>
+
+
+
+<semantic-form-errors></semantic-form-errors>
+<button name='submit' class='btn btn-default'>Speichern</button>
+</semantic-form>
+</semantic-form-autocomplete-input>
 
     <h3>entstandene Hilfsmittel</h3>
     <p>Im Rahmen von Testings, Befragungen oder Beobachtungen entstehen häufig Vorlagen wie z.B. Frage- oder
