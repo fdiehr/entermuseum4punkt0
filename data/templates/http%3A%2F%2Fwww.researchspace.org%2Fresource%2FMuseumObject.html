@@ -1,0 +1,39 @@
+<bs-panel>
+  <h1>Museumsobjekt</h1>
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}' subject='[[urlParam "musobj"]]'
+        post-action='redirect' browser-persistence=false form-id='EducationalConcept' fields="[[fieldDefinitions
+       musObjRdfType='http://www.metaphacts.com/fieldDefinition/musObjRdfType'
+                    museumObjectTitle='http://www.metaphacts.com/fieldDefinition/museumObjectTitle'
+                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in' 
+        ]]">
+      
+      <semantic-form-hidden-input for="musObjRdfType"></semantic-form-hidden-input>
+                <semantic-form-text-input for="museumObjectTitle">
+                </semantic-form-text-input>
+                <semantic-form-composite-input for="P70i_is_documented_in"
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
+                    fields="[[fieldDefinitions
+                    documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+                    documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+                    url='http://www.metaphacts.com/fieldDefinition/url'
+                    doi='http://www.metaphacts.com/fieldDefinition/doi'
+                    bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+                    ]]">
+                    <semantic-form-hidden-input for="documentRdfType">
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="documentTitle">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="doi"> </semantic-form-text-input>
+                    <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+                
+                </semantic-form-composite-input>
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default"
+            style="background-color: lightgray; border-style:outset;">Speichern</button>
+
+
+    </semantic-form>
+</bs-panel>

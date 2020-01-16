@@ -1,4 +1,4 @@
-   <!--
+<!--
     #############################################
     #####                                   #####
     #####                                   #####
@@ -9,14 +9,10 @@
                 
                 -->
 
-                <bs-panel>
+<bs-panel>
 
-    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}'
-        subject='[[urlParam "edu"]]' 
-        post-action='redirect' 
-        browser-persistence=false 
-        form-id='EducationalConcept' 
-        fields="[[fieldDefinitions
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resource/{{UUID}}' subject='[[urlParam "edu"]]'
+        post-action='redirect' browser-persistence=false form-id='EducationalConcept' fields="[[fieldDefinitions
         eduConceptRdfType='http://www.metaphacts.com/fieldDefinition/eduConceptRdfType'
         isEducationalConceptOf='http://www.metaphacts.com/fieldDefinition/isEducationalConceptOf'
         hasEducationFormat='http://www.metaphacts.com/fieldDefinition/hasEducationFormat'
@@ -25,6 +21,7 @@
         hasTargetAudience='http://www.metaphacts.com/fieldDefinition/hasTargetAudience'
         descriptionOfNarration='http://www.metaphacts.com/fieldDefinition/descriptionOfNarration'
         hasSubject='http://www.metaphacts.com/fieldDefinition/hasSubject'
+        refersToMuseumsObject='http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt'
         ]]">
 
 
@@ -37,68 +34,103 @@
         <semantic-form-hidden-input for="eduConceptRdfType"></semantic-form-hidden-input>
         <semantic-form-autocomplete-input for="isEducationalConceptOf"></semantic-form-autocomplete-input>
         <semantic-form-checklist-input for="hasEducationFormat">
-            </semantic-form-checklist-input>
-            <semantic-form-text-input for="descriptionOfEducationalGoal" multiline=true>
-            </semantic-form-text-input>
-            <semantic-form-text-input for="descriptionOfUserNeeds" multiline=true>
-            </semantic-form-text-input>
+        </semantic-form-checklist-input>
+        <semantic-form-text-input for="descriptionOfEducationalGoal" multiline=true>
+        </semantic-form-text-input>
+        <semantic-form-text-input for="descriptionOfUserNeeds" multiline=true>
+        </semantic-form-text-input>
 
-            <semantic-form-tree-picker-input for="hasTargetAudience">
-                <semantic-form
-                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
-                    fields="[[fieldDefinitions
+        <semantic-form-tree-picker-input for="hasTargetAudience">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                     conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                     inSchemeTargetAudience='http://www.metaphacts.com/fieldDefinition/inSchemeTargetAudience'    
                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                         ]]">
-                        <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
-                        <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
-                    </semantic-form-hidden-input>
-                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
-                    </semantic-form-text-input>
+                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                <semantic-form-hidden-input for="inSchemeTargetAudience" default-value='skos:Concept'>
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
 
-                    <semantic-form-errors></semantic-form-errors>
-                    <button name='submit' class='btn btn-default'>Speichern</button>
-                </semantic-form>
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+            </semantic-form>
 
-            </semantic-form-tree-picker-input>
-           
-            <h3>Gegenstand der Vermittlung</h3>
-            <p>Das Vermittlungskonzept umfasst eine Narration mit der ein Thema vermittelt wird. Oder mit
-                dem
-                Konzept soll ein spezifischer Inhalt, ein Thema vermittelt werden. Beschreiben Sie dieses
-                hier
-                genauer.
-            </p>
+        </semantic-form-tree-picker-input>
 
-            <semantic-form-text-input for="descriptionOfNarration" multiline=true>
-            </semantic-form-text-input>
-            <semantic-form-tree-picker-input for="hasSubject">
-                <semantic-form
-                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
-                    fields="[[fieldDefinitions
+        <h3>Gegenstand der Vermittlung</h3>
+        <p>Das Vermittlungskonzept umfasst eine Narration mit der ein Thema vermittelt wird. Oder mit
+            dem
+            Konzept soll ein spezifischer Inhalt, ein Thema vermittelt werden. Beschreiben Sie dieses
+            hier
+            genauer.
+        </p>
+
+        <semantic-form-text-input for="descriptionOfNarration" multiline=true>
+        </semantic-form-text-input>
+        <semantic-form-tree-picker-input for="hasSubject">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
                     conceptRdfType='http://www.metaphacts.com/fieldDefinition/conceptRdfType'
                     inSchemeSubject='http://www.metaphacts.com/fieldDefinition/inSchemeSubject'    
                 prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'                
                     ]]">
-                    <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
-                    <semantic-form-hidden-input for="inSchemeSubject" default-value='skos:Concept'>
+                <semantic-form-hidden-input for="conceptRdfType"></semantic-form-hidden-input>
+                <semantic-form-hidden-input for="inSchemeSubject" default-value='skos:Concept'>
+                </semantic-form-hidden-input>
+                <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                </semantic-form-text-input>
+
+                <semantic-form-errors></semantic-form-errors>
+                <button name='submit' class='btn btn-default'>Speichern</button>
+            </semantic-form>
+
+        </semantic-form-tree-picker-input>
+        <semantic-form-autocomplete-input for="refersToMuseumsObject">
+            <semantic-form new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}" fields="[[fieldDefinitions
+                    musObjRdfType='http://www.metaphacts.com/fieldDefinition/musObjRdfType'
+                    museumObjectTitle='http://www.metaphacts.com/fieldDefinition/museumObjectTitle'
+                    P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'              
+                    ]]">
+                <semantic-form-hidden-input for="musObjRdfType"></semantic-form-hidden-input>
+                <semantic-form-text-input for="museumObjectTitle">
+                </semantic-form-text-input>
+                <semantic-form-composite-input for="P70i_is_documented_in"
+                    new-subject-template="https://enter.museum4punkt0.de/resource/{{UUID}}"
+                    fields="[[fieldDefinitions
+                    documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+                    documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+                    url='http://www.metaphacts.com/fieldDefinition/url'
+                    doi='http://www.metaphacts.com/fieldDefinition/doi'
+                    bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+                    ]]">
+                    <semantic-form-hidden-input for="documentRdfType">
                     </semantic-form-hidden-input>
-                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    <semantic-form-text-input for="documentTitle">
                     </semantic-form-text-input>
+                    <semantic-form-text-input for="url">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="doi"> </semantic-form-text-input>
+                    <semantic-form-text-input for="bibliographicCitation" multiline=true></semantic-form-text-input>
+                
+                </semantic-form-composite-input>
+                <semantic-form-errors></semantic-form-errors>
+                <semantic-form-recover-notification></semantic-form-recover-notification>
+                <button name="submit" class="btn btn-default"
+                    style="background-color: lightgray; border-style:outset;">Speichern</button>
+            </semantic-form>
 
-                    <semantic-form-errors></semantic-form-errors>
-                    <button name='submit' class='btn btn-default'>Speichern</button>
-                </semantic-form>
 
-            </semantic-form-tree-picker-input>
+        </semantic-form-autocomplete-input>
+
+        <!--
         </semantic-form-composite-input>
-
+    -->
 
         <semantic-form-errors></semantic-form-errors>
         <semantic-form-recover-notification></semantic-form-recover-notification>
-        <button name="submit" class="btn btn-default" style="background-color: lightgray; border-style:outset;">Speichern</button>
-       
+        <button name="submit" class="btn btn-default"
+            style="background-color: lightgray; border-style:outset;">Speichern</button>
+
 
     </semantic-form>
 </bs-panel>

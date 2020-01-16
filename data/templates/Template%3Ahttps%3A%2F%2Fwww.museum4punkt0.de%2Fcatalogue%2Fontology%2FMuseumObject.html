@@ -1,0 +1,36 @@
+<bs-panel>
+    <h1>Museumsobjekt</h1>   
+   
+     <semantic-table
+            query='SELECT ?title ?json ?doc ?site WHERE {
+                ?s m4p0:museumObjectTitle ?title;
+                   m4p0:isDescribedBy ?json;
+                   crm:P70i_is_documented_in ?doc;
+                   edm:isShownAt ?site.
+                   
+                
+            }'
+            column-configuration='[
+            {"variableName": "title", "displayName": "Objekttitel"},
+            {"variableName": "doc", "displayName": "Quelle"},
+            {"variableName": "title", "displayName": "Webpräsenz"},                      
+            {"variableName": "json", "displayName": "Kataloginformationen"}  
+            
+            ]'                          
+        
+    
+
+        ></semantic-table>
+  
+  
+   
+    <semantic-link
+        iri='[[resolvePrefix ":MuseumObject"]]'
+        urlqueryparam-musobj='[[this]]'
+        
+    >
+        <button>Datensatz bearbeiten</button>
+    </semantic-link>
+
+
+    </bs-panel>
