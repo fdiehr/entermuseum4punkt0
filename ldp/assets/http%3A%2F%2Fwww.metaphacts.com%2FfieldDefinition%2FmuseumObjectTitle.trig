@@ -1,0 +1,36 @@
+
+<http://www.metaphacts.com/fieldDefinition/museumObjectTitle/context> {
+  _:genid-9d1e35e0063246b7a4dc8211149099cc-a09a3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-9d1e35e0063246b7a4dc8211149099cc-t96ujr <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject a m4p0:MuseumObject;
+  m4p0:museumObjectTitle ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "1" .
+  
+  _:genid-9d1e35e0063246b7a4dc8211149099cc-a09a3 <http://spinrdf.org/sp#text> """INSERT { $subject a m4p0:MuseumObject;
+  m4p0:museumObjectTitle $value} WHERE {}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "Geben Sie den Titel des Museumsobjekts an.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9d1e35e0063246b7a4dc8211149099cc-t96ujr;
+    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/MuseumObject>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Objektitel"@de;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9d1e35e0063246b7a4dc8211149099cc-a09a3 .
+  
+  _:genid-9d1e35e0063246b7a4dc8211149099cc-t96ujr a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-16T10:07:56.719Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> .
+  
+  <http://www.metaphacts.com/fieldDefinition/museumObjectTitle> a <http://www.w3.org/ns/ldp#Resource> .
+}

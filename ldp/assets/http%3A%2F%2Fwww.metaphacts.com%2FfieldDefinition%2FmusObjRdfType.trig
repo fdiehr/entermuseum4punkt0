@@ -1,0 +1,32 @@
+
+<http://www.metaphacts.com/fieldDefinition/musObjRdfType/context> {
+  <http://www.metaphacts.com/fieldDefinition/musObjRdfType> <http://www.metaphacts.com/ontology/fields#defaultValue>
+      "https://www.museum4punkt0.de/catalogue/ontology/MuseumObject";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-eeb4af16bd16408f8d3692d4646e0ecd-6k1guh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/musObjRdfType> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-eeb4af16bd16408f8d3692d4646e0ecd-he6jn .
+  
+  _:genid-eeb4af16bd16408f8d3692d4646e0ecd-he6jn <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/musObjRdfType> <http://www.w3.org/2000/01/rdf-schema#label>
+      "musObjRdfType"@de;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-eeb4af16bd16408f8d3692d4646e0ecd-6k1guh .
+  
+  _:genid-eeb4af16bd16408f8d3692d4646e0ecd-he6jn a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-eeb4af16bd16408f8d3692d4646e0ecd-6k1guh <http://spinrdf.org/sp#text> """SELECT ?value WHERE {  BIND(m4p0:MuseumObject as ?value)
+  BIND($subject as ?dummy)
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/musObjRdfType> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-16T10:05:29.469Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/musObjRdfType> .
+  
+  <http://www.metaphacts.com/fieldDefinition/musObjRdfType> a <http://www.w3.org/ns/ldp#Resource> .
+}

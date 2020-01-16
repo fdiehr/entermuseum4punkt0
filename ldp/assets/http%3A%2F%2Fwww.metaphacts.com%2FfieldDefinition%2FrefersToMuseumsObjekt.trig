@@ -1,0 +1,27 @@
+
+<http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt/context> {
+  <http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Thematisiert die Anwendung ein oder mehrere Museumsobjekte? Sind Museumsobjekte Thema der Anwendung? ";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-da77ec8fb332464b866788cb2b5aed1c-p6xsh;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-da77ec8fb332464b866788cb2b5aed1c-f4u22 .
+  
+  _:genid-da77ec8fb332464b866788cb2b5aed1c-f4u22 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:refersToMuseumObject $value. $value a m4p0:MuseumObject.} WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-da77ec8fb332464b866788cb2b5aed1c-p6xsh a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject a m4p0:EducationalConcept;
+  m4p0:refersToMuseumObject ?value.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Bezugsobjekt"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-16T09:40:13.329Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt> .
+  
+  <http://www.metaphacts.com/fieldDefinition/refersToMuseumsObjekt> a <http://www.w3.org/ns/ldp#Resource> .
+}
