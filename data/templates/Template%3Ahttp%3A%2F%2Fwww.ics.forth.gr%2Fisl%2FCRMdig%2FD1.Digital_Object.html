@@ -1,3 +1,4 @@
+[[> "http://www.metaphacts.com/resource/LinksToOtherDatabases" ]]
 <bs-panel>
   <h1>Digitales Objekt</h1>
   
@@ -11,36 +12,28 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?name ?provider ?mediatype ?creation ?rights ?license ?licensor ?musobj ?site WHERE {
-                ?s a crmdig:D1.Digital_Object;
+                ?s a crmdig:D1.Digital_Object.
                			
-    								edm:dataProvider ?provider ;
-    								m4p0:hasMediaType ?mediatype ;
-    								crm:P94i_was_created_by ?creation.
-    OPTIONAL {?s a crmdig:D1.Digital_Object;
-    m4p0:fileName ?name}                
-   OPTIONAL { ?s a crmdig:D1.Digital_Object;
-                 dc:rights ?rights}
-  OPTIONAL {?s a crmdig:D1.Digital_Object;
-               dcterms:license ?license }
-  OPTIONAL {?s a crmdig:D1.Digital_Object;
-               m4p0:licensor ?licensor }
-  OPTIONAL {?s a crmdig:D1.Digital_Object;
-               m4p0:refersToMuseumObject ?musobj }
-  OPTIONAL {?s a crmdig:D1.Digital_Object;
-edm:shownAt ?site .}
-                   
-                
-            }'
+    			OPTIONAL {?s edm:dataProvider ?provider }
+  OPTIONAL {?s m4p0:hasMediaType ?mediatype }
+  OPTIONAL {?s crm:P94i_was_created_by ?creation}
+    OPTIONAL {?s m4p0:fileName ?name}                
+   OPTIONAL { ?s  dc:rights ?rights}
+  OPTIONAL {?s dcterms:license ?license }
+  OPTIONAL {?s m4p0:licensor ?licensor }
+  OPTIONAL {?s  m4p0:refersToMuseumObject ?musobj }
+  OPTIONAL {?s edm:shownAt ?site .}
+}'
             column-configuration='[
-            {"variableName": "name", "displayName": "Titel"},
+            {"variableName": "name", "displayName": "Dateiname"},
+            {"variableName": "mediatype", "displayName": "Medientyp"},
             {"variableName": "provider", "displayName": "Datenprovider"},
-            {"variableName": "mediatype", "displayName": "Medientyp"},                      
-            {"variableName": "creation", "displayName": "Entwicklung"},
             {"variableName": "rights", "displayName": "Rechte"},                      
             {"variableName": "license", "displayName": "Lizenz"},
             {"variableName": "licensor", "displayName": "Lizenzgeber"},                      
             {"variableName": "musobj", "displayName": "Museumsobjekt"},
-            {"variableName": "creation", "displayName": "Webpräsenz"}
+            {"variableName": "site", "displayName": "Webpräsenz"},
+            {"variableName": "creation", "displayName": "Entwicklung"}
              ]'                          
         
     
