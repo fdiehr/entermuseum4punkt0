@@ -1,40 +1,41 @@
 
 <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace/context> {
   <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "Geben Sie die Mindestgröße des Festplattenspeichers in Gigabyte (GB) an." .
+      "Geben Sie die Mindestgröße des Festplattenspeichers in Gigabyte (GB) an.";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-90f3067a057745c3a2cc500b63a4466f-7i5ep3 a <http://spinrdf.org/sp#Query> .
+  _:genid-3dd035e843ea4a108f50717e024002ff-m5k0c a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-3dd035e843ea4a108f50717e024002ff-m5k0c .
   
-  _:genid-90f3067a057745c3a2cc500b63a4466f-zajsc a <http://spinrdf.org/sp#Query> .
+  _:genid-3dd035e843ea4a108f50717e024002ff-m5k0c <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:requiredHardDriveSpace $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-90f3067a057745c3a2cc500b63a4466f-n82x .
+      _:genid-3dd035e843ea4a108f50717e024002ff-ri0ls .
   
-  _:genid-90f3067a057745c3a2cc500b63a4466f-n82x <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  _:genid-3dd035e843ea4a108f50717e024002ff-ri0ls <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
   $subject m4p0:requiredHardDriveSpace ?value.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-90f3067a057745c3a2cc500b63a4466f-zajsc .
+  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-3dd035e843ea4a108f50717e024002ff-as7npq .
   
-  _:genid-90f3067a057745c3a2cc500b63a4466f-zajsc <http://spinrdf.org/sp#text> "DELETE { $subject m4p0:requiredHardDriveSpace $value} WHERE {}" .
-  
-  _:genid-90f3067a057745c3a2cc500b63a4466f-n82x a <http://spinrdf.org/sp#Query> .
+  _:genid-3dd035e843ea4a108f50717e024002ff-as7npq <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:requiredHardDriveSpace $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#integer>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-90f3067a057745c3a2cc500b63a4466f-7i5ep3;
-    <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Hardware>;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Festplattenspeicher"@de .
+      <http://www.w3.org/2001/XMLSchema#integer> .
   
-  _:genid-90f3067a057745c3a2cc500b63a4466f-7i5ep3 <http://spinrdf.org/sp#text> "INSERT { $subject m4p0:requiredHardDriveSpace $value} WHERE {}" .
+  _:genid-3dd035e843ea4a108f50717e024002ff-as7npq a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> a <http://www.w3.org/ns/prov#Entity>;
-    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/fdiehr>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T14:53:38.870Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  _:genid-3dd035e843ea4a108f50717e024002ff-ri0ls a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Festplattenspeicher"@de;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-23T10:45:54.050Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace> .

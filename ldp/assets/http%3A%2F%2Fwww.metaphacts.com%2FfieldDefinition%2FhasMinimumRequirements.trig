@@ -1,39 +1,38 @@
 
 <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements/context> {
+  _:genid-82054bb01ce64c91bd90c8472c321e53-zse7gb a <http://spinrdf.org/sp#Query> .
+  
   <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Mindestanforderungen der Hardware.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f58727ca17e6497f9a2a5620ade6ba5b-k1au2s .
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-82054bb01ce64c91bd90c8472c321e53-zse7gb;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-82054bb01ce64c91bd90c8472c321e53-c4qo08;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-hq051c a <http://spinrdf.org/sp#Query> .
+  _:genid-82054bb01ce64c91bd90c8472c321e53-twd8zm <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
+  $subject a m4p0:Operation; m4p0:hasMinimumRequirements ?value
+}""" .
   
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-zh9qz a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
-  
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-k1au2s a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-f58727ca17e6497f9a2a5620ade6ba5b-hq051c .
-  
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-k1au2s <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
+  _:genid-82054bb01ce64c91bd90c8472c321e53-c4qo08 a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.w3.org/2000/01/rdf-schema#label>
       "Mindestanforderungen"@de;
     <http://www.metaphacts.com/ontology/fields#range> <https://www.museum4punkt0.de/catalogue/ontology/Requirements> .
   
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-hq051c <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
-  
-  _:genid-f58727ca17e6497f9a2a5620ade6ba5b-zh9qz <http://spinrdf.org/sp#text> """SELECT ?value WHERE {
-  $subject a m4p0:Operation; m4p0:hasMinimumRequirements ?value
-}""" .
+  _:genid-82054bb01ce64c91bd90c8472c321e53-zse7gb <http://spinrdf.org/sp#text> "DELETE { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-f58727ca17e6497f9a2a5620ade6ba5b-zh9qz;
+      _:genid-82054bb01ce64c91bd90c8472c321e53-twd8zm .
+  
+  _:genid-82054bb01ce64c91bd90c8472c321e53-c4qo08 <http://spinrdf.org/sp#text> "INSERT { $subject a m4p0:Operation; m4p0:hasMinimumRequirements $value} WHERE {}" .
+  
+  _:genid-82054bb01ce64c91bd90c8472c321e53-twd8zm a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
     <http://www.metaphacts.com/ontology/fields#domain> <https://www.museum4punkt0.de/catalogue/ontology/Operation>;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-22T20:39:39.915Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-23T10:46:36.088Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/hasMinimumRequirements> .
